@@ -1,0 +1,48 @@
+Class--Class can be understood as logical representation or blueprint.
+It is defined as combination of data members and methods.
+The keyword Class is used to define class definition in Python.
+
+Class Products:
+	bakery_items:
+	milk_products:
+	def grocery:
+		bakery_items="Bread"
+		milk_products="Soya Milk"
+		
+	def display:
+		print(self.bakery_items,self.milk_products)
+		
+pro=Products()
+pro.grocery
+pro.display
+
+
+
+
+Object--Object can be understood as physical representation.
+Object is a real world entity.
+Object holds data members and methods from Class.
+
+Abstraction--Getting data members and methods from class to an object.
+It is of two types:1.Data abstraction
+				   2.Method abstraction
+				   
+Data Abstraction means every object gets data independently.
+Method Abstraction--to invoke the method using object.
+
+Encapsulation---Wrapping of data and methods is called Encapsulation.
+To get 100% encapsulation we have to use private data members.
+Data members are private then data security plays very important role.It means that another class cannot use private details.
+
+Polymorphism---Polymorphism is derived from two latin terms Poly and Morphism ..Here, Poly means many and morphism means formation.
+Polymorphism is defined as one thing exists in many forms. We can achieve the polymorphism by using function over-loading.
+
+Function Overloading-- The same function name can be repeated more no of times by changing the arguements within the same class.
+eg--sendkeys("Bangalore")
+sendkeys("Hyderabad",Keys.ENTER)
+
+Inheritance
+
+Creating a new class based on features of existing class. Python supports 2 types of inheritance.
+1.Single Inheritance-- creating only one new class from only with one old class.
+2.Multilevel Inheritance--Creating a new class from another new class. It is extension for single inheritance.

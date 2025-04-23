@@ -1,0 +1,2893 @@
+03/03/2025:
+***********
+JSON FORMAT:
+it's a key value pair
+ex:
+{ language:java }
+
+unconditional  statements  :
+break
+continue
+
+break:
+1.List (methods)
+2.findelements
+3.foreachloop
+4.break
+5.string method(equals ignorecase())
+
+
+break  is  used  to  terminate  the  process.
+if loop want  to  execute  n  times,by  injucting break,it will execute
+at n-k  times.
+
+choose  one  dropdown namely language which  contains  some 30 lan's.
+if we want  to  select  language  at  7 th  position,then  after  7th position loop should terminate
+public class PracticeClassJava1 {
+    public static void main(String[] args) throws InterruptedException {
+        WebDriver driver;
+        WebDriverManager.chromedriver().setup();
+        driver=new ChromeDriver();
+        driver.get("https://www.wikipedia.org/");
+        Thread.sleep(4000);
+        List<WebElement>languanges=driver.findElements(By.xpath("//select[@id='searchLanguage']/option"));
+        for (WebElement ele:languanges)
+        {
+            if (ele.getText().equalsIgnoreCase("Dansk"))
+            {
+                System.out.println(ele.getText());
+                break;
+            }
+
+
+        }
+
+    }
+}
+selenium  architecture:-
+  
+Script in any ide's get converted to a key value pair and then inject with coerrespondent browser driver and execute on real browser. 
+
+04-03-2025:
+
+Selenium Features:
+-------------------
+1.it is web based application(websites).
+2.selenium is OSS(open source software).
+3.it supports multiple browsers(chrome,fire fox,edge,safari).
+4.it supports multiple platforms(windows,ios,linux).
+5.selenium can be scripted in multiple languages(java,python,c#,java script,php).
+
+Strings:
+********
+Types of strings(using new key word ,literal)
+java.lang.string.
+String 
+StringBuffer
+StringBuilder
+Stringpool
+CharBuffer
+CharecterArrayToString
+StringTokenizer
+AboutHeapMemory.
+
+CHARACTER FUNCTIONS:
+*******************
+1.how to create character
+2.isLetter()
+3.isDigit()
+4.isWhitespace()
+5.isUppercase()
+6.isLowercase()
+7.toUppercase()
+8.toLowercase()
+9.toString()
+
+note:isLetter,isDigit,iswhitespace,isuppercase,islowercase----->these functions will returns true or false values because of (is) is common everywhere. .
+
+String handling Functions:
+CharAt()
+CompareTo()
+ComareToIgnoreCase()
+Concat()
+Contains()
+ContentEquals()
+EndsWith()
+Equals()
+EqualsIgnoreCase()
+IsEmpty()
+Join()
+LastIndexOf()
+IndexOf()
+Length()
+Replace()
+ReplaceAll()
+Split()
+Substring()
+TocharArray()
+ToString()
+Touppercase()
+ToLowerCase()
+Trim()
+ValueOf()
+
+Conversion Functions:
+********************
+Integer to String
+Fraction To string
+Boolean To String
+
+Sample Program:
+class Main {
+    public static void main(String[] args) {
+       int a=10;
+       String s1,s2,s3;
+       s1=String.valueOf(a);
+      
+       int b=20;
+       s2=String.valueOf(b);
+       int c=a+b;
+       s3=s1+s2;
+       System.out.println("sum of two numbers"+c);
+        System.out.println("sum of two numbers"+s3);
+
+output:
+sum of two numbers30
+sum of two numbers1020
+conclusion;
+converting an integer to String value using valueOf().
+10 ---->"10"(system displaying) for our imagination.
+
+sample Program:
+
+class Main {
+    public static void main(String[] args) {
+       int a=10;
+       String s1,s2,s3;
+       s1=Integer.toString(a);
+      
+       int b=20;
+       s2=Integer.toString(b);
+       int c=a+b;
+       s3=s1+s2;
+       System.out.println("sum of two numbers"+c);
+        System.out.println("sum of two numbers"+s3);
+       
+       
+    }
+}
+output:
+sum of two numbers30
+sum of two numbers1020
+
+
+Converting Integer to String Automatically:
+SYNTAX:
+STRING VARIABLE=""+ANYVALUE;
+EX:
+
+class Main {
+    public static void main(String[] args) {
+       int a=10;
+       String s1,s2,s3;
+     s1=""+a;
+      
+       int b=20;
+       s2=""+b;
+       int c=a+b;
+       s3=s1+s2;
+       System.out.println("sum of two numbers"+c);
+        System.out.println("sum of two numbers"+s3);
+       
+       
+    }
+}
+OUTPUT:
+sum of two numbers30
+sum of two numbers1020
+
+script for converting from integer to string
+Character functions programs:
+*****************************
+Sample Program:
+
+class Main {
+    public static void main(String[] args) {
+      char c='a',b='4';
+      System.out.println(Character.isDigit(c));  
+      if(Character.isDigit(b))
+      {
+          System.out.println("i am digit");
+      }
+      else
+      {
+          System.out.println("i am character");
+      }
+       
+       
+    }
+}
+
+output:
+false
+i am digit
+CHARACTER INTERGER TO NUMERIC:
+*****************************
+Sample PROGRAM:
+
+class Main {
+    public static void main(String[] args) {
+      char c='a',b='4';
+      int k;
+     k=Character.getNumericValue(b);//4 (or)   k=Integer.parseInt(String.valueOf(b));  //4
+      System.out.println(Character.isDigit(c));  //false
+      if(Character.isDigit(b))//true
+      {
+          System.out.println("i am digit");
+      }
+      else
+      {
+          System.out.println("i am character");
+      }
+       
+       
+    }
+}
+
+05/03/2025:
+**********
+
+
+   public static void main(String[] args) {
+        char ch='A';
+        System.out.println(Character.isLetter(ch));
+    }
+}
+
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    public static void main(String[] args) {
+        char ch='A', c=' ';
+        System.out.println(Character.isLetterOrDigit(ch));
+        
+        System.out.println(Character.isWhitespace(c));
+        
+        System.out.println(Character.isLetter(ch));
+    }
+}
+
+
+isUpperCase()
+isLowerCase()
+toUpperCase()
+toLowerCase()
+
+Boolean - used to store true or false
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    public static void main(String[] args) {
+        char ch='A', c=' ';
+        
+        boolean b=Character.isLetterOrDigit(ch);
+        System.out.println(b);
+        
+        System.out.println(Character.isWhitespace(c));
+        
+        System.out.println(Character.isLetter(ch));
+    }
+}
+
+sample program:
+----------------------------------------------------
+class Main {
+    public static void main(String[] args) {
+        String s="aPp le345";
+        
+        for(int i=0;i<s.length();i++)
+        {
+          System.out.println(s.charAt(i));   
+        }
+       
+    }
+}
+-------------------------------------------------------------
+
+
+Message = "Payment of INR 2180.00 on your Axis bank credit card number xx7689. Is pending. Please pay immediately to maintain good credit score”
+
+How many:
+
+1. Lower cases
+2. Upper cases
+3. Digits
+4. Special Symbols
+5. Spaces
+
+
+
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    public static void main(String[] args) {
+        String message = "Payment of INR 2180.00 on your Axis bank credit card number xx7689. Is pending. Please pay immediately to maintain good credit score”;
+        
+        int uc=0,lc=0,dg=0,ss=0,ws=0;
+        char ch;
+        
+        for(int i=0;i<message.length();i++)
+        {
+            ch = message.charAt(i);
+            if(Character.isUpperCase(ch))
+            {
+                uc++;
+            }
+            else if(Character.isLowerCase(ch))
+            {
+                lc++;
+            }
+            else if(Character.isDigit(ch))
+            {
+                dg++;
+            }
+            else if(Character.isWhitespace(ch))
+            {
+                ws++;
+            }
+            else
+            {
+                ss++;
+            }
+            
+           
+        }
+        
+         System.out.println("Uppercases Count:" + uc);
+            System.out.println("Lowercases Count:" + lc);
+            System.out.println("Digits Count:" + dg);
+            System.out.println("Whitespaces Count:" + ws);
+            System.out.println("Special symbols Count:" + ss);
+       
+    }
+}
+
+
+
+ASCII Values:
+
+A - 65 …. Z - 90
+A(small) - 97 …. Z - 122
+0 - 48 … 9 - 57
+
+
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    public static void main(String[] args) {
+        String message = "Payment of INR 2180.00 on your Axis bank credit card number xx7689. Is pending. Please pay immediately to maintain good credit score”;
+        
+        int uc=0,lc=0,dg=0,ss=0,ws=0;
+        char ch;
+        
+        for(int i=0;i<message.length();i++)
+        {
+            ch = message.charAt(i);
+            if(ch>='A' && ch<='Z')
+            {
+                uc++;
+            }
+            else if(ch>='a' && ch<='z')
+            {
+                lc++;
+            }
+            else if(ch>='0' && ch<='9')
+            {
+                dg++;
+            }
+            else if(Character.isWhitespace(ch))
+            {
+                ws++;
+            }
+            else
+            {
+                ss++;
+            }
+            
+           
+        }
+        
+         System.out.println("Uppercases Count:" + uc);
+            System.out.println("Lowercases Count:" + lc);
+            System.out.println("Digits Count:" + dg);
+            System.out.println("Whitespaces Count:" + ws);
+            System.out.println("Special symbols Count:" + ss);
+       
+    }
+}
+
+
+String message = "Payment of INR 2180.00 on your Axis bank credit card number xx7689. Is pending. Please pay immediately to maintain good credit score”;
+
+Count number of
+
+1. Vowels
+2. Duplicate characters
+
+
+ArrayList:
+~~~~
+
+ArrayList<Character> al = new ArrayList<Character>();
+
+
+al.add(‘A’);
+
+
+without ArrayList:
+
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    public static void main(String[] args) {
+        String message = "Payment of INR 2180.00 on your Axis bank credit card number xx7689. Is pending. Please pay immediately to maintain good credit score”;
+        
+        int vc=0;
+        char ch;
+        
+        for(int i=0;i<message.length();i++)
+        {
+            ch = message.charAt(i);
+            if(ch=='a' || ch=='e' || ch=='i' || ch=='o' || ch=='u')
+            {
+                vc++;
+            }
+        }
+        
+         System.out.println("Vowels Count:" + vc);
+            
+       
+    }
+}
+
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        String message = "Payment of INR 2180.00 on your Axis bank credit card number xx7689. Is pending. Please pay immediately to maintain good credit score”;
+        
+       ArrayList<Character> al = new ArrayList<>();
+       
+       al.add('A');
+       al.add('B');
+       al.add('C');
+        
+       
+        for(Character c:al)
+        {
+            System.out.println(c);
+        }
+    
+            
+       
+    }
+}
+
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        String message = "Payment of INR 2180.00 on your Axis bank credit card number xx7689. Is pending. Please pay immediately to maintain good credit score”;
+        
+       ArrayList<Character> al = new ArrayList<>();
+       
+       al.add('A');
+       al.add('B');
+       al.add('C');
+        
+       
+        for(Character c:al)
+        {
+            if(al.contains('B'))
+            {
+                System.out.println("B present");
+                break;
+            }
+            
+        }
+         
+       
+    }
+}
+
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        String message = "Payment of INR 2180.00 on your Axis bank credit card number xx7689. Is pending. Please pay immediately to maintain good credit score”;
+        
+        String s1="aeiou";
+        int count=0;
+        
+       ArrayList<Character> al = new ArrayList<>();
+       
+      for(int i=0;i<s1.length();i++)
+      {
+          al.add(s1.charAt(i));
+      }
+    
+        for(int i=0;i<message.length();i++)
+        {
+            if(al.contains(message.charAt(i)))
+            {
+                count++;
+            }
+        }
+        
+       System.out.println(count);
+    }
+}
+
+
+
+From given array find the pairs which have sum is equal to target value
+
+Example:
+int a[]={1,7,8,4,0,3,0,0,3,4};
+Target = 8
+
+1 7
+8 0
+8 0
+8 0
+4 4
+
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        int a[]={1,7,8,4,0,3,0,0,3,4};
+        
+        for(int i=0;i<a.length;i++)
+        {
+            for(int j=i+1;j<a.length;j++)
+            {
+                if(a[i]+a[j]==8)
+                {
+                    System.out.println(a[i]+" "+a[j]);
+                }
+            }
+        }
+        
+       
+    }
+}
+
+----------------------------------------------------------------------------------------------------------------
+06/03/2025:
+
+Collections:
+~~~~~~~~~~~~~~~~
+
+1. It is a framework 
+2. We have to import java.util.*; 
+3. It supports no.of classes and interfaces.
+
+
+List:
+~~~~~~~~~~~
+List is a collection framework which is used to store elements dynamically.
+It will allow duplicate elements and  maintain the insertion order.
+A list is a interface in java,python,and many other languages.
+Each element in the list has a specific index starting from 0.
+elements in the list are stored in the order in which they are inserted.
+List sizes can change dynamically by adding or removing elements.
+In java,the list interface is implanted by classes such as
+1. ArrayList
+2. Vector
+3. LinkedList
+4. Stack
+
+
+We can create any type of List (Integer, string, fraction ….)
+
+ArrayList:
+~~~~~~~
+List values can display using 
+1. Entire list
+2. For each loop
+3. Streams(forEach())
+4. Using iterator
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        
+        //create arraylist and store some elements and display in different ways
+        
+        ArrayList<Integer> al=new ArrayList<>();
+        
+        al.add(11);
+        al.add(12);
+        al.add(13);
+        al.add(14);
+        
+        // display all elements
+        System.out.println(al);
+        
+        // using for each
+        for(Integer i:al)
+        {
+            System.out.println(i);
+        }
+        
+        // using streams(advanced)
+        al.forEach(i -> System.out.println(i));
+        
+  
+    }
+}
+
+Iterator:
+~~~~~~~
+
+1. Iterator<wrapper_class> object = ListObject.iterator();
+2. While(Object.hasNext())
+{
+3. Use next() to display elements 
+}
+
+
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        
+        //create arraylist and store some elements and display in different ways
+        
+        ArrayList<Integer> al=new ArrayList<>();
+        
+        al.add(11);
+        al.add(12);
+        al.add(13);
+        al.add(14);
+        
+        // display all elements
+        System.out.println(al);
+  
+        
+        // Iterator
+        Iterator<Integer> ii = al.iterator();
+        
+        while(ii.hasNext())
+        {
+            System.out.println(ii.next());
+        }
+        
+
+        
+        
+    }
+}
+
+
+LinkedList:
+~~~~~~~~~~
+
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        
+        //create arraylist and store some elements and display in different ways
+        
+        LinkedList<String> al=new LinkedList<>();
+        
+        al.add("a");
+        al.add("b");
+        al.add("c");
+        al.add("c");
+        al.add("b");
+        
+        // display all elements
+        System.out.println(al);
+        
+        // using for each
+        for(String i:al)
+        {
+            System.out.println(i);
+        }
+        
+        // using streams(advanced)
+        al.forEach(i -> System.out.println(i));
+        
+        // Iterator
+        Iterator<String> ii = al.iterator();
+        
+        while(ii.hasNext())
+        {
+            System.out.println(ii.next());
+        }
+        
+
+        
+    }
+}
+
+
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        
+        //create arraylist and store some elements and display in different ways
+        
+        LinkedList<Integer> al=new LinkedList<>();
+        
+        al.add(1);
+        al.add(2);
+        al.add(3);
+        al.add(1);
+        al.add(2);
+        
+        // display all elements
+        System.out.println(al);
+        
+        al.remove(3);
+        
+        System.out.println(al);
+        
+        al.set(2,10);
+        
+        System.out.println(al);
+        
+        // // using for each
+        // for(String i:al)
+        // {
+        //     System.out.println(i);
+        // }
+        
+        // // using streams(advanced)
+        // al.forEach(i -> System.out.println(i));
+        
+        // // Iterator
+        // Iterator<String> ii = al.iterator();
+        
+        // while(ii.hasNext())
+        // {
+        //     System.out.println(ii.next());
+        // }
+        
+    
+    }
+}
+
+
+
+Update values:
+~~~~~~~~~~~~
+
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        
+        //create arraylist and store some elements and display in different ways
+        
+        LinkedList<String> al=new LinkedList<>();
+        
+        al.add("a");
+        al.add("b");
+        al.add("c");
+        al.add("a");
+        al.add("b");
+        
+        // display all elements
+        System.out.println(al);
+        
+        al.remove("b");
+        
+        System.out.println(al);
+        
+        // update
+        al.set(2,"j");
+        
+        System.out.println(al);
+
+}
+}
+
+
+Programs:
+~~~~~~~~~~
+1. Remove duplicate element
+2. Reverse array list
+
+
+
+Convert ArrayList -> String:
+
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        
+        //create arraylist and store some elements and display in different ways
+        
+        ArrayList<String> al=new ArrayList<>();
+        
+        al.add("sneha");
+        al.add("nawaz");
+        al.add("sunitha");
+        al.add("nanda");
+        al.add("poojitha");
+        
+        String s[]=new String[al.size()];
+        for(int i=0;i<al.size();i++)
+        {
+            s[i]=al.get(i);
+        }
+        
+        // display all elements
+        for(String ss: s)
+        {
+            System.out.println(ss);
+        }
+}
+}
+
+
+Creating sub list:
+~~~~~~~~~~~~~~
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        
+        //create arraylist and store some elements and display in different ways
+        
+        ArrayList<String> al=new ArrayList<>();
+        
+        al.add("sneha");
+        al.add("nawaz");
+        al.add("sunitha");
+        al.add("nanda");
+        al.add("poojitha");
+        
+        List<String> l=al.subList(0,3);
+        System.out.println(l);
+        
+        
+    
+    }
+}
+
+Sorting:
+~~~~~~~~
+
+1. Descending order
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        
+        //create arraylist and store some elements and display in different ways
+        
+        ArrayList<String> al=new ArrayList<>();
+        
+        al.add("sneha");
+        al.add("nawaz");
+        al.add("sunitha");
+        al.add("nanda");
+        al.add("poojitha");
+        
+        List<String> l=al.subList(0,3);
+        Collections.sort(l);
+        System.out.println(l);
+    }
+}
+
+
+
+Set:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1.Set is a collection framework and it is a unordered collection.
+2.it does not allow duplicate elements.
+3.each element is unique.
+4.when there is reqirement of storing unique values without caring about the order then we have to use set collections method.
+5.in java,the set is an interface that extends collection.it is implemented by classes like
+1.hashset---->does not maintain order and is backed by a hash table.
+2.Linkdhashset---->maintains insertion order
+3.treeset----->maintains elements in a sorted order(ascending by default).
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        
+        //create arraylist and store some elements and display in different ways
+        
+        Set<String> al=new HashSet<>();
+        
+        al.add("sneha");
+        al.add("nawaz");
+        al.add("sunitha");
+        al.add("nanda");
+        al.add("sneha");
+        
+    
+        System.out.println(al);
+        
+       
+    
+    }
+}
+
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        
+        //create arraylist and store some elements and display in different ways
+        String s="apple";
+    
+        Set<Character> al=new HashSet<>();
+        
+       for(int i=0;i<s.length();i++)
+       {
+           al.add(s.charAt(i));
+       }
+    
+    for(Character c:al)
+    {
+        System.out.println(c);
+    }
+        
+        
+       
+    
+    }
+}
+
+
+
+
+Convert List -> set:
+~~~~~~~~~~~~~~~~
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        
+        //create arraylist and store some elements and display in different ways
+        String s="apple";
+    
+        List<String> l=new ArrayList<>();
+        
+        l.add("sneha");
+        l.add("sunitha");
+        l.add("poojitha");
+        l.add("nawaz");
+        l.add("sunitha");
+        
+         System.out.println(l);
+         
+         
+        Set<String> al=new HashSet<String>(l);
+        System.out.println(al);
+
+    }
+}
+
+Assignment: convert array to hashset
+
+
+Program to shuffle 0 at end 
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        
+        //create arraylist and store some elements and display in different ways
+        
+        int arr[]={1,7,8,4,0,3,0,0,3,4};
+        int count=0;
+        
+        for(int i=0;i<arr.length;i++)
+        {
+            if(arr[i]!=0)
+            {
+                
+               arr[count]=arr[i];
+               count++;
+            }
+            
+        }
+        
+        while(count<arr.length)
+        {
+            arr[count++]=0;
+        }
+        
+        for(int i=0;i<arr.length;i++)
+        {
+             System.out.println(arr[i]);
+        }
+
+    }
+}
+
+
+HashMap:
+~~~~~~~~~~~~~
+
+1. Stores data in key value format
+2. It can be combination of two different wrapper classes
+3. Syntax:
+4. HashMap<Wrapper_class1, Wrapper_class2> object = new HashMap<Wrapper_class1, Wrapper_class2>();
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        
+        HashMap<Integer, String> hm = new HashMap<Integer, String>();
+        
+        hm.put(101,"prasad");
+        hm.put(102,"sunitha");
+        hm.put(103,"sneha");
+        hm.put(104,"nanda");
+        hm.put(105,"nawaz");
+        
+        System.out.println(hm);
+    }
+}
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        
+        HashMap<String, String> hm = new HashMap<String, String>();
+        
+        hm.put("A","prasad");
+        hm.put("B","sunitha");
+        hm.put("C","sneha");
+        hm.put("D","nanda");
+        hm.put("E","nawaz");
+        
+        System.out.println(hm);
+    }
+}
+
+
+
+NOTE: Only one null key is allowed in Hashmat as key but many nulls as values
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        
+        HashMap<String, String> hm = new HashMap<String, String>();
+        
+        hm.put(null,null);
+        hm.put(null,"sunitha");
+        hm.put("C",null);
+        hm.put("D","nanda");
+        hm.put("E",null);
+        
+        System.out.println(hm);
+    }
+}
+
+
+Map: interface
+~~~~~
+
+Entry - class
+
+entrySet()
+getKey()
+getValue()
+
+
+Occurrences program:
+~~~~~~~~~~~~~~
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        
+        //to count duplicate characters
+        String s="hi hellow apple";
+        HashMap<Character, Integer> hm = new HashMap<Character, Integer>();
+        
+        for(int i=0;i<s.length();i++)
+        {
+            char c=s.charAt(i);
+            
+            if(!hm.containsKey(c))
+            {
+                hm.put(c,1);
+            }
+            else
+            {
+               hm.put(c,hm.get(c)+1);
+            }
+            
+        }
+       
+        
+        System.out.println(hm);
+        
+      
+    }
+}
+
+
+Other method:
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        
+        //to count duplicate characters
+        String s="hi hellow apple";
+        HashMap<Character, Integer> hm = new HashMap<Character, Integer>();
+        
+        char c[]=s.toCharArray();
+        
+        for(char ch:c)
+        {
+            if(hm.containsKey(ch))
+            {
+                hm.put(ch,hm.get(ch)+1);
+            }
+            else
+            {
+                hm.put(ch,1);
+            }
+        }
+        
+        for(Map.Entry e:hm.entrySet())
+        {
+            System.out.println(e.getKey()+" - "+e.getValue());
+        }
+          
+
+}
+
+
+}
+
+
+Hashtable:
+
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        
+        //to count duplicate characters
+        String s="hi hellow apple";
+        Hashtable<Integer, String> hm = new Hashtable<Integer, String>();
+        
+        hm.put(1,"A");
+        hm.put(2,"B");
+        hm.put(3,"C");
+        hm.put(4,"D");
+  
+       System.out.println(hm);
+        
+      
+        
+      
+    }
+}
+
+Hashtable does not allow null values and null keys
+
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        
+        //to count duplicate characters
+        String s="hi hellow apple";
+        Hashtable<Integer, String> hm = new Hashtable<Integer, String>();
+        
+        hm.put(1,"A");
+        hm.put(2,"B");
+        hm.put(3,null);
+        hm.put(4,"D");
+  
+       System.out.println(hm);
+        
+      
+        
+      
+    }
+}
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        
+        //to count duplicate characters
+        String s="hi hellow apple";
+        Hashtable<Integer, String> hm = new Hashtable<Integer, String>();
+        
+        hm.put(1,"A");
+        hm.put(2,"B");
+        hm.put(3,"C");
+        hm.put(4,"D");
+  
+  
+  for(Map.Entry e: hm.entrySet())
+  {
+      System.out.println(e.getKey()+" "+e.getValue());
+  }
+       
+        
+      
+        
+      
+    }
+}
+
+split:
+~~~~~
+
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        
+     
+        String s="hi hellow apple";
+       
+       //split
+       String words[] = s.split(" ");
+       
+       for(String h:words)
+       {
+           System.out.println(h);
+       }
+        
+  
+    }
+}
+
+
+https://www.flipkart.com/mobile-phones-store?fm=neo%2Fmerchandising&iid=M_2c0f5449-9bda-4ca3-9170-1d686b7c215a_1_372UD5BXDFYS_MC.ZRQ4DKH28K8J&otracker=hp_rich_navigation_2_1.navigationCard.RICH_NAVIGATION_Mobiles_ZRQ4DKH28K8J&otracker1=hp_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_2_L0_view-all&cid=ZRQ4DKH28K8J
+
+
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        
+     
+        String s="https://www.flipkart.com/mobile-phones-store?fm=neo%2Fmerchandising&iid=M_2c0f5449-9bda-4ca3-9170-1d686b7c215a_1_372UD5BXDFYS_MC.ZRQ4DKH28K8J&otracker=hp_rich_navigation_2_1.navigationCard.RICH_NAVIGATION_Mobiles_ZRQ4DKH28K8J&otracker1=hp_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_2_L0_view-all&cid=ZRQ4DKH28K8J";
+       
+       //split
+       String words[] = s.split("\\?");
+       
+       for(String h:words)
+       {
+           System.out.println(h);
+       }
+        
+  
+    }
+}
+
+
+String s[] = {”dog”,“apple”,”cat”,”bat”};
+
+
+
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        
+     
+       String s[] = {"dog","apple","cat","bat"};
+      
+      int i[] = {3,2,5,1};
+  
+        Arrays.sort(s);
+        
+        for(String ii:s)
+        {
+            System.out.println(ii);
+        }
+        
+  
+    }
+}
+
+
+
+Assignment:
+
+Program to count each vowel in a string using collections
+Program 
+
+Hello Madanapalle
+
+Sample outputs:
+~~~~~~~~~~~~~
+Oleo ellapanadam
+
+ellapanadam Oleo
+
+Ifmmp 
+
+
+Combinations of letters: OTP
+ 
+Hello 
+
+Output:
+
+Hello
+Elloh
+Llohe
+
+Extract only integers and perform addition
+
+String s[]={“a1we”,”2mhy”,”gh4gh”}
+
+String s=“ma2danap4all8e”;
+
+
+
+Reverse it: n=248
+
+Name = "munagala bala seshagiri Prasad”;
+
+
+Output: m.b.s.prasad
+
+
+First occurrence of duplicate character count
+String sen="hey I am learning java”;
+
+
+
+String sen="hey I am learning java”;
+Output: h*y I am l*arning java
+
+
+
+
+
+
+
+programming methodology
+1.pop:the  entire  java  program,will be  under  main() method.
+here  for  variables  memory  will allocates  only  once.
+if we  try  to  update  new  values,only  updated values will get  displayed.
+but  previous  values  will override.
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class SBI {
+    public static void main(String[] args) {
+        String accno,name;
+        int bal;
+        accno="3454354";
+        name="kumar";
+        bal=90000;
+        System.out.println("id="+accno);
+        System.out.println("name="+name);
+        System.out.println("salary="+bal);
+    
+    }
+}
+
+2.oops:
+class 
+variable/data members
+
+method def
+object
+ 
+class Dog
+{
+    String breed,color;
+        int  cost;
+    public    Dog(String breed,String color,int cost)
+    {
+       this.breed=breed;
+        this.color=color;
+        this.cost=cost;
+    }
+    public  void  dogOutput()
+    {
+        System.out.println("breed="+breed);
+        System.out.println("color="+color);
+        System.out.println("cost="+cost);
+       
+    }
+    public  static void main(String args[])
+    {
+        Dog d1=new Dog("gs","brown",45000);
+        Dog d2=new Dog("lab","white",6000);
+        d1.dogOutput();
+        d2.dogOutput();
+        d2.dogOutput();
+        d1.dogOutput();
+        
+    }
+}
+
+static :
+
+public void  accept()-----non static  method
+{
+}
+
+
+
+static  public  void  accept()----static  method
+{
+
+
+}
+ String  breed---->non static  variable
+static  String breed---->static variable
+
+static  variable+method
+not   class.
+
+wip1
+wip2
+
+class Cognizent
+{
+    String name,des;
+
+    int id;
+    int sal;
+    static int count,allsalary;
+
+     
+
+     public Cognizent (String name,String des,int sal)
+     {
+           count++;
+           id=count;
+         this.name=name;
+         this.des=des;
+         this.sal=sal;
+         allsalary=this.sal+allsalary;
+         
+     }
+    
+    public  void  getEmployeeDetails()
+    {
+        System.out.println("id="+"wip"+id);
+        System.out.println("name="+name);
+        System.out.println("des="+des);
+        System.out.println("sal="+sal);
+        
+        
+    }
+    
+    public  static  void total() 
+    {
+        
+        System.out.println("COGNIZENT DATA======");
+        System.out.println("total no.of employess="+count);
+        System.out.println("allsal="+allsalary);
+        
+    }
+    
+    public  static  void main(String args[])
+    {
+        Cognizent  s1=new Cognizent("sneha","analyst",60000);
+        Cognizent p1=new Cognizent("poojitha","devaloper",80000);
+        s1.getEmployeeDetails();
+        p1.getEmployeeDetails();
+        Cognizent  n1=new Cognizent("nandan","qa",90000);
+        n1.getEmployeeDetails();
+        
+        //Cognizent.total();
+        
+        
+        Cognizent s2=new Cognizent("sunitha","devoops",100000);
+        s2.getEmployeeDetails();
+        
+        n1.total();   
+        
+    }
+}
+
+
+Create pop n oops programs 
+For
+Script to store sbi details(accno,name,bal)
+1.create 3 customers
+And output there details on console 
+2.display how many customers are available 
+2.display how much amt credited to sbi
+
+package Batchno10Automation;
+
+public class StateBankOfIndia {
+    int accno;
+    String name;
+    double balance;
+     static int totalcustomers=0;
+     static double totalcreditamount=0.0;
+     public StateBankOfIndia(int accno,String name,double balance)
+     {
+         totalcustomers++;
+         accno=totalcustomers;
+         this.accno=accno;
+         this.name=name;
+         this.balance=balance;
+         totalcreditamount=balance+totalcreditamount;
+     }
+     public void GetOutputDetails()
+     {
+         System.out.println("accno="+accno);
+         System.out.println("name="+name);
+         System.out.println("balance="+balance);
+
+     }
+     public static void SbiTotalDetails()
+     {
+         System.out.println("State Bank of India customers details..........");
+         System.out.println("total no of customers="+totalcustomers);
+         System.out.println("total credited amount="+totalcreditamount);
+     }
+
+    public static void main(String[] args) {
+        StateBankOfIndia s1=new StateBankOfIndia(101,"poojitha",1000.29);
+        StateBankOfIndia s2=new StateBankOfIndia(102,"siddu",3000.67);
+        StateBankOfIndia s3=new StateBankOfIndia(103,"hoovi",4000.34);
+        s1.GetOutputDetails();//display s1 customer data details
+        s2.GetOutputDetails();//display s2 customer data details
+        s3.GetOutputDetails();//display s3 customer data details
+        StateBankOfIndia.SbiTotalDetails();//it will display how many customers and total creditd amt  in sbi bank for all the objects
+        
+
+    }
+}
+
+package Batchno10Automation;
+
+public class SBI {
+    public static void main(String[] args) {
+        int accno;
+        String name;
+        accno=101;
+        double balance=2000;
+        name="poojitha";
+        System.out.println("accno="+accno);
+        System.out.println("balance="+balance);
+        System.out.println("name="+name);
+        int accno1;
+        String name1;
+        accno1=102;
+        double balance1=30000;
+        name1="siddu";
+        System.out.println("accno1="+accno1);
+        System.out.println("balance1="+balance1);
+        System.out.println("name1="+name1);
+        int accno2;
+        String name2;
+        accno2=103;
+       double balance2=7000;
+        name2="kavya";
+        System.out.println("accno2="+accno2);
+        System.out.println("balance2="+balance2);
+        System.out.println("name2="+name2);
+
+
+
+
+    }
+}
+
+Static:
+----------------
+
+Static is an access modifier.
+it can be applied for 
+1.variabe
+2.method
+Characteristics of static:
+----------------------------
+1.memory will allocate during compilation of a program only once 
+2.the keyword static must be prefixed before either variable or method.
+Stataic variable:
+The keyword static must be prefixed before the variable.
+ex:
+static int totalsal;
+for static variable default value is zero.
+Memory will allocate only once and value will be keep on updating.
+the value in stataic variable can be shared by class and objects.
+static method:
+-------------------
+the keyword static must be prefixed before the returntype of method.
+ex:
+public static void allsalries()
+{
+}
+Within static methods only static variables must be used.
+In non static methods we can use static variables and non static variables.
+Static method can be called by using class name.
+if required we can call with object also.
+This keyword:
+-----------------------------
+class cognizant
+{
+String id,name;//datamembers
+int sal;
+public cognizant(String id,String name,int sal)  //formal parameters
+{
+this.id=id;
+this.name=name;
+this.sal=sal;
+}
+}
+When formal parameters and datamenbers  are same in such case this keyword is used.
+If this keyword is not used then default values will displayed.
+Default  values is given by the default constructor.
+
+
+String vs 
+
+vs StringBuilder:
+
+String is immutable(not updatable) because updating, appending, deleting, inserting cannot be done for existing string.
+
+Example:
+
+	String s=“java”;
+
+StringBuffer:
+
+	1. String buffer is mutable, we can append, insert, delete, uoatde for existing content
+
+	append() 
+	insert()
+	reverse()
+	delete()
+
+
+	StringBuffer sb=new StringBuffer(“Prasad”);
+	sb.append(“munagal”);
+
+class Main {
+    public static void main(String[] args) {
+        StringBuffer sb=new StringBuffer("Prasad");
+	    sb.append("munagal");
+	    sb.insert(1,"morining");
+	    sb.reverse();
+        System.out.println(sb);
+    }
+}
+
+
+NOTE: How to convert StringBuffer to String
+
+class Main {
+    public static void main(String[] args) {
+        StringBuffer sb=new StringBuffer("Prasad");
+	    sb.append("munagal");
+	  
+	  
+        System.out.println(sb);
+        
+        String ss=sb.toString();
+         System.out.println(ss);
+    }
+}
+
+
+
+String Constant Pool:
+
+Difference between == and equals()
+
+class Main {
+    public static void main(String[] args) {
+        String s1="Prasad";
+        String s2="Prasad";
+        String s3=new String("Prasad");
+        String s4=new String("Prasad");
+   
+	  
+        System.out.println(s1==s2); //true
+        System.out.println(s1.equals(s2)); // true
+        System.out.println(s1==s3); //false
+        System.out.println(s3.equals(s4)); //true
+        
+    
+    }
+}
+
+
+
+
+Swapping:
+
+With third variable
+ 	 temp=a;
+        a=b;
+        b=temp;
+        
+Without third variable
+        a=a+b;
+        b=a-b;
+        a=a-b;
+
+  	 a=a^b;
+       b=a^b;
+       a=a^b;
+
+
+a=a*b,
+b=a/b,
+a=a/b
+
+Sorting of strings:
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    public static void main(String[] args) {
+        String s1[]={"Prasad","sneha","sunitha","nanda","poojitha"};
+       String temp="";
+       
+       
+       
+        for(int i=0;i<s1.length;i++)
+        {
+            for(int j=i+1;j<s1.length;j++)
+            {
+                if(s1[i].compareTo(s1[j])>0)
+                {
+                    temp=s1[i];
+                    s1[i]=s1[j];
+                    s1[j]=temp;
+                }
+            }
+        }
+        for(String h:s1)
+        {
+             System.out.println(h);
+        }
+       
+    
+    }
+}
+
+
+
+
+
+Substring:
+class Main {
+    public static void main(String[] args) {
+        
+        String s="madanapalle is good town";
+        
+        String ss=s.replaceAll("\\s","");
+        
+        System.out.println(ss);
+    }
+}
+
+
+
+class Main {
+    public static void main(String[] args) {
+        
+        String s=" madanapalle is good town ";
+        
+        //String ss=s.replaceAll("\\s","");
+      
+        System.out.println(s);
+        
+         String ss=s.trim();
+         System.out.println(ss);
+    }
+}
+
+
+Prasad
+
+Prasa
+Pras
+Pra
+Pr
+P
+
+Using substring():
+
+
+class Main {
+    public static void main(String[] args) {
+        
+       String name="prasad";
+       
+       int len=name.length();
+       
+       
+           for(int j=len;j>=0;j--)
+           {
+               System.out.println(name.substring(0,j));
+           }
+          
+      
+    }
+}
+
+Without using substring:
+
+class Main {
+    public static void main(String[] args) {
+        
+       String name="prasad";
+       
+       int len=name.length();
+       
+       for(int i=0;i<len;i++)
+       {
+           for(int j=0;j<len-i;j++)
+           {
+               System.out.print(name.charAt(j));
+           }
+           System.out.println();
+       }
+    }
+}
+
+
+
+p
+pr
+pra
+pras
+prasa
+
+class Main {
+    public static void main(String[] args) {
+        
+       String name="prasad";
+       
+       int len=name.length();
+       
+       for(int i=0;i<len;i++)
+       {
+           for(int j=0;j<i;j++)
+           {
+               System.out.print(name.charAt(j));
+           }
+           System.out.println();
+       }
+    }
+}
+
+Static:
+----------------
+
+Static is an access modifier.
+it can be applied for 
+1.variabe
+2.method
+Characteristics of static:
+----------------------------
+1.memory will allocate during compilation of a program only once 
+2.the keyword static must be prefixed before either variable or method.
+Stataic variable:
+The keyword static must be prefixed before the variable.
+ex:
+static int totalsal;
+for static variable default value is zero.
+Memory will allocate only once and value will be keep on updating.
+the value in stataic variable can be shared by class and objects.
+static method:
+-------------------
+the keyword static must be prefixed before the returntype
+ex:
+public static void allsalries()
+{
+}
+Within static methods only static variables must be used.
+In non static methods we can use static variables and non static variables.
+Static method can be called by using class name.
+if required we can call with object also.
+This keyword:
+-----------------------------
+class cognizant
+{
+String id,name;//datamembers
+int sal;
+public cognizant(String id,String name,int sal)  //formal parameters
+{
+this.id=id;
+this.name=name;
+this.sal=sal;
+}
+}
+When formal parameters and datamenbers  are same in such case this keyword is used.
+If this keyword is not used then default values will displayed.
+Default  values is given by the default constructor.
+
+
+
+Singleton class:
+
+1. We have to declare private-static instance of a class
+
+		private static Prasad p;
+
+1. Private constructor to prevent or avoid instantiation of object
+
+	private prasad()
+	{
+
+	}
+		Constructor must be empty
+
+3. We should define getInstance() to provide access to instance (this method should be publicly with static)
+4. Independent public method to display result 
+public void  display()
+{
+		System.out.println(“welcome to singleton class”);
+}
+
+
+Singleton class: A singleton class is class that only allows one instance of itself to be created. It is design pattern.
+~~~~~
+
+How to create singleton class:
+
+1. Create package first
+2. Then create two classes in that package 
+3.  In one file create above steps
+
+package sample_singleton;
+
+public class Prasad {
+
+	//step-1
+	private static Prasad p;
+	
+	//step-2
+	private Prasad()
+	{
+		
+	}
+	
+	//step-3
+	public static Prasad getInstance() 
+	{
+		if(p==null)
+		{
+			p=new Prasad();
+		}
+		
+		return p;
+	}
+	
+	public void display()
+	{
+		System.out.println("I am prasad with singleton class");
+	}
+}
+
+4. In other files make use of singleton class like below 
+package sample_singleton;
+
+public class SingletonDemo {
+
+	public static void main(String[] args) {
+		
+		Prasad.getInstance().display();
+		
+		
+		
+
+	}
+
+}
+
+When to use singleton class:
+
+1. When we need to ensure that only one instance of a class across application, in such case we can use singleton class
+
+
+Exception Handling:
+
+Without using exception handling:
+
+If project doesn’t implemented exception handling mechanism then it leads to “ABRUPTLY GET ABORTED”. To overcome this problem we need to implement exception handling mechanism.
+
+ERROR vs Exception:
+
+1.Error indicates serious problem that a reasonable application should not try to catch.
+2.It caused by JVM or hardware. 
+3.Example: OutOfMemoryError, StackOverFlowError(Recursions, infinity loops) .
+4.Errors are usually beyond the control of the programmer, and we should not try to handle errors.
+
+Exception indicates conditions that a reasonable application might try to catch. It caused by conditions in the program such as invalid input or logical errors. Examples: NullPointerException,IOException.                          
+
+
+		Object
+		   |	
+		Throwable
+		   |	
+	Exception	Errors
+           |                 |
+			   Virtual Memory Errors, Assertion Errors
+Exceptions:
+	1. Checked Exceptions(IO or Compile time exceptions)
+	2. Unchecked Exceptions(Runtime or Null pointer exceptions)
+
+Major Reasons why exception occurs:
+1. Invalid user input
+2. Code errors(logical-level)
+3. Null reference
+4. Arithmetic errors
+5. Out of bounds
+6.Database errors
+7.opening an unavailable files.
+
+
+types  of  exceptions:
+--------------------------
+1.built in exceptions:
+2.uer dfined exceptios:
+
+1.built in exceptions:
+----------------------------
+built in  exceptions  are pre defined exception classes
+provided   by java  to handle common errors during 
+program execution
+ a. Checked  exceptions
+checked  exceptions are called compile time exceptions.
+because these  exceptions are  checked at compilation time
+by the COMPILER.
+Ex:
+InteruptedException
+InstantiationException
+IOEXception:throws when i/p opearation fails.
+SQLException
+FileNotFoundException
+ClassNotFoundException
+
+2.unchecked exceptions
+unchecked exceptions are just opposit  to the  checked exceptions.
+these exceptions  are  not  checked  by  compiler.all runtime exceptions are ununchecked .
+ArithematicException
+ClassCastException
+NUllPointerException
+ArrayIndexOutOfBoundsException
+ArrayStoreException
+IllegalThreadStateException
+NumberFormatException
+NegtiveArrayIndexException
+2.userdefined  exceptions
+user defined exceptions are customized  exceptions.
+we can  create our  own exceptions.
+the  keyword throw is used to create customized exceptions.
+
+
+
+
+Exception handling keywords:
+1.try
+2.catch
+3.throws
+4.throw
+5.finally
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    public static void main(String[] args) {
+        try
+        {
+        int a,b,div;
+        a=10;
+        b=0;
+        div=a/b;
+         System.out.println("div="+div);
+         System.out.println("good morning");
+        }
+        catch(ArithmeticException e)
+        {
+            // System.out.println("b value should not be zero");
+            // System.out.println(e.getMessage());
+            // e.printStackTrace();
+            System.out.println(e.toString());
+        }
+       
+    
+        
+    }
+}
+
+e.getMessage():
+It is used to print message or content about the exception.
+
+e.printStackTrace();
+It gives description of the exception.
+
+e.toString():
+it displays exception class name along with message.
+Try:
+Doubtful code will be placed under observation
+catch
+catch is the exception handler which handles the exception.Whenever exception takes place in try block it immediately reaches to catch block.
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    public static void main(String[] args) {
+        try
+        {
+        int a[]={10,20,30,40,50};
+        for(int i=0;i<=a.length;i++)
+        {
+    System.out.println(a[i]);
+        } 
+        }
+        catch(ArrayIndexOutOfBoundsException e)
+        {
+            // System.out.println("limit exceeds");
+            // System.out.println(e.getMessage());
+            // e.printStackTrace();
+            System.out.println(e.toString());
+            
+        }
+        
+    }
+}
+
+using exception:
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    public static void main(String[] args) {
+        try
+        {
+        int a[]={10,20,30,40,50};
+        for(int i=0;i<=a.length;i++)
+        {
+    System.out.println(a[i]);
+        } 
+        }
+        catch(Exception e)
+        {
+            // System.out.println("limit exceeds");
+            // System.out.println(e.getMessage());
+            // e.printStackTrace();
+            System.out.println(e.toString());
+            
+        }
+        
+    }
+}
+output:
+10
+20
+30
+40
+50
+java.lang.ArrayIndexOutOfBoundsException: Index 5 out of bounds for length 5
+
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    public static void main(String[] args) {
+        try
+        {
+            int x,y,div;
+            x=10;
+            y=0;
+            div=x/y;
+            System.out.println(div);
+        int a[]={10,20,30,40,50};
+        for(int i=0;i<a.length;i++)
+        {
+    System.out.println(a[i]);
+        } 
+        }
+        catch(ArithmeticException e)
+        {
+            System.out.println("Y should not be zero");
+            // System.out.println(e.getMessage());
+            // e.printStackTrace();
+            // System.out.println(e.toString());
+            
+        }
+        catch(ArrayIndexOutOfBoundsException e )
+        {
+            System.out.println("limit Exceeds");
+        }
+        
+    }
+}
+output:
+Y should not be zero
+
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    public static void main(String[] args) {
+            String name=null;
+            System.out.println(name.length());
+            
+        
+    }
+}
+
+output:
+ERROR!
+Exception in thread "main" java.lang.NullPointerException: Cannot invoke "String.length()" because "<local1>" is null
+	at Main.main(Main.java:7)
+
+using Exception handling mechanism:
+
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    public static void main(String[] args) {
+        try
+        {
+           String name=null;
+            System.out.println(name.length());
+  
+        }
+        catch(NullPointerException e)
+        {
+        System.out.println("String should not be null");
+         System.out.println(e.getMessage());
+          System.out.println(e.toString());
+          e.printStackTrace();
+        }
+    }
+}
+
+output:
+String should not be null
+Cannot invoke "String.length()" because "<local1>" is null
+java.lang.NullPointerException: Cannot invoke "String.length()" because "<local1>" is null
+java.lang.NullPointerException: Cannot invoke "String.length()" because "<local1>" is null
+	at Main.main(Main.java:9)
+ERROR!
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at jdk.compiler/com.sun.tools.javac.launcher.Main.execute(Main.java:484)
+	at jdk.compiler/com.sun.tools.javac.launcher.Main.run(Main.java:208)
+	at jdk.compiler/com.sun.tools.javac.launcher.Main.main(Main.java:135)
+
+=== Code Execution Successful ===
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    public static void main(String[] args) {
+           int a[]=new int[-10];
+            System.out.println(a.length);
+            
+        
+    }
+}
+
+output:ERROR!
+Exception in thread "main" java.lang.NegativeArraySizeException: -10
+	at Main.main(Main.java:6)
+
+using exception handling mechanism:
+
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    public static void main(String[] args) {
+        try
+        {
+            int a[]=new int[-10];
+           System.out.println(a.length);  
+        }
+        catch(NegativeArraySizeException e)
+        {
+        System.out.println("Size shoulb be always positive");
+         System.out.println(e.getMessage());
+          System.out.println(e.toString());
+          e.printStackTrace();
+        }
+    }
+}
+
+output:
+Size should be always positive
+-10
+java.lang.NegativeArraySizeException: -10
+java.lang.NegativeArraySizeException: -10
+	at Main.main(Main.java:8)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+ERROR!
+	at jdk.compiler/com.sun.tools.javac.launcher.Main.execute(Main.java:484)
+	at jdk.compiler/com.sun.tools.javac.launcher.Main.run(Main.java:208)
+	at jdk.compiler/com.sun.tools.javac.launcher.Main.main(Main.java:135)
+
+=== Code Execution Successful ===
+
+one example for NumberFormatException?
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    public static void main(String[] args) {
+        try
+        {
+         String name="pooji";
+         int a=Integer.parseInt(name);
+        
+         System.out.println(a);
+  
+        }
+        catch(NumberFormatException e)
+        {
+        System.out.println("it should not accept characters and special symbols");
+         System.out.println(e.getMessage());
+          System.out.println(e.toString());
+          e.printStackTrace();
+        }
+    }
+}
+output:
+it should not accept characters and special symbols
+For input string: "pooji"
+java.lang.NumberFormatException: For input string: "pooji"
+java.lang.NumberFormatException: For input string: "pooji"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:662)
+	at java.base/java.lang.Integer.parseInt(Integer.java:778)
+	at Main.main(Main.java:9)
+ERROR!
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at jdk.compiler/com.sun.tools.javac.launcher.Main.execute(Main.java:484)
+ERROR!
+	at jdk.compiler/com.sun.tools.javac.launcher.Main.run(Main.java:208)
+	at jdk.compiler/com.sun.tools.javac.launcher.Main.main(Main.java:135)
+
+=== Code Execution Successful ===
+
+
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    public static void main(String[] args) {
+        try
+        {
+            int x,y,div;
+            x=10;
+            y=0;
+            div=x/y;
+            System.out.println(div);
+        int a[]={10,20,30,40,50};
+        for(int i=0;i<=a.length;i++)
+        {
+    System.out.println(a[i]);
+        } 
+        }
+        catch(ArithmeticException e)
+        {
+            System.out.println("Y should not be zero");
+            System.out.println(e.getMessage());
+            e.printStackTrace();
+            System.out.println(e.toString());
+            
+        }
+        catch(ArrayIndexOutOfBoundsException e )
+        {
+            System.out.println("limit exceeds");
+            System.out.println(e.getMessage());
+            e.printStackTrace();
+            System.out.println(e.toString());
+        }
+        
+    }
+}
+output:
+Y should not be zero
+/ by zero
+java.lang.ArithmeticException: / by zero
+	at Main.main(Main.java:11)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+ERROR!
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at jdk.compiler/com.sun.tools.javac.launcher.Main.execute(Main.java:484)
+	at jdk.compiler/com.sun.tools.javac.launcher.Main.run(Main.java:208)
+ERROR!
+	at jdk.compiler/com.sun.tools.javac.launcher.Main.main(Main.java:135)
+java.lang.ArithmeticException: / by zero
+
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    public static void main(String[] args) {
+        try
+        {
+            int x,y,div;
+            x=10;
+            y=2;
+            div=x/y;
+            System.out.println(div);
+        int a[]={10,20,30,40,50};
+        for(int i=0;i<=a.length;i++)
+        {
+    System.out.println(a[i]);
+        } 
+        }
+        catch(ArithmeticException e)
+        {
+            System.out.println("Y should not be zero");
+            System.out.println(e.getMessage());
+            e.printStackTrace();
+            System.out.println(e.toString());
+            
+        }
+        catch(ArrayIndexOutOfBoundsException e )
+        {
+            System.out.println("limit exceeds");
+            System.out.println(e.getMessage());
+            e.printStackTrace();
+            System.out.println(e.toString());
+        }
+        
+    }
+}
+
+output:
+
+
+ERROR!
+5
+10
+20
+30
+40
+50
+limit exceeds
+Index 5 out of bounds for length 5
+java.lang.ArrayIndexOutOfBoundsException: Index 5 out of bounds for length 5
+	at Main.main(Main.java:16)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at jdk.compiler/com.sun.tools.javac.launcher.Main.execute(Main.java:484)
+	at jdk.compiler/com.sun.tools.javac.launcher.Main.run(Main.java:208)
+	at jdk.compiler/com.sun.tools.javac.launcher.Main.main(Main.java:135)
+java.lang.ArrayIndexOutOfBoundsException: Index 5 out of bounds for length 5
+
+=== Code Execution Successful ===
+
+
+username=Sneha
+input should be Sneha output should be "my name is Sneha".
+if input should not be Sneha then create user defined exception
+pwd:
+
+
+How to create User defined exceptions
+Throw is a keyword to create customized exceptions in java.
+Step1:
+try to use if conditon if required
+Step2:
+use throw keyword with valied user defined class name along with exception message.
+ex:
+throw new Poojitha("poojitha learning java");
+Step 3:
+create class by name With user defined exception name and extends with exception class.
+Ex:Class Poojitha extends Exception
+{
+}
+
+Step4:
+implement parameterized constructor
+public Poojitha(String Msg)
+{
+}
+Step 5:
+Super keyword:
+it is used to invoke base class constructor .
+We have to implement the concept of inheritance
+the super keyword should be the first statement.
+public Poojitha(String Msg)
+{
+super(msg);  //this invokes constructor of Exception class.
+}
+Step 6
+now implement try catch keywords
+catch(Poojitha e)
+{
+System.out.println(e.getMessage());
+System.out.println(e.toString());
+}
+
+sample program1:
+package PracticeClassJavaStringpgms;
+
+public class UserDefinedException {
+    public static void main(String[] args) {
+        try {
+            int a;
+            a = 5;
+            if (a >= 3) {
+                throw new PoojithaException("a should not be greater than or equal to 3");
+            }
+        }
+        catch(PoojithaException e)
+        {
+            System.out.println(e.getMessage());
+        }
+    }
+}
+ Inheritance class:
+
+package PracticeClassJavaStringpgms;
+
+public class PoojithaException extends Exception
+{
+    public PoojithaException(String msg)
+    {
+       super(msg);
+    }
+
+}
+
+
+Sample program 2:
+
+package PracticeClassJavaStringpgms;
+
+public class Addition {
+    public static void main(String[] args) {
+        try {
+            int a, b, sum;
+            a = 2;
+            b = 8;
+            sum = a + b;
+            if (sum == 10) {
+                System.out.println("sum=" + sum);
+            } else {
+                throw new SnehaException("DO not perform the Addition");
+            }
+        }
+        catch(SnehaException e)
+        {
+            System.out.println(e.getMessage());
+        }
+    }
+}
+
+
+inheritance class:
+
+package PracticeClassJavaStringpgms;
+
+import java.sql.SQLOutput;
+
+public class SnehaException extends Exception
+{
+    public SnehaException(String msg)
+    {
+        super(msg);
+    }
+
+}
+
+
+  finally :
+Weather  exception may or may not takes place finally block of statements will execute compulsory.
+ex:
+finally
+        {
+            System.out.println("thankyou");
+        }
+
+What is Exception:
+--------------------
+Exception  is an object in java. Due to invalid input given by user leads to exceptions.
+it is an abnormal situation that takes place during running of the program with bad input.
+
+
+Interface:
+--------------
+
+Interface is alternative concept for multiple inheritance. In java to achieve multiple inheritance it can be achieved through the concept of interface. It is defined as it contains abstract methods, static methods and default methods. We can also declare constants. The keyword “interface” is used to create interface definition.
+
+Example:
+
+Interface employee
+{
+
+	static final int a=10;
+
+	// it is an abstract method
+	public void display();
+
+	// default method
+	default void output()
+	{
+		System.out.println(“I am default”);
+	}
+
+	// static method
+	static void input()
+	{
+		System.out.println(“I am static”);
+	}
+}
+
+
+Abstract method : method should be declared (end with semicolon) It doesn’t contains body. 
+Default method: default is a keyword used to define default methods. For default methods we can define definitions within the interface.
+
+1. Class can implements interfaces:
+----------------------------------
+Example:
+Interface Demo
+{
+
+}
+Class Sample implements Demo
+{
+
+} 
+
+Interface can extends interface:
+-------------------------------
+example:
+
+Interface Demo1
+{
+
+}
+
+Interface Demo2 extends Demo1
+{
+
+
+}
+
+
+1. Class can extends class:
+---------------------------
+example:
+
+Class Parent
+{
+
+}
+
+Class child extends parent
+{
+
+}
+
+
+Example: Interface cannot extends or implements class:
+--------------------------------------------------------
+
+Class Demo
+{
+
+	
+}
+
+interface Sample
+{
+
+}
+
+
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+
+public interface Demo
+{
+    public void display();
+    
+    default void display1()
+    {
+        System.out.println("interface default");
+    }
+    
+    public static void display2()
+    {
+        System.out.println("interface static");
+    }
+}
+
+
+class Sample implements Demo {
+    public void display()
+    {
+        System.out.println("sample method in class");
+    }
+    
+    public static void main(String[] args) {
+        Sample sam=new Sample();
+        sam.display();
+        sam.display1();
+        Demo.display2();
+    }
+}
+
+
+-------------------------------------------------------------
+
+public interface Demo1 {
+
+	default void calculate()
+	{
+		System.out.println("interface caculation");
+	}
+}
+
+
+public interface Demo2 {
+
+	default void calculate()
+	{
+		System.out.println("interface addition");
+	}
+}
+
+
+public class Demos implements Demo1,Demo2{
+
+	public void calculate()
+	{
+	
+		
+		
+		System.out.println("class calculate");
+		
+		Demo2.super.calculate();
+		Demo1.super.calculate();
+		
+	}
+	public static void main(String[] args) {
+		Demos dm=new Demos();
+		dm.calculate();
+	
+
+	}
+
+}
+
+
+public class Demos implements Demo1,Demo2{
+
+	public void calculate()
+	{
+	
+		
+		
+		System.out.println("class calculate");
+		
+		Demo2.super.calculate();
+		Demo1.super.calculate();
+		
+	}
+	public static void main(String[] args) {
+		Demo1 dm1=new Demos();
+		
+		dm1.calculate();
+	
+		
+
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

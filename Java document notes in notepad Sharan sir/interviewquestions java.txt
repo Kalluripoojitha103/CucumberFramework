@@ -1,0 +1,70 @@
+Core JAVA
+1.what is  string pool?
+2.abstract vs interface?
+3.== VS equals()
+4.example of method overloading in ur project
+5.this and super
+6.single ton class
+7. diff b/w hashmap and hashtable
+
+1.java programs:
+String msg={"javaprogramming","javalanguage","java"};
+to display repeated word as output
+output is
+java
+2.java program 
+arr={1,5,0,4,0,6,0}
+output:
+{1,4,5,6,0,0,0}
+
+selenium:
+about explicit wait with example
+about javascript executor
+about actions class
+is  webdriver is class r interface
+cross browser testing
+about reporting tool
+pagefactory syntax
+can we automate images?
+jira:
+how to create bug
+jenkins:
+how to pass parameters
+cucumber:
+about table set
+how to pass parameters
+how many given can we give for one scenerio
+hooks and background
+cucumber options
+testng:
+annotations explination
+dataprovider
+how we do parallel execution using testNG
+
+
+scenerio:
+go to amazon .com
+search for iphone15
+
+will display  list
+select price  of every iphone15
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+

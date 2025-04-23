@@ -1,0 +1,16 @@
+Patient App is  web-based application and Mobile based Application designed for interacting with providers (doctors)virtually. Modules involved
+are 1.Virtual Visits(online appointment) 2.Instant Virtual Visits(emergency appointment) 3.Provider Chat 4.Medication(tablets)  6.Care Content (telling symptoms about the disease)7.Health vitals(smart watch like checking bp,heart beat)8.sign in 9.sign out
+By Using inconnect patient App Patient can communicate with providers , can connect to google fit and Apple Health,Can set Remainders for Medication, can chat with providers .
+
+
+its patient application.its supports both web and mobile platforms .this application is used to interact with providers.here providers are the doctors.modules in this application are.
+1.sing up module
+-here patient want to get register using US number.it wont supports Indian numbers
+2.sing in-once patient got registered,patient can login into app and can all the modules like virtual visits,instant virtual visit,chating with doctor,medication details.
+
+challenges and difficulties:
+****************************
+as the app supports only us numbers to create patients so we are using second line app to get the us numbers with the help of this app we are  tesing the application.every 15 days number will get  expired.it is big challenging to test the app with different us numbers.
+
+
+

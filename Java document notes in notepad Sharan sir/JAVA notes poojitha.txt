@@ -1,0 +1,383 @@
+About java
+**********
+variables
+datatypes
+operators
+Structure of java program
+*************************
+class classname
+{
+public static void main(String[] args){
+Declaration;
+input;
+business logic;
+output;
+}
+}
+Branching Statements:
+*********************
+if statement
+if else statement
+looping statement:
+while loop
+for loop
+for each loop
+
+java program for factorial
+**************************
+int fact,n;
+        fact=1;
+        n=6;
+        for(int i=1;i<=n;i++)
+        {
+            fact=fact*i;
+        }
+        System.out.println(fact);
+Java program for prime number or not
+*************************************
+ //natural number >1
+//which has only 2 factors 1 and itself
+//19=> 1 nad 19 =>prime number
+//28=>1,2,4,7,14,28 =>not a prime number
+
+        int n = 7;
+        int count = 0;
+        if (n > 1) {
+            for (int i = 1; i <= n; i++) {
+                if (n % i == 0)
+                    count++;
+            }
+            if (count == 2) {
+                System.out.println("prime number=" + n);
+            }
+            else
+            {
+                System.out.println("not a prime number=" + n);
+            }
+        }
+        else
+        {
+            System.out.println("not a prime number=" + n);
+        }
+java program for perfect square
+******************************
+int n=4;
+int square;
+for(int i=1;i<=n;i++)
+{
+square=i*i;
+}
+system.out.println(square);
+
+java program for sum of natual numbers
+**************************************
+int n=10;
+int sum=0;
+for(int i=1;i<=n;i++)
+{
+sum=sum+i;
+}
+System.out.println(sum);
+
+Arrays:
+******
+1D array:
+*********
+
+Strings:
+*******
+in java string can be defined as group of characters represented within double quotes.
+We can defined string in 2 ways.
+1.literal
+2.new keyword
+1.literal:
+*********
+string name="poojitha";
+2.new keyword:
+*************
+String name=new String("poojitha");
+
+Length()
+CharAt()
+
+String name="poojitha";
+ for(int i=0;i<name.length();i++)
+        {
+            System.out.println(name.charAt(i));
+        }
+        for(int i=name.length()-1;i>=0;i--)
+        {
+            System.out.print(name.charAt(i));
+        }
+
+equals():
+********
+String n1="poojitha",n2="POOJITHA";
+        if(n1.equals(n2))
+        {
+            System.out.println("both are same");
+        }
+        else {
+            System.out.println("both are not same");
+        }
+equalsIgnoreCase():
+*******************
+ String n1="poojitha",n2="POOJITHA";
+        if(n1.equalsIgnoreCase(n2))
+        {
+            System.out.println("both are same");
+        }
+        else {
+            System.out.println("both are not same");
+        }
+
+java program for count no of vowels in a string:
+************************************************
+
+ String name="poojitha";
+        String v="aeiou";
+        int count=0;
+        ArrayList<Character> vowels=new ArrayList<Character>();
+        for(int i=0;i<v.length();i++)
+        {
+            vowels.add(v.charAt(i));
+        }
+        System.out.println(vowels);
+        for(int i=0;i<name.length();i++)
+        {
+            if(vowels.contains(name.charAt(i)))
+            {
+                count++;
+            }
+        }
+        System.out.println("no of vowels ="+count);
+
+JAVA PROGRAM  FOR OCCURENCENCES OF EACH VOWEL IN A STRING
+*********************************************************
+
+ String name="poojitha";
+        int count=0;
+        HashMap<Character,Integer> vowels=new HashMap<Character,Integer>();
+        vowels.put('a',0);
+        vowels.put('e',0);
+        vowels.put('i',0);
+        vowels.put('o',0);
+        vowels.put('u',0);
+        for(int i=0;i<name.length();i++)
+        {
+            if(vowels.containsKey(name.charAt(i)))
+            {
+               count=vowels.get(name.charAt(i));
+               vowels.put(name.charAt(i),++count);
+            }
+        }
+        System.out.println(vowels);
+
+ASCII values:
+*************
+A---->65 to Z----->90
+a----->97 to z---->122
+0---->48 to 9----->56
+JAVA PROGRAM TO COUNT NO OF UPPER CASE CHARACTERS AND LOWER CASE CHARACTERS AND NO OF DIGITS AND NO OF SPECIAL sym
+******************************************************************************************************************
+String name="i am learning JAVA & Selenium for RS.30000";
+        char ch;
+        int upc=0,lcc=0,dc=0,spc=0;
+        for(int i=0;i<name.length();i++)
+        {
+            ch=name.charAt(i);
+            if(ch>=65 && ch<=90)
+            {
+                upc++;
+            }
+            else if(ch>=97 && ch<=122)
+            {
+                lcc++;
+            }
+            else if(ch>=48 && ch<=56)
+            {
+                dc++;
+            }
+            else
+            {
+                spc++;
+            }
+        }
+        System.out.println("upper case count="+upc);
+        System.out.println("lower case count="+lcc);
+        System.out.println("digits count="+dc);
+        System.out.println("special symbol count"+spc);
+
+toCharArray
+convert string to character array
+String name="poojitha";
+        char ch[];
+        ch=name.toCharArray();
+        System.out.println(ch);
+
+Jva program for remove duplicates:
+ String name="poojitha";
+               HashSet<Character> hs=new HashSet<Character>();
+        for(int i=0;i<name.length();i++) {
+            hs.add(name.charAt(i));
+        }
+        System.out.println(hs);
+        for(Character C:hs)
+        {
+            System.out.println(C);
+        }
+java program for to count no of characters in a string
+
+String name="poojitha banglore selenium java";
+        HashMap<Character,Integer> d=new HashMap<Character,Integer>();
+        char ch[]=name.toCharArray();
+        for(char c:ch)
+        {
+            if(d.containsKey(c))
+            {
+                d.put(c,d.get(c)+1);
+            }
+            else {
+                d.put(c,1);
+            }
+        }
+        System.out.println(d);
+
+04-02-2025:
+
+Exception names in java:
+1.Arithmetic exception--denominator value is zero
+2.IOexception -input and output hardware problem
+3.Number Format Exception-entering special symbols,characters instead of numbers
+4.Array Index out of bounds Exception
+5.Negetive Array index exception-provide  index numbers of array as negative.
+4.Null pointer exception-display null if the values does not given by user
+
+Exception names in selenium:
+1.Stale element exception-occurs when an element is no longer attached to the DOM.
+			-refresh the reference to the element by locating it again
+2.Element not visible exception-raising an exception if the element is not visible in a webpage.
+				-sol:ensures the element is visible,scroll into a view, or clickable
+3.Element not found Exception-raised when an element cannot be found.
+				-ensure the element locator (id,name,xpath) is correct and the element is visible
+4.Null pointer exception
+5.Alert not present exception
+6.Window not present exception
+7.TimeoutException.-occurs when a command takes too long to complete.
+		-increase the wait time using webdriverwait.
+Webdriverexception-it will occur for varius reasons.
+		check the driver,browser or network for issues.
+
+
+remaining concepts in java:
+
+methods
+static
+abstract
+final
+
+
+06-02-2025:
+
+Static:
+Static can be applied for variable and methods.
+Static variable:
+static keyword is prefixed before the variable then it is called static variables.
+ static int allsalaries;
+static variables can be used in both static and non static methods.
+Static methods:
+the keyword static is prefixed before the method then it is called static method.
+ex:static public void display()
+{
+}
+within static methods only static variables must be used.static methods can be invoked by using class name.
+ex:
+Infosys.display();
+Final:
+final is a keyword used for variable,method and class.
+Final class:
+if keyword final applied for class .once class declared as final then it should not be extends the another class.that is Inheritance is not possible.
+ex:class A
+{
+}
+class B extends A
+{
+}
+Ex:
+final class A
+{
+}
+class B extends A(error)
+{
+}
+Final Mthod:
+if metod is declared as final then it can not be override for further calss.
+ex:
+class A 
+{
+final public void input()
+{
+}
+Class B extends class A
+{
+public void input()(error)
+{
+
+}
+Final variable:
+if variable is declared as final then the value become constant.final should not be updated during execution of a program.
+ex:
+final double PI=3.14;
+variables should be always uppercase when u declare final keyword.
+
+
+@beforesuite
+@aftersuite
+@BeforeMetod
+@afterMethod
+@BeforeClass
+@Afterclass
+@beforeTest
+@AfterTest
+@Test
+
+
+invocation count:
+@Test (invocationcount=10)
+public void display()
+{
+system.out.println("poojitha");
+}
+when there is a reqirement of executing same method n times in such case we can use invocationcount using @Test annotation.
+
+nosuchelementexception-attempting to click a button that does not exist
+
+elementnotfoundexception-notvisible in a webpage
+
+elementnotinteractableexception-element is either disabled or invisible
+
+elementnotselectableexception-trying to interact with an element that is not selectable
+
+staleelementreferenceexception-when an element is no longer attached to the dom
+
+timeoutexception-implicit wait times out
+
+webdriverexception- a general exception class for webdriver related issues
+
+webdrivertimeoutexception- webdriver wait timeout
+
+nosuchwindowexceptin-navigating to a closed tab
+
+sessionnotcreatedexception-browserloading failure
+
+noalertpresentexception-attempting to handle an alert that doesnot exist
+
+movetargetoutofboundsexception-target of a mouse action is outside the visible area
+
+connectionclosed exception-network issue
+
+
+
+
+
+

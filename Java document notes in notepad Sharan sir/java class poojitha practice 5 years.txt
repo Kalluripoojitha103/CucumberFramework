@@ -1,0 +1,600 @@
+java class poojitha practice:
+
+convert integer to String:
+------------------------------------------------------
+There are three ways to convert
+1.Integer.toString(a)
+ex: int a=20;
+    String b;
+    b=Integer.toString(a);
+    sout(b);
+2.String.value(a)
+ex: int a=20;
+    String b;
+    b=String.valueOf(a);
+    sout(b);
+3.""+a
+ex: int a=20;
+    String b;
+    b=""+a  //automatically it will convert integer to string.
+    sout(b);
+
+convert character Integer to Numeric:
+------------------------------------------
+1.Integer.parseInt(String.value(a);
+ex: char a='3';
+    int b;
+    b=Integer.parseInt(String.valueOf(a));
+    sout(b);
+2.Character.getNumericValue(a)
+ex: char a='3';
+    int b;
+    b=Character.getNumericValue(a);
+    sout(b);
+
+Character Functions:
+----------------------------------------
+1.Character.isDigit(c)
+ex: char c='3';
+    sout(Character.isDigit(c));
+2. Character.isLetter(c)
+ex: char c='a';
+    sout(Character.isLetter(c));
+3.Character.isWhitespace(c)
+ex: char c=' ';
+    sout(Character.isWhitespace(c));
+4.Character.isLetterOrDigit(c)
+ex: char c='a';
+    sout(Character.isLetterOrDigit(c));
+         (OR)
+    char c='4';
+    sout(Character.isLetterOrDigit(c));
+5.Character.isUpperCase()
+ex: char c='A';
+    sout(Character.isUpperCase(c));
+6. Character.isLowerCase()
+ex: char c='a';
+    sout(Character.isLowerCase(c));
+7. Character.toUpperCase()
+ex: char c='a';
+    sout(Character.toUpperCase(c));
+8. Character.toLowerCase()
+ex: char c='A';
+    sout(Character.toLowerCase(c));
+
+1. It is a framework 
+2. We have to import java.util.*; 
+3. It supports no.of classes and interfaces.
+
+
+List:
+~~~~~~~~~~~
+List is a collection framework which is used to store elements dynamically.
+It will allow duplicate elements and  maintain the insertion order.
+A list is a interface in java,python,and many other languages.
+Each element in the list has a specific index starting from 0.
+elements in the list are stored in the order in which they are inserted.
+List sizes can change dynamically by adding or removing elements.
+In java,the list interface is implemented by classes such as
+1. ArrayList
+2. Vector
+3. LinkedList
+4. Stack
+
+
+We can create any type of List (Integer, string, fraction ….)
+
+ 1.  // display all elements
+        System.out.println(al);
+        
+2.   // using for each
+        for(Integer i:al)
+        {
+            System.out.println(i);
+        }
+        
+3.   // using streams(advanced)
+        al.forEach(i -> System.out.println(i));
+4.   // Iterator
+        Iterator<Integer> ii = al.iterator();
+        
+        while(ii.hasNext())
+        {
+            System.out.println(ii.next());
+        }
+
+        
+
+
+Set:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1.Set is a collection framework and it is a unordered collection.
+2.it does not allow duplicate elements.
+3.each element is unique.
+4.when there is reqirement of storing unique values without caring about the order then we have to use set collections.
+5.in java,the set is an interface that extends collection.it is implemented by classes like
+1.hashset---->does not maintain order and is backed by a hash table.
+2.Linkdhashset---->maintains insertion order
+3.treeset----->maintains elements in a sorted order(ascending by default).
+
+HashMap:
+~~~~~~~~~~~~~
+
+1. Stores data in the form of  key value pair.
+2. It can be combination of two different wrapper classes.
+3. Syntax:
+HashMap<Wrapper_class1, Wrapper_class2> object= new HashMap<Wrapper_class1, Wrapper_class2>();
+4.it allows one null key and multiple null values in hashmap
+5.hashmap is faster compared to hash table because it is not synchronized,meaning it is not thread safe.
+6.it does not guarantee any specific order of keys or values.
+
+Map: interface
+~~~~~
+
+Entry - class
+
+entrySet()
+getKey()
+getValue()
+
+ for(Map.Entry e:hm.entrySet())
+        {
+            System.out.println(e.getKey()+" - "+e.getValue());
+        }
+
+Hashtable:
+It is used to store the data in the form of key value pair.
+it is a combination of two wrapper classes.
+it does not allow null keys and null values.
+hash table is slower compared to hash map due to the overhead of synchronization,meaning it is thread-safe.
+Only one thread can access and modify it at a time,making it safe for use in multi-threaded enviroments.
+Like hashmap,it does not guarantee any specific order of keys or values.
+hash table is used when thread safety is required.
+
+program to count each vowel in a string by using collections.
+
+String name="poojitha hoovishka reddy";
+        int count=0;
+        HashMap<Character,Integer> vowel=new HashMap<Character,Integer>();
+        vowel.put('a',0);
+        vowel.put('e',0);
+        vowel.put('i',0);
+        vowel.put('o',0);
+        vowel.put('u',0);
+        for (int i=0;i<name.length();i++)
+        {
+            if(vowel.containsKey(name.charAt(i)))
+            {
+                count=vowel.get(name.charAt(i));
+                vowel.put(name.charAt(i),++count);
+            }
+        }
+        System.out.println(vowel);
+
+2.java program for reverse a string,switching positions,Caesar Cipher(Shift by 1)
+ex:hello madanapalli
+output:
+olleh illapanadam
+illapanadam olleh
+Ifmmp!Nbecbobqbmmj
+
+
+
+
+public class Main {
+
+    // Function to reverse a string
+    public static String reverseString(String str) {
+        String reversed = "";
+        for (int i = str.length() - 1; i >= 0; i--) {
+            reversed += str.charAt(i);
+        }
+        return reversed;
+    }
+
+    // Function to apply Caesar cipher (shift by 1) on a string
+    public static String caesarCipherShift(String str) {
+        String shifted = "";
+        for (int i = 0; i < str.length(); i++) {
+            char c = str.charAt(i);
+            shifted += (char) (c + 1);  // Shift each character by 1
+        }
+        return shifted;
+
+    }
+
+    public static void main(String[] args) {
+        String input = "Hello Madanapalli";
+
+        // Step 1: Split the input string into two parts: "Hello" and "Madanapalli"
+        String[] parts = input.split(" ");
+
+        // Step 2: Reverse both parts
+        String reversedPart1 =  reverseString(parts[0]);  // "olleh"
+        String reversedPart2 = reverseString(parts[1]);  // "illapanadam"
+
+        // Output 1: "olleh illapanadam"
+        System.out.println(reversedPart1 + " " + reversedPart2);
+
+        // Output 2: "illapanadam olleh"
+        System.out.println(reversedPart2 + " " + reversedPart1);
+
+        // Step 3: Apply Caesar cipher (shift by 1) to the original input string
+        String shiftedString = caesarCipherShift(input);
+
+        // Output 3: "Ifmmp"
+        System.out.println(shiftedString);
+    }
+}
+
+java program for different combinations of otp's
+
+Numeric OTPs (Only digits)
+
+These are the most common types of OTPs, typically made up of numbers.
+
+Example Code (Numeric OTP):
+
+import java.util.Random;
+
+public class OTPGenerator {
+
+    // Generate numeric OTP of given length
+    public static String generateNumericOTP(int length) {
+        String numbers = "0123456789";
+        Random random = new Random();
+        StringBuilder otp = new StringBuilder(length);
+
+        for (int i = 0; i < length; i++) {
+            otp.append(numbers.charAt(random.nextInt(numbers.length())));
+        }
+
+        return otp.toString();
+    }
+public static void main(String[] args) {
+        int length = 6; // You can change the OTP length
+        String otp = generateNumericOTP(length);
+        System.out.println("Numeric OTP: " + otp);
+    }
+}
+
+Output Example:
+
+Numeric OTP: 295743
+
+2. Alphanumeric OTPs (Letters + digits)
+
+These OTPs are a mix of letters and numbers, adding an extra layer of security.
+
+Example Code (Alphanumeric OTP):
+
+import java.util.Random;
+
+public class OTPGenerator {
+
+    // Generate alphanumeric OTP of given length
+    public static String generateAlphanumericOTP(int length) {
+        String characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        Random random = new Random();
+        StringBuilder otp = new StringBuilder(length);
+
+        for (int i = 0; i < length; i++) {
+            otp.append(characters.charAt(random.nextInt(characters.length())));
+        }
+
+        return otp.toString();
+    }
+
+    public static void main(String[] args) {
+        int length = 8; // You can change the OTP length
+        String otp = generateAlphanumericOTP(length);
+        System.out.println("Alphanumeric OTP: " + otp);
+    }
+}
+
+Output Example:
+
+Alphanumeric OTP: A7c2E8Gk
+
+3. Alphanumeric OTPs with Special Characters
+
+You can add special characters to increase the complexity of the OTP.
+
+Example Code (Alphanumeric + Special Characters OTP):
+
+import java.util.Random;
+
+public class OTPGenerator {
+
+    // Generate alphanumeric OTP with special characters of given length
+    public static String generateComplexOTP(int length) {
+        String characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_=+";
+        Random random = new Random();
+        StringBuilder otp = new StringBuilder(length);
+
+        for (int i = 0; i < length; i++) {
+            otp.append(characters.charAt(random.nextInt(characters.length())));
+        }
+
+ return otp.toString();
+    }
+
+    public static void main(String[] args) {
+        int length = 10; // You can change the OTP length
+        String otp = generateComplexOTP(length);
+        System.out.println("Complex OTP: " + otp);
+    }
+}
+
+Output Example:
+
+Complex OTP: aB3$Fg2@Qx
+
+4. Time-based OTPs
+
+Time-based OTPs (TOTP) are generated using an algorithm based on the current time and are valid for only a short period (like Google Authenticator). This requires additional libraries like Google Authenticator or TOTP algorithms.
+
+
+java program for Extract only integers and perform addition
+
+String s[]={“a1we”,”2mhy”,”gh4gh”}
+
+public class ExtractAndAddIntegers {
+
+    // Function to extract integers from a string and perform addition
+    public static int extractAndAddIntegers(String[] arr) {
+        int sum = 0;
+        
+        // Loop through each string in the array
+        for (String s : arr) {
+            // Loop through each character in the string
+            for (int i = 0; i < s.length(); i++) {
+                char c = s.charAt(i);
+                
+                // Check if the character is a digit
+                if (Character.isDigit(c)) {
+                    // Convert the character to an integer and add to the sum
+                    sum += Character.getNumericValue(c);
+                }
+            }
+        }
+
+        return sum;
+    }
+
+    public static void main(String[] args) {
+        String[] s = {"a1we", "2mhy", "gh4gh"};
+        
+        // Call the function to extract integers and perform addition
+        int result = extractAndAddIntegers(s);
+        
+        // Print the result
+        System.out.println("The sum of integers is: " + result);
+    }
+}
+
+
+5.
+public class ExtractDigits {
+
+    // Function to extract digits from the string
+    public static String extractDigits(String s) {
+        StringBuilder digits = new StringBuilder();
+        
+        // Loop through each character in the string
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            
+            // Check if the character is a digit
+            if (Character.isDigit(c)) {
+                // Append the digit to the StringBuilder
+                digits.append(c);
+            }
+        }
+        
+        // Return the digits as a string
+        return digits.toString();
+    }
+  public static void main(String[] args) {
+        String s = "ma2danap4all8e";
+        
+        // Call the function to extract digits
+        String result = extractDigits(s);
+        
+        // Print the result
+        System.out.println("Extracted digits: " + result);
+    }
+}
+
+
+6.a Java program that processes the given full name and generates the desired output "m.b.s.prasad":
+
+public class NameAbbreviation {
+
+    // Function to generate abbreviation from the full name
+    public static String generateAbbreviation(String name) {
+        // Split the name into individual words
+        String[] parts = name.split(" ");
+        
+        // StringBuilder to store the result
+        StringBuilder abbreviation = new StringBuilder();
+        
+        // Loop through each word except the last one and append the first letter
+        for (int i = 0; i < parts.length - 1; i++) {
+            abbreviation.append(parts[i].charAt(0)).append(".");
+        }
+        
+        // Append the last word (surname)
+        abbreviation.append(parts[parts.length - 1].toLowerCase());
+
+        return abbreviation.toString();
+    }
+
+    public static void main(String[] args) {
+        String name = "munagala bala seshagiri Prasad";
+ // Call the function to generate abbreviation
+        String result = generateAbbreviation(name);
+        
+        // Print the result
+        System.out.println(result);
+    }
+}
+
+Here’s a Java program that takes the input "Kalluri Poojitha Reddy" and outputs "k.p.rddy":
+
+import java.util.Scanner;
+
+public class NameAbbreviation {
+    public static void main(String[] args) {
+        // Take input from the user
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter your full name: ");
+        String fullName = scanner.nextLine();
+        
+        // Split the full name into parts
+        String[] nameParts = fullName.split(" ");
+        
+        // Initialize an empty string for the output
+        StringBuilder abbreviatedName = new StringBuilder();
+        
+        // Add first letter of the first and second names in lowercase followed by dots
+        for (int i = 0; i < nameParts.length - 1; i++) {
+            abbreviatedName.append(Character.toLowerCase(nameParts[i].charAt(0))).append(".");
+        }
+        
+        // Add the last name with only consonants in lowercase
+        String lastName = nameParts[nameParts.length - 1].toLowerCase();
+        for (char c : lastName.toCharArray()) {
+            if (c != 'a' && c != 'e' && c != 'i' && c != 'o' && c != 'u') {
+                abbreviatedName.append(c);
+            }
+        }
+        
+        // Print the result
+        System.out.println("Abbreviated Name: " + abbreviatedName.toString());
+        
+        scanner.close();
+    }
+}
+
+Input:
+
+Kalluri Poojitha Reddy
+
+Output:
+
+k.p.rddy
+
+Explanation:
+
+The first and second names are abbreviated to their first letters in lowercase, followed by dots.
+
+The last name is transformed by removing the vowels and converting the consonants to lowercase.
+
+
+ Java Program to Find First Occurrence of a Duplicate Character and Count Its Occurrences in a String
+import java.util.HashMap;
+
+public class FirstDuplicateCharacter {
+
+    // Function to find first duplicate character and count its occurrences
+    public static void findFirstDuplicateAndCount(String sentence) {
+        HashMap<Character, Integer> charCountMap = new HashMap<>();
+        char firstDuplicate = '\0';  // Default null character
+
+        // Loop through each character in the string
+        for (char c : sentence.toCharArray()) {
+            // Ignore spaces
+            if (c != ' ') {
+                charCountMap.put(c, charCountMap.getOrDefault(c, 0) + 1);
+
+                // Check if it's the first occurrence of a duplicate character
+                if (charCountMap.get(c) == 2) {
+                    firstDuplicate = c;
+                    break;
+                }
+            }
+        }
+  if (firstDuplicate != '\0') {
+            System.out.println("First duplicate character: " + firstDuplicate);
+            System.out.println("Count: " + charCountMap.get(firstDuplicate));
+        } else {
+            System.out.println("No duplicate characters found.");
+        }
+    }
+
+    public static void main(String[] args) {
+        String sentence = "hey I am learning java";
+        findFirstDuplicateAndCount(sentence);
+    }
+}
+
+
+7. Java Program to Replace First Occurrence of Duplicate Character with Asterisk
+public class ReplaceFirstDuplicate {
+
+    // Function to replace first occurrence of a duplicate character with '*'
+    public static String replaceFirstDuplicate(String sentence) {
+        char[] charArray = sentence.toCharArray();
+        boolean[] found = new boolean[256];  // ASCII character array to track occurrences
+        boolean replaced = false;
+
+        // Loop through each character in the string
+        for (int i = 0; i < charArray.length; i++) {
+            char c = charArray[i];
+
+            // Ignore spaces
+            if (c != ' ' && !replaced) {
+                // Check if the character has been encountered before
+                if (found[c]) {
+                    // Replace the first occurrence of duplicate character with '*'
+                    charArray[i] = '*';
+                    replaced = true;
+                } else {
+                    found[c] = true;
+	             }
+            }
+        }
+
+        return new String(charArray);
+    }
+
+    public static void main(String[] args) {
+        String sentence = "hey I am learning java";
+        String result = replaceFirstDuplicate(sentence);
+        
+        // Print the result
+        System.out.println(result);
+    }
+}
+
+
+int a,b,sum ;
+     a=10;b=20;sum=a+b;
+     String s1,s2 ,sum1;
+     s1=String.valueOf(a); s1=Integer.toString(a);s1=""+a;
+     s2=String.valueOf(b);s2=Integer.toString(b);s2=""+b;
+     sum1=s1+s2;
+        System.out.println(sum);
+        System.out.println(sum1);
+        char c='p',k='4',a1=' ';
+        int o=Integer.parseInt(String.valueOf(k));
+        System.out.println(o);
+        System.out.println(Character.getNumericValue(k));
+        System.out.println(Character.isDigit(k));
+        System.out.println(Character.isDigit(c));
+        System.out.println(Character.isWhitespace(a1));
+        System.out.println(Character.isUpperCase(c));
+        System.out.println(Character.isLowerCase(c));
+        System.out.println(Character.toUpperCase(c));
+        System.out.println(Character.toLowerCase(c));
+        System.out.println(Character.isLetterOrDigit(c));
+        System.out.println(Character.isLetterOrDigit(k));
+        System.out.println(Character.isLetter(c));
+
+
+
+    
+
+
+

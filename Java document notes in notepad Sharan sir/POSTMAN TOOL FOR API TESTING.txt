@@ -1,0 +1,225 @@
+
+API TESTING:POSTMAN tool:
+---------------
+GET-200
+POST-201
+PUT
+PATCH
+DELETE
+
+
+Postman:
+postman is a popular tool used for api testing,allowing you to send requests to APIs and inspect their responses.
+
+Creating a request:
+click on new means + button in the request window
+In the request window u have to select HTTP METHOD(GET,POST,PUT,PATCH,DELETE)
+Enter the url of the api and u want test in the field next to the filed(means url field)
+
+HTTP METHODS: which action need to performed on a given resource in an API.
+Here’s a simple breakdown of common HTTP methods:
+
+1. GET
+
+What it does: Fetches data from the server.
+
+Example: Asking for a list of products or user information.
+
+Real-life analogy: Reading a book from a library without changing anything.
+
+
+2. POST
+
+What it does: Sends data to the server to create something new.
+
+Example: Submitting a form to register a new user.
+
+Real-life analogy: Filling out and submitting an application to create a new account.
+
+
+3. PUT
+
+What it does: Updates existing data or creates it if it doesn't exist.
+
+Example: Updating an entire profile of a user (like name, email, and address).
+
+Real-life analogy: Replacing a book in the library with an updated version.
+
+
+4. PATCH
+
+What it does: Partially updates existing data.
+
+Example: Changing just the email address of a user.
+
+Real-life analogy: Correcting a typo on one page of a book.
+
+
+5. DELETE
+
+What it does: Removes data from the server.
+
+Example: Deleting a user account or removing a product.
+
+Real-life analogy: Throwing away or removing a book from the library.
+
+
+6. HEAD
+
+What it does: Similar to GET, but it only asks for the headers (metadata), not the actual data.
+
+Example: Checking if a resource exists without downloading it.
+
+Real-life analogy: Checking the table of contents to see if a book exists without opening the book.
+
+
+7. OPTIONS
+
+What it does: Asks the server what actions (methods) are allowed on a resource.
+
+Example: Finding out whether the server allows GET, POST, or DELETE on a product.
+
+Real-life analogy: Asking a librarian what you’re allowed to do with a book (borrow, read, etc.).
+
+
+In summary:
+
+GET: Retrieve data.
+
+POST: Create new data.
+
+PUT: Replace or update data.
+
+PATCH: Update part of the data.
+
+DELETE: Remove data.
+
+HEAD: Check metadata without getting the data.
+
+OPTIONS: Ask what’s allowed to do.
+
+
+
+ADDING HEADERS ,PARAMS,BODY,AUTHORIZATION:
+PARAMS:the api accepts url parameters,click the params and enter the key value pairs.
+Authorization:if the api requires authentication,postman supports multiple authentication types:
+1.api key
+2.OAuth 2.0
+3.Bearer Token
+4.Basic Auth
+Headers :To add headers(such as content-type,authorization) click on the headers tab.
+Body:if u want to send the data with POST and PUT then click on the body and select the format(json,form-data,raw).enter the data you want to send.
+Sending the request:
+once the request is setup,click SEND.
+POSTMAN WILL DISPLAY THE RESPONSE at the bottom,including the status code,time,and the response body.
+
+TESTING API Responses (responses  status codes):
+http status codes are issued by a server in response to a client's requests made to the server.
+They help to indicate whether a request was successful or if there was an error.
+
+1. 1XX Informational:
+These codes indicate that the server has received the request and is continuing the process.
+
+*100 continue:
+The server has received the request headers and the client should proceed to send the request body.
+
+*101 Switching Protocols:
+the server switches protocols as requested by the client.
+
+*102 processing:
+the server has received the request and is processing it but no response is available yet.
+
+2.2XX Success:
+ this category indicates that the request was successfully recived,understood,and accepted.
+
+*200 OK:
+The request was successful.
+the response depends on the method used.
+GET:Resource fetched and transmitted in the message body.
+POST:Resource created or action performed.
+
+*201 CREATED:
+The request has been fulfilled,and a new resource has been created.
+
+*202 ACCEPTED:
+The request has been accepted for processing,but the processing is not complete.
+
+*204 NO CONTENT:
+The serever successfully processed the request,but there is no content to send it back.
+
+*206 Partial Content:
+The server is delivering only part of the resource(often used with range requests).
+
+3.3XX Redirection:
+These codes indicate that further action needs to be taken by the client to complete the request.
+
+301 Moved Permanently:
+The requsted resource has been permanentlty moved to a new URL.
+
+302 Found:
+The resource has been temporarily moved to a different URL.
+
+304 Not Modified: 
+The resource has not been modified since the last request. The client can use the cached version.
+
+307 Temporary Redirect: 
+The resource temporarily resides under a different URL, but the client should continue using the original request method.
+
+4. 4xx Client Errors:
+
+These codes indicate that there was an error with the request, typically caused by the client (e.g., bad syntax, invalid request).
+
+400 Bad Request:
+The server cannot process the request due to a client error (e.g., malformed request syntax).
+
+401 Unauthorized:
+The request requires user authentication. Authentication is required or has failed.
+
+403 Forbidden: 
+The client is not allowed to access the resource.
+
+404 Not Found: 
+The server could not find the requested resource.
+
+405 Method Not Allowed:
+The request method is not supported by the resource (e.g., trying to use POST on a resource that only accepts GET).
+
+408 Request Timeout:
+The server timed out waiting for the request.
+
+409 Conflict: 
+The request could not be completed due to a conflict with the current state of the resource.
+
+429 Too Many Requests:
+The client has sent too many requests in a given amount of time ("rate limiting").
+
+
+5. 5xx Server Errors:
+These codes indicate that the server failed to fulfill a valid request.
+
+500 Internal Server Error:
+The server encountered an unexpected condition that prevented it from fulfilling the request.
+
+501 Not Implemented:
+The server does not recognize the request method or lacks the ability to fulfill the request.
+
+502 Bad Gateway: 
+The server, while acting as a gateway or proxy, received an invalid response from the upstream server.
+
+503 Service Unavailable: 
+The server is currently unable to handle the request (usually due to maintenance or overload).
+
+504 Gateway Timeout:
+The server, while acting as a gateway or proxy, did not receive a timely response from the upstream server.
+
+505 HTTP Version Not Supported:
+The server does not support the HTTP protocol version used in the request.
+
+
+
+
+
+
+
+
+

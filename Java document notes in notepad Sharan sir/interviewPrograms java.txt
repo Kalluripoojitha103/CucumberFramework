@@ -1,0 +1,152 @@
+to count duplicate characters
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+
+class HelloWorld {
+    public static void main(String[] args) {
+        String name="venkataramana";
+        HashMap<Character,Integer> hm=new HashMap<Character,Integer>();
+        char []charname=name.toCharArray();
+        for(char c:charname){
+            if(hm.containsKey(c)){
+                hm.put(c,hm.get(c)+1);
+            }
+            else{
+                hm.put(c,1);
+            }
+        }
+        System.out.println(hm);
+        for(Map.Entry entry:hm.entrySet()){
+            System.out.println(entry.getKey()+"---"+entry.getValue());
+            
+        }
+    }
+}
+
+to remove duplicate characters from String?
+import java.util.*;
+
+class HelloWorld {
+    public static void main(String[] args) {
+        String name="venkataramana";
+        LinkedHashSet<Character> lhs=new LinkedHashSet<Character>();
+        for(int i=0;i<name.length();i++){
+            lhs.add(name.charAt(i));
+        }
+        for(Character c:lhs){
+            System.out.println(c);
+        }
+      
+    }
+}
+
+
+
+to count vowels,constantsmspecial symbols,digits
+import java.util.*;
+
+class HelloWorld {
+    public static void main(String[] args) {
+        String msg="ja6va i%s prog2ramming lan%g*uage";
+        int count=0,v=0,c=0,d=0,ss=0;
+        char ch;
+        for(int i=0;i<msg.length();i++){
+            ch=msg.charAt(i);
+            if((ch>='A' && ch<='Z') || (ch>='a' && ch<='z'))
+            {
+                if(ch=='a'|| ch=='o'|| ch=='e'|| ch=='i'||ch=='u'){
+                    v++;
+                }
+                else
+                {
+                    c++;
+                }
+            }
+            else if(ch>='0' && ch<='9'){
+                d++;
+            }
+            else
+            ss++;
+        }
+      
+      
+      System.out.println(v+"-"+d+"-"+ss+"-"+c);
+      
+    }
+}
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+
+class HelloWorld {
+    public static void main(String[] args) {
+        String msg="ja6va i%s prog2ramming lan%g*uage";
+        String v="aeiou";
+        int c=0;
+        msg.toLowerCase();
+        ArrayList<Character> av=new ArrayList<Character>();
+        for(int i=0;i<v.length();i++){
+            av.add(v.charAt(i));
+        }
+        for(int i=0;i<msg.length();i++){
+            if(av.contains(msg.charAt(i))){
+      
+
+
+          c++;
+            }
+        }
+        System.out.println(c);
+        
+    }
+}
+
+
+
+
+target=8
+import java.util.*;
+
+class HelloWorld {
+    public static void main(String[] args) {
+        int a[]={1,7,8,4,0,3,0,0,3,4};
+        int j;
+        for(int i=0;i<a.length;i++){
+            for( j=i+1;j<a.length;j++){
+                if(a[i]+a[j]==8)
+                System.out.println(a[i]+"+"+a[j]);
+                
+        }
+        
+            }
+        
+    }
+}
+
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+
+class HelloWorld {
+    public static void main(String[] args) {
+        int a[]={1,7,8,4,0,3,0,0,3,4};
+        int count=0;
+        for(int i=0;i<a.length;i++){
+            if(a[i]!=0){
+                a[count]=a[i];
+                count++;
+            }
+        }
+        while(count<a.length){
+            a[count++]=0;
+        }
+        for(int i=0;i<a.length;i++)
+        System.out.print(a[i]);
+        
+    }
+}
+
+1784334000

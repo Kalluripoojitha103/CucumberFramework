@@ -1,0 +1,589 @@
+datatypes:-
+int/double/String
+int  for  integers  Ex:78,-5
+double  for  fractions  Ex:5.6, 3.4
+Strings  for  name  Ex: banglore,madanapalli
+
+int age;
+double ht;
+String name;
+the above  3  statmentes are  called DECLETATION.
+
+java  program  to  store  name,age,height?
+class Demo
+{
+    public  static  void  main(String args[])
+    {
+        int age;
+        double ht;
+        String name;
+        age=25;
+        ht=5.7;
+        name="arjun";
+        System.out.println(name);
+        System.out.println(age);
+        System.out.println(ht);
+        
+        
+    }
+}
+------------------------------------
+ System.out.println("name="+name);
+        System.out.println("age="+age);
+        System.out.println("h="+ht);
+-------------------------------------------
+ System.out.println("name="+name+"age="+age+"ht="+ht);
+ ---------------------------------------------------  
+
+java program  to  dislay  employee details?
+id,name,designation,salary,location
+
+class Employee
+{
+    public static void main(String[] args) 
+    {
+        int id,salary;
+        String name,des,location;
+        id=127;
+        name="harsha";
+        des="testing";
+        salary=89000;
+        location="pune";
+        System.out.println("id="+id);
+        System.out.println("name="+name);
+        System.out.println("des="+des);
+        System.out.println("salary="+salary);
+        System.out.println("location="+location);
+        
+        
+    }
+}
+
+java  program to accept  college details?
+collegename,group,fees,rno,place
+java  program  to  accept  book  details?
+bookname,bookcost,bookpages,bookauthor
+bname,bpages,bcost,bauthor
+class Book
+{
+    public static void main(String[] args) 
+    {
+        int bcost,bpages;
+        String bname,bauthor;
+       bcost=78;
+       bpages=126;
+       bname="python";
+       bauthor="james";
+       System.out.println("bname="+bname);
+       System.out.println("bauthor="+bauthor);
+       System.out.println("bpages="+bpages);
+       System.out.println("bcost="+bcost);
+             
+        
+    }
+}
+------------------------------------------------
+System.out.println("book name is:"+bname);
+       System.out.println("book authoris :"+bauthor);
+       System.out.println("book pages is:"+bpages);
+       System.out.println("book cost:"+bcost);
+       -----------------------------------------
+java  program  to display  dog  details?
+breed,color,cost
+java program  to  display toothbrush details?
+brushcolor,brushname,bushcost,past
+bcolor,bname,bcost,bpast
+
+Busniess logic/formula based  programs:-
+java program  to  find  addition of 5 numbers?
+
+add=a+b+c+d+e
+
+no.of variables(6): a,b,c,d,e,add
+input vaiables:a,b,c,d,e
+output variable:add
+class HelloWorld {
+    public static void main(String[] args) {
+        int a,b,c,d,e,add;
+        a=5;
+        b=6;
+        c=5;
+        d=-5;
+        e=12;
+        add=a+b+c+d+e;
+        System.out.println("addition of 5  numbers="+add);
+        
+        
+    }
+}
+
+
+java program  to  find +,-,*?
+add=a+b
+sub=a-b
+mul=a*b
+no.of variable(5):a,b,add,sub,mul
+input  variable:a,b
+output variable: add,sub,mul
+
+
+class demo
+{
+    public static void main(String args[])
+    {
+        int a,b,add,sub,mul;
+        a=10;
+        b=5;
+        add=a+b;
+        sub=a-b;
+        mul=a*b;
+        System.out.println("add="+add+"sub="+sub+"mul="+mul);
+        
+        
+        
+    }
+}
+
+java program to find
+1.area of rectangle
+2.perimeter of rectangle
+
+area=l*b
+perimeter=2*(l+b)
+
+no.of variable(4):l,b,area,perimeter
+input variables: l,b
+output variables:area,perimeter
+
+class Rectangle
+{
+    public static void main(String args[])
+    {
+        int l,b,area,perimeter;
+        l=7;
+        b=5;
+        area=l*b;
+        perimeter=2*(l+b);
+        System.out.println("area of  rectange="+area);
+        System.out.println("perimeter of rectangle="+perimeter);
+        
+    }
+    
+}
+
+java  program to find area  and perimeter of  square?
+area=s*s
+perimer=4*s
+
+no.of variables(3):s,area,perimeter
+input---->s
+output--->area,perimetr
+
+class Rectangle
+{
+    public static void main(String args[])
+    { 
+        int   s,area,perimeter;
+        s=5;
+        area=s*s;
+        perimeter=4*s;
+        System.out.println("area of square="+area);
+        System.out.println("perimeter of square="+perimeter);
+        
+        
+    }
+    
+}
+java  program  to  find  division?
+java program  to  find multiplication of  9  numbers?
+java  program  to  find
+1.area of circle
+2.perimeter of circle
+class Demo
+{
+    public static void main(String args[]){
+        int r;
+        double area,perimeter;
+        r=3;
+        area=3.14*r*r;
+        perimeter=2*3.14*r;
+        System.out.println("area="+area);
+        System.out.println("perimeter="+perimeter);
+        
+    }
+}
+
+
+java program  to  find SI?
+si=(p*t*r)/100
+
+no.v's(4)--->p,t,r,si
+i/p v's--->p,t,r
+o/p v's--->si
+
+class Demo
+{
+    public static void main(String args[]){
+        int p,t,r,si;
+        p=100000;
+        t=1;
+        r=2;
+        si=(p*t*r)/100;
+        System.out.println("Intrest for Rs.="+si);
+               
+    }
+}
+
+
+java  program  for
+1.volume of cylinder
+2.volume of spear
+c=pi*r*h
+   3.14*r*h
+s=pi*r*r
+  3.14*r*h
+
+java  program  to  find all arithmetic  operations?
+
++,-,*,/--->quotient,%---->remainder
+
+add=a+b
+sub=a-b
+mul=a*b
+div1=a/b
+div2=a%b
+
+
+
+
+
+10/2=5   10%2=0
+11/2=5     11%2=1
+3/10=0
+3%10=3
+
+class Demo
+{
+    public static void main(String args[]){
+        int a,b,add,sub,mul,div1,div2;
+        a=341;
+        b=10;
+        add=a+b;
+        sub=a-b;
+        mul=a*b;
+        div1=a/b;
+        div2=a%b;
+        System.out.println("add="+add);
+        System.out.println("sub="+sub);
+        System.out.println("mul="+mul);
+        System.out.println("div1="+div1);
+        System.out.println("div2="+div2);
+    }
+}
+
+
+java  program  to  accept student details
+and find total and avg
+display all the details?
+
+rno,name,group,college,ict,web,dbms,total,avg
+
+total=ict+web+dbms
+avg=total/3
+
+
+class Demo
+{
+    public static void main(String args[]){
+        int rno,ict,web,dbms,total,avg;
+        String name,group,college;
+        rno=6;
+        name="faroque";
+        college="SGDC";
+        group="BCA";
+        ict=60;
+        web=57;
+        dbms=99;
+        total=ict+web+dbms;
+        avg=total/3;
+        System.out.println("PROVISIONAL MARKS SHEET");
+        System.out.println("rollnumber=    "+rno);
+        System.out.println("name=          "+name);
+        System.out.println("college name="+college);
+        System.out.println("group=       "+group);
+        System.out.println("ict=         "+ict);
+        System.out.println("web=        "+web);
+        System.out.println("dbms=       "+dbms);
+        System.out.println("total=     "+total);
+        System.out.println("avg=        "+avg);
+        System.out.println("S V University");
+        
+    }
+}
+
+java  program  to  swap  2  numbers?
+swapping:- exchange  of  2  values
+input:- 
+a=10   b=20
+
+output:-
+a=20  b=10;
+
+swapping  without extra variable:-
+
+
+class HelloWorld {
+    public static void main(String[] args) {
+        int   a,b;
+        a=5;
+        b=7;
+        System.out.println("a="+a+"b="+b);
+        a=a+b;
+        b=a-b;
+        a=a-b;
+        System.out.println("a="+a+"b="+b);
+    }
+}
+swapping  with extra(temprory) variable:-
+class HelloWorld {
+    public static void main(String[] args) {
+        int   a,b,t;
+        a=5;
+        b=7;
+        System.out.println("a="+a+"b="+b);
+        t=a;
+        a=b;
+        b=t;
+        
+        System.out.println("a="+a+"b="+b);
+    }
+}
+
+-------------------------------------------------------------
+hallto:234398932
+account no:3113211825
+adharno:360067770579
+atm pin:8800
+mobileno:+91 8309047570
+
+Strings: it  accept  alphabets,numbers ,specialsymbols in
+double quots 
+
+
+
+
+integers:number  express in 10,100,1000,10000,100000,....
+
+
+java  program to  accept  ur  bank accout  details?
+name,accno,deposit,ifsc,mobileno
+finally
+name,accno,deposit,ifsc,mobileno
+bal
+
+class HelloWorld {
+    public static void main(String[] args) {
+        String name,accountno,ifsc,mobileno;
+        int deposit,bal=0,withdraw=0;
+        name="sharan";
+        accountno="31132111825";
+        ifsc="HDFC00235";
+        mobileno="8309047570";
+        deposit=5000;
+        bal=deposit+bal;
+        withdraw=2000;
+        bal=bal-withdraw;
+        deposit=3000;
+        bal=deposit+bal;
+        System.out.println("WELCOME TO HDFC  BANLING........");
+        System.out.println("name="+name);
+        System.out.println("accountno="+accountno);
+        System.out.println("ifsc="+ifsc);
+        System.out.println("mobileno="+mobileno);
+        System.out.println("deposit="+deposit);
+        System.out.println("bal="+bal);
+        System.out.println("thank u...visit again....");
+        
+        
+        
+        
+        
+    }
+}
+
+
+java  program  to  accept  debit card /credit card details?
+
+java  program  to  adhar details?
+java  program   assum  that  u  joined in WIPRO
+write  for  onboarding details?
+name,fname,mothername,doj,dob,mobileno,adharno,passport,
+gender,id,
+
+branching  statements:-
+java  suports
+1.if statement
+2.if else statement
+3.nested if
+4.switch statement
+
+to  go with branching statements  we  need  conditions
+condition: <,>,<=,>=,!=,== (t/f)
+to  provide more than one condition: 
+&&-->AND  ||-->OR  !-->not
+
+comprassion operators:- <,>,<=,>=,!=,==
+logical operators:-&&,||,!
+
+if  statement  :-
+if  will check the  condition.if condition is  true
+then  the  statemnets  will execute.
+if  condition is false,then  the  statements  will not
+execute
+syntax:
+s1;
+s2;
+if(con)
+{
+s3;
+s4;
+}
+s5;
+s6;
+
+s1,s2,s3,s4,s5,s6
+s1,s2,s5,s6
+
+class HelloWorld {
+    public static void main(String[] args) {
+        int  a,b;
+        a=8;
+        b=8;
+        if(a==b)
+        {
+        System.out.println("madanapalli");
+        }
+        
+        
+    }
+}
+java  program  to  find  biggest?
+
+class HelloWorld {
+    public static void main(String[] args) {
+        int  a,b;
+        a=8;
+        b=1;
+        if(a>b)
+        {
+        System.out.println("big is  a");
+        }
+        if(b>a)
+        {
+        System.out.println("big is  b");
+        }
+        
+        
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

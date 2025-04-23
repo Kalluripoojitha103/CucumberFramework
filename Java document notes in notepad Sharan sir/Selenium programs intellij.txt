@@ -1,0 +1,638 @@
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+
+PROGRAM FOR OPENING CHROME ,IN CHROME WE OPENING FLIPKART APPLICATION:
+
+public class Poojitha {
+    public static void main(String[] args) throws InterruptedException {
+        WebDriver d;
+        WebDriverManager.chromedriver().setup();
+        d=new ChromeDriver();
+        d.get("https://www.flipkart.com/");
+        Thread.sleep(2000);
+        d.manage().window().maximize();
+        d.quit();
+        d.close();
+    }
+}
+
+
+public class GoogleSearch {
+    public static void main(String[] args) throws InterruptedException {
+       WebDriver d;
+       WebDriverManager.chromedriver().setup();
+       d=new ChromeDriver();
+       d.get("https://www.google.com/");
+       Thread.sleep(1000);
+       d.findElement(By.xpath("//textarea[starts-with(@id,'APj')]")).sendKeys("banglore");
+       Thread.sleep(500);
+       d.findElement(By.xpath("(//input[starts-with(@class,'gNO89b')])[1]")).click();
+       d.findElement(By.xpath("(//input[@class='RNmpXc'])[2]")).click();
+    }
+}
+
+SAMPLE PROGRAM:
+public class ViewSourcePage {
+    public static void main(String[] args) throws InterruptedException {
+        WebDriver d;
+        WebDriverManager.chromedriver().setup();
+        d=new ChromeDriver();
+        d.get("https://www.google.com/");
+        Thread.sleep(1000);
+        String t,u,code;
+        t=d.getTitle();
+        u=d.getCurrentUrl();
+        code=d.getPageSource();
+        System.out.println("google title is="+t);
+        System.out.println("url of webpage is="+u);
+        System.out.println(code);
+    }
+}
+
+simple alert:sample program
+
+WebDriver driver;
+  WebDriverManager.chromedriver().setup();
+  driver=new ChromeDriver();
+  driver.get("https://the-internet.herokuapp.com/javascript_alerts");
+  Thread.sleep(2000);
+  driver.findElement(By.xpath("//button[text()='Click for JS Alert']")).click();
+  Alert al=driver.switchTo().alert();
+  Thread.sleep(5000);
+  al.accept();
+
+confirm alert sample program:
+
+WebDriver driver;
+ WebDriverManager.chromedriver().setup();
+ driver=new ChromeDriver();
+ driver.get("https://the-internet.herokuapp.com/javascript_alerts");
+ Thread.sleep(2000);
+ driver.findElement(By.xpath("//button[text()='Click for JS Confirm']")).click();
+ Alert al=driver.switchTo().alert();
+ Thread.sleep(5000);
+//al.accept();
+ al.dismiss();
+
+prompt alert sample program:
+
+WebDriver driver;
+WebDriverManager.chromedriver().setup();
+driver=new ChromeDriver();
+driver.get("https://the-internet.herokuapp.com/javascript_alerts");
+Thread.sleep(2000);
+driver.findElement(By.xpath("//button[text()='Click for JS Prompt']")).click();
+Alert al=driver.switchTo().alert();
+Thread.sleep(5000);
+al.sendKeys("kalluri poojitha");
+al.accept();
+//al.dismiss();
+
+sample program for alerts:
+
+SAMPLE PROGRAM:
+
+public class AlertsReddiff {
+    public static void main(String[] args) throws InterruptedException {
+        WebDriver driver;
+        WebDriverManager.chromedriver().setup();
+        driver=new ChromeDriver();
+        driver.get("https://mail.rediff.com/cgi-bin/login.cgi");
+        Thread.sleep(3000);
+        driver.findElement(By.id("login1")).sendKeys("poojicn251001@reddif.com");
+        Thread.sleep(3000);
+        driver.findElement(By.xpath("//input[@class='signinbtn']")).click();
+        Alert al=driver.switchTo().alert();
+        al.accept();
+
+
+https://the-internet.herokuapp.com/tables
+
+
+example 2
+table 1
+//table[@class='tablesorter'][1]/thead/tr/th[1]               //finding the table header row
+//table[@class='tablesorter'][1]/thead/tr/th[1]/following::th[1]
+//table[@class='tablesorter'][1]/thead/tr/th[1]/following::th[2]
+//table[@class='tablesorter'][1]/thead/tr/th[1]/following::th[3]
+//table[@class='tablesorter'][1]/thead/tr/th[1]/following::th[4]
+//table[@class='tablesorter'][1]/thead/tr/th[1]/following::th[5]
+//table[@class='tablesorter'][1]/tbody/tr[1]
+//table[@class='tablesorter'][1]/tbody/tr[1]/td[1]
+//table[@class='tablesorter'][1]/tbody/tr[1]/td[1]/following::td[1]
+//table[@class='tablesorter'][1]/tbody/tr[1]/td[1]/following::td[2]
+//table[@class='tablesorter'][1]/tbody/tr[2]/td[1]
+//table[@class='tablesorter'][1]/tbody/tr[2]/td[1]/following::td[1]
+//table[@class='tablesorter'][1]/tbody/tr[2]/td[1]/following::td[2]
+//table[@class='tablesorter'][1]/tbody/tr[2]/td[1]/following::td[3]
+//table[@class='tablesorter'][1]/tbody/tr[2]/td[1]/following::td[4]
+//table[@class='tablesorter'][1]/tbody/tr[2]/td[1]/following::td[5]
+//table[@class='tablesorter'][1]/tbody/tr[3]/td[1]
+//table[@class='tablesorter'][1]/tbody/tr[3]/td[1]/following::td[1]
+//table[@class='tablesorter'][1]/tbody/tr[3]/td[1]/following::td[2]
+//table[@class='tablesorter'][1]/tbody/tr[3]/td[1]/following::td[3]
+//table[@class='tablesorter'][1]/tbody/tr[3]/td[1]/following::td[4]
+//table[@class='tablesorter'][1]/tbody/tr[3]/td[1]/following::td[5]
+//table[@class='tablesorter'][1]/tbody/tr[4]/td[1]
+//table[@class='tablesorter'][1]/tbody/tr[4]/td[1]/following::td[1]
+//table[@class='tablesorter'][1]/tbody/tr[4]/td[1]/following::td[2]
+//table[@class='tablesorter'][1]/tbody/tr[4]/td[1]/following::td[3]
+//table[@class='tablesorter'][1]/tbody/tr[4]/td[1]/following::td[4]
+//table[@class='tablesorter'][1]/tbody/tr[4]/td[1]/following::td[5]
+
+example 3
+table 2
+
+//table[@class='tablesorter'][2]/thead/tr/th[1]
+//table[@class='tablesorter'][2]/thead/tr/th[1]/following::th[1]
+//table[@class='tablesorter'][2]/thead/tr/th[1]/following::th[2]
+//table[@class='tablesorter'][2]/thead/tr/th[1]/following::th[3]
+//table[@class='tablesorter'][2]/thead/tr/th[1]/following::th[4]
+//table[@class='tablesorter'][2]/thead/tr/th[1]/following::th[5]
+//table[@class='tablesorter'][2]/tbody/tr[1]
+//table[@class='tablesorter'][2]/tbody/tr[1]/td[1]
+//table[@class='tablesorter'][2]/tbody/tr[1]/td[1]/following::td[1]
+//table[@class='tablesorter'][2]/tbody/tr[1]/td[1]/following::td[2]
+//table[@class='tablesorter'][2]/tbody/tr[1]/td[1]/following::td[3]
+//table[@class='tablesorter'][2]/tbody/tr[1]/td[1]/following::td[4]
+//table[@class='tablesorter'][2]/tbody/tr[1]/td[1]/following::td[5]
+//table[@class='tablesorter'][2]/tbody/tr[2]
+//table[@class='tablesorter'][2]/tbody/tr[2]/td[1]
+//table[@class='tablesorter'][2]/tbody/tr[2]/td[1]/following::td[1]
+//table[@class='tablesorter'][2]/tbody/tr[2]/td[1]/following::td[2]
+//table[@class='tablesorter'][2]/tbody/tr[2]/td[1]/following::td[3]
+//table[@class='tablesorter'][2]/tbody/tr[2]/td[1]/following::td[4]
+//table[@class='tablesorter'][2]/tbody/tr[2]/td[1]/following::td[5]
+//table[@class='tablesorter'][2]/tbody/tr[3]
+//table[@class='tablesorter'][2]/tbody/tr[3]/td[1]
+//table[@class='tablesorter'][2]/tbody/tr[3]/td[1]/following::td[1]
+//table[@class='tablesorter'][2]/tbody/tr[3]/td[1]/following::td[2]
+//table[@class='tablesorter'][2]/tbody/tr[3]/td[1]/following::td[3]
+//table[@class='tablesorter'][2]/tbody/tr[3]/td[1]/following::td[4]
+//table[@class='tablesorter'][2]/tbody/tr[3]/td[1]/following::td[5]
+//table[@class='tablesorter'][2]/tbody/tr[4]
+//table[@class='tablesorter'][2]/tbody/tr[4]/td[1]
+//table[@class='tablesorter'][2]/tbody/tr[4]/td[1]/following::td[1]
+//table[@class='tablesorter'][2]/tbody/tr[4]/td[1]/following::td[2]
+//table[@class='tablesorter'][2]/tbody/tr[4]/td[1]/following::td[3]
+//table[@class='tablesorter'][2]/tbody/tr[4]/td[1]/following::td[4]
+//table[@class='tablesorter'][2]/tbody/tr[4]/td[1]/following::td[5]
+
+
+Case:2
+
+public class TestNgAnnotation {
+
+    @Test
+    public void hoovi()
+    {
+        int actual,expected;
+        actual=200;
+        expected=200;
+        Assert.assertEquals(actual,expected,"both are not same");
+        //output:
+        // tests passed
+
+       /* int actual,expected;
+        actual=100;
+        expected=200;
+        Assert.assertEquals(actual,expected);
+        //output:
+        //tests failed
+        /*java.lang.AssertionError:
+        Expected :200
+        Actual   :100
+
+         */
+
+        /*int actual,expected;
+        actual=200;
+        expected=200;
+        Assert.assertEquals(actual,expected);
+        //output:
+        //test passed
+
+ /*String actual,expected;
+        actual="hoovishka";
+        expected="ammu";
+        Assert.assertEquals(actual,expected); //test failed
+       */
+        /*String actual,expected;
+        actual="hoovishka";
+        expected="hoovishka";
+        Assert.assertEquals(actual,expected); //test passed
+         */
+       /* String actual,expected;
+        actual="hoovishka";
+        expected="hoovishka";
+        Assert.assertEquals(actual,expected,"both are not same");
+        //output:
+        //tests passed
+        */
+
+        /*String actual,expected;
+        actual="hoovishka";
+        expected="ammu";
+        Assert.assertEquals(actual,expected,"both are not same");
+        //output:
+        //tests failed
+        java.lang.AssertionError: both are not same
+        Expected :ammu
+        Actual   :hoovishka
+         */
+        //AssertNotEquals:
+
+       /* int actual,expected;
+        actual=100;
+        expected=200;
+        Assert.assertNotEquals(actual,expected); //tests passed
+        */
+      /*  int actual,expected;
+        actual=200;
+        expected=200;
+        Assert.assertNotEquals(actual,expected); //test failed
+        */
+       /* int actual,expected;
+        actual=100;
+        expected=200;
+        Assert.assertNotEquals(actual,expected,"both the values are same"); //tests passed
+        */
+       /* int actual,expected;
+        actual=200;
+        expected=200;
+        Assert.assertNotEquals(actual,expected,"both the values are  same");
+        //tests failed
+        //java.lang.AssertionError: both the values are not same did not expect [200] but found [200]
+        */
+       /* String actual,expected;
+        actual="hoovishka";
+        expected="ammu";
+        Assert.assertNotEquals(actual,expected); //tests passed
+        */
+       /* String actual,expected;
+        actual="hoovishka";
+        expected="hoovishka";
+        Assert.assertNotEquals(actual,expected); //tests failed
+        */
+       /* String actual,expected;
+        actual="hoovishka";
+        expected="ammu";
+        Assert.assertNotEquals(actual,expected,"both are same"); //tests passed
+        */
+       /* String actual,expected;
+        actual="hoovishka";
+        expected="hoovishka";
+        Assert.assertNotEquals(actual,expected,"both are same");
+        //output
+        //tests failed
+        //java.lang.AssertionError: both are same did not expect [hoovishka] but found [hoovishka]
+        */
+
+//ASSERTEQUALS:
+
+      /* Double actual,expected;
+        actual=10.3;
+        expected=34.2;
+        Assert.assertEquals(actual,expected); //tests failed
+       */
+       /* Double actual,expected;
+        actual=34.2;
+        expected=34.2;
+        Assert.assertEquals(actual,expected); //tests passed
+        */
+        /*Double actual,expected;
+        actual=10.3;
+        expected=34.2;
+        Assert.assertEquals(actual,expected,"both are not same"); //tests failed
+        */
+      /*  Double actual,expected;
+        actual=34.2;
+        expected=34.2;
+        Assert.assertEquals(actual,expected,"both are not same"); //tests passed
+        */
+ /* Long actual,expected;
+        actual=763765963476l;
+        expected=677878556454l;
+        Assert.assertEquals(actual,expected);//tess failed
+        */
+        Long actual,expected;
+        actual=677878556454l;
+        expected=677878556454l;
+        Assert.assertEquals(actual,expected);
+
+ASSERTNOTEQUALS:
+
+
+        /*Double actual,expected;
+        actual=10.3;
+        expected=34.2;
+        Assert.assertNotEquals(actual,expected); //tests passed
+        */
+      /*  Double actual,expected;
+        actual=34.2;
+        expected=34.2;
+        Assert.assertNotEquals(actual,expected); //tests failed*/
+       
+             /* Long actual,expected;
+        actual=1234567890456l;
+        expected=54255725265625l;
+        Assert.assertNotEquals(actual,expected);//tests passed
+
+ 	/* int actual=10;
+      Integer expected=20;
+        Assert.assertEquals(actual,expected);//tests failed*/
+       /* int actual=10;
+        Integer expected=10;
+        Assert.assertEquals(actual,expected);//test passed*/
+
+
+HardAssert sample program:
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+public class HardAssertion1 {
+    @Test
+    public void kutti() throws InterruptedException {
+        WebDriver driver;
+        WebDriverManager.chromedriver().setup();
+        ChromeOptions co=new ChromeOptions();
+        co.addArguments("--headless");
+        driver=new ChromeDriver(co);
+        driver.get("https://secure.icicidirect.com/customer/login");
+        String actual="ICICI Direct Customer Login - Desktop ";
+        String expected= driver.getTitle();
+        Assert.assertEquals(actual,expected,"both are not same");
+        System.out.println(actual);
+        System.out.println(expected);
+        System.out.println("pooji how r u");
+        Thread.sleep(2000);
+        driver.quit();
+    }
+}
+
+OUTPUT:TEST PASSED
+
+ICICI Direct Customer Login - Desktop
+ICICI Direct Customer Login - Desktop
+pooji how r u
+
+===============================================
+Default Suite
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+
+
+Process finished with exit code 0
+
+IF ACTUAL AND EXPECTED BOTH ARE NOT SAME THEN THE SAMPLE PROGRAM AND OUTPUT IS
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+public class HardAssertion1 {
+    @Test
+    public void kutti() throws InterruptedException {
+        WebDriver driver;
+        WebDriverManager.chromedriver().setup();
+        ChromeOptions co=new ChromeOptions();
+        co.addArguments("--headless");
+        driver=new ChromeDriver(co);
+        driver.get("https://secure.icicidirect.com/customer/login");
+        String actual="ICICI Direct Customer Login -";
+        String expected= driver.getTitle();
+        Assert.assertEquals(actual,expected,"both are not same");
+        System.out.println(actual);
+        System.out.println(expected);
+        System.out.println("pooji how r u");
+        Thread.sleep(2000);
+        driver.quit();
+    }
+}
+
+
+OUTPUT:TESTFAILED
+
+java.lang.AssertionError: both are not same
+Expected :ICICI Direct Customer Login - Desktop
+Actual   :ICICI Direct Customer Login -
+<Click to see difference>
+
+
+	===============================================
+Default Suite
+Total tests run: 1, Passes: 0, Failures: 1, Skips: 0
+===============================================
+
+
+Process finished with exit code 0
+
+
+  SoftAssert sample program:
+
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
+
+public class SoftAssertions1 {
+        @Test
+        public void kutti() throws InterruptedException {
+            WebDriver driver;
+            WebDriverManager.chromedriver().setup();
+            ChromeOptions co=new ChromeOptions();
+            co.addArguments("--headless");
+            driver=new ChromeDriver(co);
+            driver.get("https://secure.icicidirect.com/customer/login");
+            String actual="ICICI Direct Customer Login - Desktop";
+            String expected= driver.getTitle();
+            SoftAssert sa=new SoftAssert();
+            sa.assertEquals(actual,expected,"both are not same");
+            System.out.println(actual);
+            System.out.println(expected);
+            System.out.println("pooji how r u");
+            Thread.sleep(2000);
+            driver.quit();
+            sa.assertAll();
+        }
+    }      
+OUTPUT:TEST PASSED
+
+ICICI Direct Customer Login - Desktop
+ICICI Direct Customer Login - Desktop
+pooji how r u
+
+===============================================
+Default Suite
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+
+
+Process finished with exit code 0
+IN SOFT ASSERT IF BOTH ACTUAL AND EXPECTED IS NOT SAME THEN THE PROGRAM AND OUTPUT WILL BE
+public class SoftAssertions1 {
+        @Test
+        public void kutti() throws InterruptedException {
+            WebDriver driver;
+            WebDriverManager.chromedriver().setup();
+            ChromeOptions co=new ChromeOptions();
+            co.addArguments("--headless");
+            driver=new ChromeDriver(co);
+            driver.get("https://secure.icicidirect.com/customer/login");
+            String actual="ICICI Direct Customer Login - De";
+            String expected= driver.getTitle();
+            SoftAssert sa=new SoftAssert();
+            sa.assertEquals(actual,expected,"both are not same");
+            System.out.println(actual);
+            System.out.println(expected);
+            System.out.println("pooji how r u");
+            Thread.sleep(2000);
+            driver.quit();
+            sa.assertAll();
+        }
+    }
+
+OUTPUT:TESTFAILED
+
+ICICI Direct Customer Login - De
+ICICI Direct Customer Login - Desktop
+pooji how r u
+
+java.lang.AssertionError: The following asserts failed:
+	both are not same
+Expected :ICICI Direct Customer Login - Desktop
+Actual   :ICICI Direct Customer Login - De
+<Click to see difference>
+
+
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at SoftAssertions1.kutti(SoftAssertions1.java:27)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+
+
+===============================================
+Default Suite
+Total tests run: 1, Passes: 0, Failures: 1, Skips: 0
+===============================================
+
+
+Process finished with exit code 0
+
+
+DRAG AND DROP----->dragAndDrop
+
+Sample program:
+
+public class DragandDrop {
+    public static void main(String[] args) throws InterruptedException {
+        WebDriver driver;
+        WebDriverManager.chromedriver().setup();
+        driver=new ChromeDriver();
+        driver.get("https://the-internet.herokuapp.com/drag_and_drop");
+        Thread.sleep(2000);
+        WebElement source= driver.findElement(By.xpath("(//div[@class='column'])[1]"));
+        WebElement destination= driver.findElement(By.xpath("(//div[@class='column'])[2]"));
+        Actions act=new Actions(driver);
+        act.dragAndDrop(source,destination).build().perform();
+    }
+}
+
+RIGHT CLICK----->contextClick
+
+sample program:
+
+public class RightClick {
+    public static void main(String[] args) throws InterruptedException {
+        WebDriver driver;
+        WebDriverManager.chromedriver().setup();
+        driver=new ChromeDriver();
+        driver.get("https://the-internet.herokuapp.com/context_menu");
+        Thread.sleep(2000);
+        WebElement ele= driver.findElement(By.xpath("//div[@id='hot-spot']"));
+        Actions act=new Actions(driver);
+        act.contextClick(ele).build().perform();
+
+    }
+}
+
+
+DOUBLE CLICK------->doubleClick
+
+sample program:
+
+public class Doubleclick {
+    public static void main(String[] args) throws InterruptedException {
+        WebDriver driver;
+        WebDriverManager.chromedriver().setup();
+        driver=new ChromeDriver();
+        driver.get("https://the-internet.herokuapp.com/context_menu");
+        Thread.sleep(2000);
+        WebElement ele= driver.findElement(By.xpath("//div[@id='hot-spot']"));
+        Actions act=new Actions(driver)
+        act.doubleClick(ele).build().perform();
+
+    }
+}
+
+
+public class BooleanFunctions {
+    public static void main(String[] args) {
+        WebDriver driver;
+        WebDriverManager.chromedriver().setup();
+        driver=new ChromeDriver();
+        driver.get("https://rahulshettyacademy.com/AutomationPractice/");
+        driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
+       driver.findElement(By.xpath("(//input[@name='radioButton'])[1]")).click();
+        Boolean r=driver.findElement(By.xpath("(//input[@name='radioButton'])[2]")).isSelected();
+        System.out.println(r);
+//        Assert.assertTrue(r);
+        WebElement ele=driver.findElement(By.xpath("//input[starts-with(@class,'inputs ui-autocomplete-input')]"));
+        Boolean b=ele.isEnabled();
+        System.out.println(b);
+        Assert.assertTrue(b);
+        driver.close();
+    }
+}
+
+
+
+
+
+
+
+

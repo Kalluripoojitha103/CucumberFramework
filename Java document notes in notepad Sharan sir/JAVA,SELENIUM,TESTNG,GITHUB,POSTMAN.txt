@@ -1,0 +1,2136 @@
+JAVA,SELENIUM,TESTNG,GITHUB,POSTMAN,CUCUMBER FRAMEWORK:
+JAVA:
+--------
+*after downloding and installing eclipse we have to follow below steps to create maven project
+
+step-1:click on "create maven project"
+step-2:one dailouge box will appear,click on next in the dailouge box
+step-3:the artifact id box will appear,in that select "java"and click on next
+step-4:again dailouge box will appear, in  that give artifact id(we can give any name)and also give group id(we can give any name),now click on finish
+NOTE:in artifact id and group id spaces are not allowed
+step-5:after clicking finish project will start to create and at the end we can see "Y:",place cursor there and click enter 
+step-6:Now we can see "Build Sucess" message 
+Now you can see the project folder under project explorer tab which is present top left side of eclise
+
+*HOW TO CREATE PACKAGE A MAVEN PROJECT
+step-1:right click on folder name and select new and select packge
+step-2:one dailouge box will appear,give one name and click on finish
+stpe-3:package has been created successfully
+
+
+
+*HOW TO CREATE JAVA FILE IN A PACKAGE?
+STEP-1:RIGHT CLICK ON PACKAGE NAME WHERE WE HAVE TO CREATE THE JAVA FILE
+step-2:select new and click on class
+step-3:dailouge box will appear,give name to class and click on finish
+step-4:java file and class in that file has been created successfully
+
+Packages -> java files-1, file-2,file-3….. -> code (unlimited)
+
+
+Folders -> file -> content
+
+
+Package:
+
+Syntax: package <name>;
+
+package shiva;
+
+package Jyothi;
+
+Note: 
+1. only one package name is allowed in one java file
+2. Package keyword must be the first line in java file (Interview)
+
+
+Class: Very very important (Heart of java)
+
+Syntax: 
+
+class <name>
+{
+
+}
+
+1.  We can create any number of classes in one java file 
+2.  We can also create any number of classes inside the class (nested classes) - interview question
+3. We can create unlimited nested classes in one class
+4. We can create class(unlimited) in nested class also
+
+Task:
+
+create package with name "javaclass" and create 5 classes with any names you want and in first class create two nested classes with names "A" and "B" and in second class create class with name "Apple" and again inside apple class create class with name "Banana" and in third class create two classes with  names "summer" and "winter" and in winter class create class "monsoon"
+
+4-03-2025:
+Note: Regarding Main Method
+1. In one java file only one main method allowed
+2. But we can keep main method in any class in java file
+
+Task:
+1. Check we can create package inside package or not?
+sol:no,we can't create the package inside package.because in java file package keyword only once allowed.and it should be the first line of statement in java file.
+2. We guys already created 3 packages and 2 files in each package, so now create 2 classes inside each file with your own names and write more than one main method in class and check what will happen?
+
+----------------------------------------------------------------------------------
+05/04/2025:
+1. Difference between System.out.println() and System.out.print()
+“println” prints the data in separate line whereas “print” prints the data in same line
+
+
+1. Variables: variables stores data temporarily in RAM 
+
+Harddisk, memorycard, pen drive(Permanent storing):  images, videos, songs
+
+NOTE: All keywords must be in small letters
+
+Datatypes: 8
+
+	4 Families:
+		1. Integer: byte(-128 to +127), short(-32,768 to +32,767), int(-2^31 to +2^31-1), long(-2^63 to +2^63-1)
+				-infinity to +infinity:  -33, -45, -2, -1 0 1 45 67 			
+
+		2. Double(Decimal): float(small values), double(long values)
+				-infinity.infinity to +infinity.infinity: -33.2. -2.45 0.0. 1.23. 4.67
+
+		3. Boolean: boolean
+				true, false			
+	
+		4. Character(one letter): char
+				a  A. C V 1 1.2 @ # *
+
+
+Syntax:
+
+		datatype <name> = <value>;
+
+		1. I want to store 45
+		
+			byte b=45; valid
+			short s=45;	valid
+			int i=45; valid
+			long l=45; valid
+
+	2. I want to store 868768768768768768687686
+
+		int i=868768768768768768687686;
+		long l=868768768768768768687686;
+
+	3. I want to store 1.23
+
+		float f=1.23;
+		double d=1.23;
+
+	4. I want to store false
+
+		boolean bb=false;
+		boolean bb1=true;
+
+	5. I want to store k
+
+		char c=‘K’;
+		char c1=‘@‘;
+		char c2=‘%’;
+		char c3=‘8’;
+
+package javaproject1;
+
+
+
+class JavaProject1
+{
+	public static void main(String ss[])
+	{
+
+			// I want to store 45
+		
+//			short s=45;
+//			System.out.println(s);
+//			
+//			byte b=45;
+//			System.out.println(b);
+//			
+//			int i=45;
+//			System.out.println(i);
+//			
+//			long l=45;
+//			System.out.println(l);
+//			
+			
+			// I want to store -2.34
+			
+//			float f= -2.34f;
+//			System.out.println(f);
+//			
+//			double d=-2.34;
+//			System.out.println(d);
+			
+			// I want to store false
+			
+//			boolean b=false;
+//			System.out.println(b);
+//			
+//			boolean b1=true;
+//			System.out.println(b1);
+			
+			// I want to store any single letter @
+			
+			char c='@';
+		
+			System.out.println(c);
+			
+			char c1='A';
+			
+			System.out.println(c1);
+			
+			
+			char c2='8';
+			
+			System.out.println(c2);
+	}
+
+}
+
+Task:
+
+1. store 34 in variable and show me 34 on output screen
+2. store 34.67 in variable and show me 34.67 on output screen
+3. store true in variable and show me true on output screen
+4. 1store false in variable and show me false on output screen
+5. store & in variable and show me & on output screen
+6. store S in variable and show me S on output screen
+7. store p in variable and show me p on output screen
+8. store 98 as character in variable and show me 98 on output screen
+
+LOCAL VARAIBLE: class lopala edhaina code rasukoni malla aa codel lopala variable create chest
+GLOBAL VARAIABLE: direct ga class lopala variable create chesthe
+
+
+
+NOTE:
+
+Main method lo code vunte direct ga run aipothundhi but main method lo code lekapothe Manamu OBJECT create chesthe and object ni use chesukoni code ni access cheyali
+
+
+OBJECT creation:
+
+Classname <name> = new Classname();
+
+IMPORT: oka file lo vunna code ni inko file lo use chesukovali ante import concept vandal
+
+
+javaproject1(package) -> JavaProject1.java (java file) -> JavaProject1(class) -> int i=3; (variable)
+
+
+
+Syntax:
+
+Import packagename.filename;
+
+Decision Making:
+~~~~~~~~~~~~~~~~~~~~
+
+1. If-else
+2. Switch
+
+
+If-else:
+
+If -> aithe
+else -> kakapothe
+
+
+Syntax:
+
+Condition: any code but output must be true/false
+
+If:
+~~~
+
+if(condition)
+{
+
+}
+
+If-else:
+~~~~~~
+
+if(condition)
+{
+
+}
+else
+{
+
+
+}
+
+If-else-if:
+~~~~~~
+
+if(condition)
+{
+
+}
+else if(condition)
+{
+
+
+}
+else
+{
+
+}
+
+
+NOTE:
+
+If lo vunna condition true aithe if lo vunna code run avuthundhi and if lo Vunna code false aithe else lo vunna code run avuthundhi
+
+Task: write code for below scenario
+
+if 10 is greater than 9 then print java else print selenium
+
+Task: write code for below scenario
+
+if 10 is greater than 9 then again check 12 is less than 10 print java else print selenium
+Tasks:
+
+1. if 10 is greater than 9 then again check, if 10 is less than 12 again check 2 is greater than 1 then print java 
+if (10 > 9) {
+            if (10< 12) {
+                if (2 > 1) {
+                    System.out.println("java");
+                } else {
+                    System.out.println("selenium");
+                }
+            }
+
+        }
+2. check 12 is greater than 10 or not if false then again check 2 is less than 4 or not if true print apple
+if (12>10) {
+            if (2<4)
+            {
+                System.out.println("apple");
+            }
+
+        }
+3. check 12 is greater than 10 or not if false then again check 4 is less than 2 or not if false print apple
+if(12>10)
+                {
+                    if(4<2)
+                    {
+                        System.out.println("pooji");
+                    }
+                    else
+                    {
+                        System.out.println("apple");
+                    }
+                }
+switch(value)
+{
+	case <value>: <code>;
+	case <value1>: <code>;
+		————
+
+}
+
+
+switch(10)
+{
+	case 1: System.out.println(“apple”); break;
+	case 10: System.out.println(“banana”); break; 
+	case 11: System.out.println(“orange”); break;
+
+}
+
+
+NOTE: we must have to write “break” keyword for every case at the end
+
+package javaproject1;
+
+
+
+class JavaProject1
+{
+	
+	int i=3;
+	
+	public static void main(String ss[])
+	{
+
+		
+			switch(10)
+			{
+				case 1: System.out.println("apple"); break;
+				case 13: System.out.println("banana"); break;
+				case 10: System.out.println("orange"); break;
+				case 12: System.out.println("pine"); break;
+				
+				default: System.out.println("value not matched");
+			
+			}
+			
+	}
+	
+	
+
+}
+
+package javaproject1;
+
+
+
+class JavaProject1
+{
+	
+	
+	
+	public static void main(String ss[])
+	{
+
+		int i=1;
+		
+		while(i<3)
+		{
+			System.out.println("Java");
+			i  =   i +  1;
+			
+			
+		}
+		
+	}
+	
+	
+
+}
+
+
+i = 1, true,  Java
+
+i = 2, true,  Java 
+
+i = 3, false   STOP
+
+1. while:
+
+Syntax:
+
+		condition: any code but output must be true/false
+
+		while(condition)
+		{
+
+				code……..
+		}
+
+
+
+If: runs only once
+While: condition false ayyi varaku run avuthune vuntundhi
+
+package javaproject1;
+
+
+
+class JavaProject1
+{
+	
+	
+	
+	public static void main(String ss[])
+	{
+
+		int a=10, b=5;
+		
+		int c=a % b;
+		
+		System.out.println(c);
+	}
+	
+	
+
+}
+
+
+//a/b -> 10 / 5 -> 2
+//
+//a%b -> 10%5 -> 0
+//
+//
+//5) 10 ( 2 -> Quotient
+//   10
+//  -----
+//  	0 -> Remainder
+
+package javaproject1;
+
+
+
+class JavaProject1
+{
+	
+	
+	
+	public static void main(String ss[])
+	{
+
+		int a=0; 
+		
+
+		
+		System.out.println(--a); // pre-increment 
+		System.out.println(a--); // post-increment 
+		System.out.println(--a);
+		
+		System.out.println(++a); // pre-increment 
+		System.out.println(a++); // post-increment 
+		System.out.println(++a);
+		
+	}
+	
+	
+
+}
+
+Operators:
+~~~~~~~~~~~~~~~
+
+1. Arithmetic Operator:  +(addition)   -(subtraction)    *(multiplication)     / (quotient division)  % (modulus division)
+2. Assignment Operator: =  +=   -=   /=  %=
+3. Relational Operator:  ==(Equals)   <(Less than)  <=(Less than or equals)  >(greater than)   >= (greater than or equals) !=(not equals)
+4. Unary Operator:  ++(Increment)  - -(Decrement) (Interview questions)
+
+Operators:
+~~~~~~~~~~~~~~~
+
+1. Arithmetic Operator:  +(addition)   -(subtraction)    *(multiplication)     / (quotient division)  % (modulus division)
+2. Assignment Operator: =  +=   -=   /=  %=
+3. Relational Operator:  ==(Equals)   <(Less than)  <=(Less than or equals)  >(greater than)   >= (greater than or equals) !=(not equals)
+4. Unary Operator:  ++ — (Interview questions)
+5. Logical Operators: && (and)  || (or)   ! (not)
+6. Bitwise Operators: & | ^ ~ >> << (will discuss about this later)
+
+package javaproject1;
+
+
+
+class JavaProject1
+{
+	
+	
+	
+	public static void main(String ss[])
+	{
+
+		int a=1,b=2, c=0; 
+		
+
+		
+		
+//		System.out.println(a>b && c<b); // left: true right; true -> true
+//		
+//		System.out.println(a>b || c<b); // any one condition is true then final output is also true
+//		
+//		
+//		System.out.println(a>b && c<b && a<c);
+//		
+//		System.out.println(a>b || c<b || a<c);
+		
+		System.out.println(!true); // it reverses the boolean value
+		
+		System.out.println(!(a<b));
+		
+		
+	}
+	
+	
+}
+
+2. Do-While:
+
+Syntax:
+
+do
+{
+
+	code…
+}
+while(condition);
+
+NOTE:
+
+While and do-while are opposite to each other. In while first we check the condition and then we run the code but in do-while we run the code first and then we check the condition
+
+package javaproject1;
+
+
+
+class JavaProject1
+{
+	
+	
+	
+	public static void main(String ss[])
+	{
+
+		int a=1,b=2; 
+		
+		
+		
+		
+		do
+		{
+			a=a+1;
+			System.out.println("poojitha");
+			
+		}
+		while(a<3);
+		
+		
+	}
+	
+	
+}
+
+package Tech;
+
+public class New {
+
+	public static void main(String[] args) {
+		int a=1,  d=5;
+		while(a<6){
+			System.out.println(a);
+			a+=1;
+			int b=1;
+			while(b<4) {
+				System.out.println("java");
+				b++;
+				int c=1;
+				while(c<3) {
+					System.out.println("python");
+					c++;
+					
+				}
+			}
+		}
+
+	}
+
+}
+package Tech;
+
+public class New {
+
+	public static void main(String[] args) {
+		int a=1, b=2;
+		do {
+			a += 1; 
+			System.out.println("java");	
+			while(b<3) {
+				b += 1;
+				System.out.println("sha");
+			}
+			
+				
+			
+		}
+		
+		while(a<4);
+
+	}
+
+}
+
+package javaproject1;
+
+
+public class JavaProject11 {
+
+	public static void main(String ss[])
+	{
+		for(int i=1;i<3;i++)
+		{
+			System.out.println("shiva");
+		}
+			
+	}
+}
+
+//i=1 1<3: true o: shiva
+//i=2 2<3: true o:shiva
+//i=3 3<3: false
+
+For Loop:
+~~~~~~~~~~~
+
+Syntax:
+
+	for(intialization;condition;updation)
+	{
+
+	}
+
+
+
+intialization -> int i=1;
+
+condition -> any code but output must be true or false
+
+updation -> any code like increment(I++), decrement(I—), method …… Interview question
+
+
+NOTE:
+1. In complete for “Intilaization part” will only run for one time
+
+package Tech;
+
+public class New {
+
+	public static void main(String[] args) {
+		int a=1,b=2;
+		do {
+			a += 1;
+			System.out.println("java");
+			do {
+				 b+= 1;
+				 System.out.println("selenium");
+			}while (b<4);
+		}
+		while(a<3);
+		
+	}
+
+}
+ //a=1 a=2 java b=2 b=3 selenium  3<4=true b=4 selenium 4<4=false 2<3=true 
+//a=3 java b=5 selenium 5<4=false 3<3=false.
+
+
+
+
+While Loop Practice:
+
+int i = 1;
+while (i <= 10) {
+    System.out.println(i);
+    i++;
+}
+
+
+int i = 2;
+while (i <= 20) {
+    System.out.println(i);
+    i += 2;
+}
+
+
+int i = 1;
+int sum = 0;
+while (i <= 100) {
+    sum += i;
+    i++;
+}
+System.out.println("Sum: " + sum);
+
+
+int num = 12345;
+int count = 0;
+while (num != 0) {
+    num /= 10;
+    count++;
+}
+System.out.println("Digits: " + count);
+
+
+int num = 4567;
+int reversed = 0;
+while (num != 0) {
+    int digit = num % 10;
+    reversed = reversed * 10 + digit;
+    num /= 10;
+}
+System.out.println("Reversed: " + reversed);
+
+
+int num = 12121;
+int original = num;
+int reversed = 0;
+while (num != 0) {
+    int digit = num % 10;
+    reversed = reversed * 10 + digit;
+    num /= 10;
+}
+if (original == reversed) {
+    System.out.println("Palindrome");
+} else {
+    System.out.println("Not a Palindrome");
+}
+
+
+int num = 6;
+int result = 1;
+while (num > 1) {
+    result *= num;
+    num--;
+}
+System.out.println("Factorial: " + result);
+
+
+int num = 2;
+while (num <= 50) {
+    int i = 2;
+    boolean isPrime = true;
+    while (i <= num / 2) {
+        if (num % i == 0) {
+            isPrime = false;
+            break;
+        }
+        i++;
+    }
+    if (isPrime) {
+        System.out.println(num);
+    }
+    num++;
+}
+
+
+int num = 2;
+while (num <= 50) {
+    int i = 2;
+    boolean isPrime = true;
+    while (i <= num / 2) {
+        if (num % i == 0) {
+            isPrime = false;
+            break;
+        }
+        i++;
+    }
+    if (isPrime) {
+        System.out.println(num);
+    }
+    num++;
+}
+
+
+int num = 153;
+int original = num;
+int result = 0;
+while (num != 0) {
+    int digit = num % 10;
+    result += digit * digit * digit;
+    num /= 10;
+}
+if (original == result) {
+    System.out.println("Armstrong Number");
+} else {
+    System.out.println("Not an Armstrong Number");
+}
+
+
+int n = 10;
+int a = 0, b = 1;
+int count = 0;
+while (count < n) {
+    System.out.println(a);
+    int next = a + b;
+    a = b;
+    b = next;
+    count++;
+}
+
+
+Do While Loop Practice:
+
+int i = 1;
+do {
+    System.out.println(i);
+    i++;
+} while (i <= 10);
+
+
+int i = 2;
+do {
+    System.out.println(i);
+    i += 2;
+} while (i <= 20);
+
+
+int i = 1;
+int sum = 0;
+do {
+    sum += i;
+    i++;
+} while (i <= 100);
+System.out.println("Sum: " + sum);
+
+
+int num = 987654;
+int count = 0;
+do {
+    num /= 10;
+    count++;
+} while (num != 0);
+System.out.println("Digits: " + count);
+
+
+int num = 3456;
+int reversed = 0;
+do {
+    int digit = num % 10;
+    reversed = reversed * 10 + digit;
+    num /= 10;
+} while (num != 0);
+System.out.println("Reversed: " + reversed);
+
+
+int num = 1221;
+int original = num;
+int reversed = 0;
+do {
+    int digit = num % 10;
+    reversed = reversed * 10 + digit;
+    num /= 10;
+} while (num != 0);
+if (original == reversed) {
+    System.out.println("Palindrome");
+} else {
+    System.out.println("Not a Palindrome");
+}
+
+
+int num = 5;
+int result = 1;
+do {
+    result *= num;
+    num--;
+} while (num > 1);
+System.out.println("Factorial: " + result);
+
+
+int num = 2;
+do {
+    int i = 2;
+    boolean isPrime = true;
+    do {
+        if (i <= num / 2 && num % i == 0) {
+            isPrime = false;
+            break;
+        }
+        i++;
+    } while (i <= num / 2);
+    if (isPrime) {
+        System.out.println(num);
+    }
+    num++;
+} while (num <= 50);
+
+
+int num = 371;
+int original = num;
+int result = 0;
+do {
+    int digit = num % 10;
+    result += digit * digit * digit;
+    num /= 10;
+} while (num != 0);
+if (original == result) {
+    System.out.println("Armstrong Number");
+} else {
+    System.out.println("Not an Armstrong Number");
+}
+
+
+int n = 10;
+int a = 0, b = 1;
+int count = 0;
+do {
+    System.out.println(a);
+    int next = a + b;
+    a = b;
+    b = next;
+    count++;
+} while (count < n);
+
+For Loop Practice:
+
+
+for (int i = 1; i <= 10; i++) {
+    System.out.println(i);
+}
+
+
+for (int i = 2; i <= 20; i += 2) {
+    System.out.println(i);
+}
+
+
+int sum = 0;
+for (int i = 1; i <= 100; i++) {
+    sum += i;
+}
+System.out.println("Sum: " + sum);
+
+
+int num = 9876;
+int count;
+for (count = 0; num != 0; num /= 10) {
+    count++;
+}
+System.out.println("Digits: " + count);
+
+
+int num = 1234;
+int reversed = 0;
+for (; num != 0; num /= 10) {
+    int digit = num % 10;
+    reversed = reversed * 10 + digit;
+}
+System.out.println("Reversed: " + reversed);
+
+
+int num = 12321;
+int original = num;
+int reversed = 0;
+for (; num != 0; num /= 10) {
+    int digit = num % 10;
+    reversed = reversed * 10 + digit;
+}
+if (original == reversed) {
+    System.out.println("Palindrome");
+} else {
+    System.out.println("Not a Palindrome");
+}
+
+
+int num = 6;
+int result = 1;
+for (int i = 1; i <= num; i++) {
+    result *= i;
+}
+System.out.println("Factorial: " + result);
+
+
+for (int num = 2; num <= 50; num++) {
+    boolean isPrime = true;
+    for (int i = 2; i <= num / 2; i++) {
+        if (num % i == 0) {
+            isPrime = false;
+            break;
+        }
+    }
+    if (isPrime) {
+        System.out.println(num);
+    }
+}
+
+for (int num = 2; num <= 50; num++) {
+    boolean isPrime = true;
+    for (int i = 2; i <= num / 2; i++) {
+        if (num % i == 0) {
+            isPrime = false;
+            break;
+        }
+    }
+    if (isPrime) {
+        System.out.println(num);
+    }
+}
+
+
+int num = 153;
+int original = num;
+int result = 0;
+for (; num != 0; num /= 10) {
+    int digit = num % 10;
+    result += digit * digit * digit;
+}
+if (original == result) {
+    System.out.println("Armstrong Number");
+} else {
+    System.out.println("Not an Armstrong Number");
+}
+
+
+int n = 10;
+int a = 0, b = 1;
+for (int i = 0; i < n; i++) {
+    System.out.println(a);
+    int next = a + b;
+    a = b;
+    b = next;
+}
+
+Arrays: In single variable we have to store multiple values
+
+
+Variables: stores data (single value)
+
+Int i=10,k=11,j=23;
+
+
+Syntax:
+
+Datatype name[] = new datatype[size]; -> create
+
+NOTE: size : maximum value. We can size value more than required value but it shouldn’t be less value than required value
+
+Requirement: 1,2,3,4,5
+
+Int shiva[] = new int[5]; -> create
+
+Index values: starts with 0
+
+1st box : 0 -> 1
+2nd box : 1 -> 2
+3rd box : 2
+4th box: 3
+5th box: 4
+
+
+
+shiva[0]=1
+shiva[1]=2
+shiva[2]=3
+shiva[3]=4
+shiva[4]=5
+
+
+shiva[0]=5
+
+package javaproject1;
+
+
+public class JavaProject11 {
+
+	public static void main(String ss[])
+	{
+		
+		//Requirement true, false, true
+		
+		boolean shiva[]=new boolean[2]; //-> create array 1 step
+		
+		
+		// values assigning to array
+		shiva[0]=true;
+		shiva[1]=false;
+		
+		shiva[2]=true;
+		
+
+		
+		System.out.print(shiva[1]);
+			
+	}
+}
+
+package javaproject1;
+
+
+public class JavaProject11 {
+
+	public static void main(String ss[])
+	{
+		
+		//Requirement 1, 2, 3, 4, 5
+		
+		int shiva[]=new int[5]; //-> create array 1 step
+		
+		
+		// values assigning to array
+		shiva[0]=1;
+		shiva[1]=2;
+		shiva[2]=3;
+		shiva[3]=4;
+		shiva[4]=5;
+		
+
+		
+		System.out.print(shiva[1]);
+			
+	}
+}
+
+package javaproject2;
+
+
+
+public class StoreFloat {
+
+	public static void main(String args[])
+
+	{
+
+		float f[]=new float[5];
+
+		f[0]=23.8f;
+
+		f[1]=34.2f;
+
+		f[2]=45.1f;
+
+		f[3]=65.9f;
+
+		f[4]=76.0f;
+
+		System.out.println(f[3]);
+
+		
+
+	}
+
+
+
+}
+
+For-each loop:
+~~~~~~~~~~~~~~~~
+
+
+Syntax:
+
+for(datatype name: grouped_data)
+{
+
+
+}
+
+
+Int i=10; -> single value
+
+Int I[]=new int[3]; -> grouped data
+
+I[0]=1;
+I[1]=2;
+
+package javaproject1;
+
+
+public class JavaProject11 {
+
+	public static void main(String ss[])
+	{
+		
+		//Requirement 1, 2, 3, 4, 5
+		
+		int shiva[]=new int[5]; //-> create array 1 step
+		
+		
+		// values assigning to array
+		shiva[0]=1;
+		shiva[1]=2;
+		shiva[2]=3;
+		shiva[3]=4;
+		shiva[4]=5;
+		
+
+		for(int poojitha:shiva)
+		{
+			System.out.print(poojitha); //1 2 3 4 5
+		}
+	
+	}
+}
+
+package javaproject1;
+
+
+public class JavaProject11 {
+
+	public static void main(String ss[])
+	{
+	
+		
+		float shiva[]=new float[3]; //-> create array 1 step
+		
+		
+		// values assigning to array
+		shiva[0]=1.2f;
+		shiva[1]=2.3f;
+		shiva[2]=3.4f;
+		
+		
+
+		for(float poojitha:shiva)
+		{
+			System.out.println(poojitha); 
+		}
+	
+	}
+}
+
+package javaproject1;
+
+
+public class JavaProject11 {
+
+	public static void main(String ss[])
+	{
+	
+		
+		boolean shiva[]=new boolean[3]; //-> create array 1 step
+		
+		
+		// values assigning to array
+		shiva[0]=true;
+		shiva[1]=false;
+		shiva[2]=true;
+		
+		
+
+		for(boolean poojitha:shiva)
+		{
+			System.out.println(poojitha); 
+		}
+	
+	}
+}
+
+package javaproject1;
+
+
+public class JavaProject11 {
+
+	public static void main(String ss[])
+	{
+	
+		
+		boolean shiva[]=new boolean[3]; //-> create array 1 step
+		
+		
+		// values assigning to array
+		shiva[0]=true;
+		shiva[1]=false;
+		shiva[2]=true;
+		
+		
+
+		for(boolean poojitha:shiva)
+		{
+			for(boolean k:shiva)
+			{
+				System.out.println(k); 
+			}
+		}
+	
+	}
+}
+
+package javaproject1;
+
+
+public class JavaProject11 {
+
+	public static void main(String ss[])
+	{
+		int i=0; 
+	
+		while(i<3) //false, loop permanent stop
+		{
+			System.out.println("java");
+			i=i+1;
+			
+			if(i==2)
+			{
+				break;
+				
+			}
+		}
+	
+	}
+}
+
+
+//i=0 0<3=true java i=1 false
+//i=1 1<3=true java i=2 true -> stop
+
+package javaproject1;
+
+
+public class JavaProject11 {
+
+	public static void main(String ss[])
+	{
+		int i=0; 
+	
+		while(i<3) 
+		{
+			System.out.println("java");
+			i=i+1;
+			
+			if(i==2)
+			{
+				continue;
+				//System.out.println("auto");
+			}
+		}
+	
+	}
+}
+
+
+//i=0 0<3=true java i=1 1==2: false
+//i=1 1<3=true java i=2 2==2: true
+//i=2 2<3=true java i=3 3==2: false
+//i=3 3<3=false : loop permanent stop
+
+package javaproject1;
+
+
+public class JavaProject11 {
+
+	public static void main(String ss[])
+	{
+		int i=0; 
+	
+		while(i<3) 
+		{
+			System.out.println("java");
+			i=i+1;
+			
+			if(i==2)
+			{
+				continue;	
+				
+			}
+			System.out.println("auto");
+		}
+	
+	}
+}
+
+
+//Java
+//auto
+//Java
+//Java
+//auto
+
+Break: it stops the running of loops permanently
+continue: it skips the current execution 
+
+We have to use above 2 keywords in only loops but only break can use in switch
+
+while()
+{
+while()
+{
+	break;
+}
+Break;
+}
+
+NOTE: break stops only the loop its present
+
+Methods -> very very very very important (easy) -> what is purpose of methods. Answers: maintainability
+
+
+Lines of code -> group
+
+
+
+Syntax:
+
+
+access_modifier(optional)    non_access_modifier(optional)    return_data_type(compulsory)   name(datatype name1, datatype nam2) //parameters - optional
+{
+
+
+			any number of lines
+
+
+}
+
+
+
+
+access_modifiers:
+~~~~~~~~~~~~~
+
+1. Public
+2. Private
+3. Protected
+
+Non_access_modifiers:
+~~~~~~~~~~~~~~~~~
+1. Static
+2. Final
+3. Abstract
+
+return_data_type or datatypes:  9
+~~~~~~~~~~~~~~~~~~~~~~~
+
+1. Byte
+2. Short
+3. Int
+4. Long
+5. Float
+6. Double
+7. Boolean
+8. Char
+9. Void : empty -> we have to use only in method
+
+
+How to run methods:
+~~~~~~~~~~~~~~~~~
+
+Step-1: create object for class
+Step-2: by using the object variable we have to call method 
+	Syntax: to call method
+
+		method_name(arguments);
+
+NOTE:
+
+Parameters and arguments are different.
+
+Parameters: we declare when we create method
+Arguments: when we are calling the method we give arguments
+
+package javaproject1;
+
+
+public class JavaProject11 {
+	
+	
+	void shiva()
+	{
+		int i=10;
+		System.out.println(i);
+		
+		while(i<12)
+		{
+			System.out.println("java");
+			i=i+1;
+			
+		}
+	}
+	
+	
+	public static void main(String ss1[])
+	{
+				
+				
+		JavaProject11 ss=new JavaProject11();
+		ss.shiva();
+				
+	}
+}
+
+NOTE:
+
+Parameters and arguments are different.
+
+Parameters: we declare when we create method
+Arguments: when we are calling the method we give arguments
+
+
+Recursion: when method call itself
+~~~~~~~
+Note: we must have to give condition to stop calling the recursion function
+
+
+General: Any program in the world can create using recursion or normal program
+
+NOTE:
+~~~~~
+
+1. If we declare any datatype other than void then we must have to return the values
+	Syntax:
+
+	return <Value>;
+2. The value returns to called code
+
+package javaproject1;
+
+
+public class JavaProject11 {
+	
+
+	
+	int shiva()
+	{
+		
+		return 21;
+	}
+	
+	
+	public static void main(String ss1[])
+	{
+				
+				
+		JavaProject11 ss=new JavaProject11();
+		System.out.println(ss.shiva());
+				
+	}
+}
+
+package javaproject1;
+
+public class Method {
+	boolean  poojitha()
+	{
+		boolean b=false;
+		int a=10;
+		poojitha();
+		return b;
+		
+	}
+
+	public static void main(String[] args) {
+		Method m=new Method();
+		System.out.println(m.poojitha());
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+access_modifiers:
+~~~~~~~~~~~~~
+
+1. Public
+2. Private
+3. Protected
+
+NOTE: 
+	1. If we do not use any access modifiers then we called it as “default”.
+	2. If default access modifier is applicable to class, variable, method then we can only access those in same package
+
+
+
+Point-1: Where to use these 3 access modifiers
+
+1. Class
+2. Method
+3. Variable
+
+Point-2: What will happen if we use these 3 modifiers
+
+1. Public: if we give public then we can access it any where(before accessing we have to import class in different package)
+    1. Class
+    2. Variable
+    3. Method
+
+2. Private: if we give private then except in the class we cannot use anywhere(even though they are present in same package or different package)
+	Note: we cannot give private to class because the core concept of class is to use somewhere else but if we give private it is not possible to access anywhere so core concept of class will not applicable
+
+
+package javaproject1;
+
+ public class JavaProject11 {
+	
+	 
+	 protected int i=90;
+	
+	 protected int shiva()
+	{
+		return 10;
+	}
+	
+	public static void main(String ss1[])
+	{
+			
+	}
+}
+
+package javaproject1;
+
+
+ public class JavaProject11 {
+	
+	 
+	 public int i=90;
+	
+	 public int shiva()
+	{
+		return 10;
+	}
+	
+	public static void main(String ss1[])
+	{
+				
+				
+	
+				
+	}
+}
+
+package javaproject1;
+
+
+ public class JavaProject11 {
+	
+	 
+	 private int i=90;
+	
+	 private int shiva()
+	{
+		return 10;
+	}
+	
+	public static void main(String ss1[])
+	{
+				
+				
+	
+				
+	}
+}
+
+package JavaProject2;
+
+import javaproject1.JavaProject11;
+
+public class JavaProject2 extends JavaProject11{
+	
+	public static void main(String ss1[])
+	{
+				
+		JavaProject11 jp=new JavaProject11();
+		System.out.println(jp.i);
+		
+		System.out.println(jp.shiva());
+	
+				
+	}
+
+}
+
+1. Difference between public and private?
+2. Is it possible to use one class properties(methods, variable) in another class in same package, if yes how?
+3. Is it possible to use one class properties(methods, variable) in another class in different package, if yes how?
+4. how many datatypes in java?
+5. how many return datatypes in java?
+6. can we use void datatype for variables?
+7. What is meant by nested while, do-while, for, for-each loop?
+8. i want to store 10 which concept have to use and i want store 10,20,30 which concept have to use?
+9. difference between println() and print()?
+Sytem.out.println("java");
+Sytem.out.print("shiva");
+Sytem.out.print("poojitha");
+
+
+System.out.println("java");
+System.out.print("shiva");
+System.out.println("poojitha");
+
+
+int i=0;
+
+System.out.println(++i);
+System.out.println(i++);
+System.out.println(i);
+
+
+package javaproject2;
+
+
+
+public class Publicmodifier {
+
+    public static void main(String[] args) {
+
+		int i=0;
+
+
+
+		System.out.println(++i);//1 first i value increments by 1 and then i value prints.
+
+		System.out.println(i++);//1 first i value prints and then i value increments by 1
+
+		System.out.println(i);//2 print i value
+
+	}
+
+
+
+}
+
+
+
+package javaproject2;
+
+public class Publicmodifier {
+    public static void main(String[] args) {
+		int i=0;
+
+		System.out.println(++i);//1 first i value increments by 1 and then i value prints.
+		System.out.println(i++);//1 first i value prints and then i value increments by 1
+		System.out.println(i);//2 print i value
+	}
+
+}
+
+package sample;
+
+//step-1: compile
+//step-2: run
+
+class test11 //parent class
+{
+	//method overloading
+	void shiva(int i)
+	{
+		System.out.print("java");
+	}
+	
+	void shiva()
+	{
+		System.out.print("automation");
+	}
+}
+
+class test extends test11 // child class
+{
+	
+	//method overriding
+	void shiva(int i)
+	{
+		System.out.print("apple");
+	}
+	
+	
+	public static void main(String s[])
+	{
+		
+	}
+
+}
+
+OOPS: 
+	1. Inheritance: Using one class properties into another class
+		1. Single level Inheritance: only one class properties use in another class
+		2. Multi level Inheritance: we can use more than one class properties in another classes
+		3. Multiple Inheritance: Not possible in java
+		NOTE:  If we are extending the class no need to create object, we can use properties directly
+	2. Polymorphism
+		1. Compile-time or overloading : method overload, constructor overload
+			NOTE: method name must be same but parameters must be different
+		2. Run-time or overriding: method override, constructor override
+			NOTE: method name and parameters must be same in both parent and child class
+	3. Encapsulation
+	4. Abstraction
+
+NOTE: In static methods only static variables are allowed.
+
+Protected:
+1. Within package
+2. Different package but inherit(extends)
+
+Constructor:
+1. Constructor is a special method, the name should be  same as class name but there shouldn’t be be return type
+2. What is use of construtor? Answer: To initialise the values to global variables so that we can use anywhere in the class
+3. Constructor Overloading: constructor name must be same but parameters must be different
+4. Constructor overriding: constructor overriding is not possible why? Constructor belongs to class so if we give name in another class also, it becomes method but not the constructor overriding
+
+
+
+this(): It is used for construtor chaining
+	1. construtor chaining: connecting the constructors using this()
+	2. this() must be the first line otherwise we will get an error
+
+this:
+
+super(): It is used to call the parent constructor
+1. super() must be the first line otherwise we will get an error
+
+super: It is used to access the parent class properties when both parent and child class have properties with same names
+
+// single level inheritance
+
+package sample;
+
+
+class test11 //parent class
+{
+	static int i=10;
+	
+}
+
+public class test extends test11 // child class
+{
+
+	public static void main(String s[])
+	{
+		
+		System.out.println(i);
+
+	}
+
+}
+
+// multi level inheritance
+
+package sample;
+
+
+class test11 //parent class
+{
+	static int i=10;
+	
+}
+
+class test22 extends test11 //parent class
+{
+	static int j=20;
+	
+}
+
+class test33 extends test22 //parent class
+{
+	static int k=30;
+	
+}
+
+public class test extends test33 // child class
+{
+
+	public static void main(String s[])
+	{
+		
+		System.out.println(k);
+
+	}
+
+}
+
+// method overloading
+
+package sample;
+
+
+public class test  // child class
+{
+
+	void test1()
+	{
+		System.out.println("test");
+	}
+	
+	void test1(int i)
+	{
+		System.out.println("test-int");
+	}
+	
+	void test1(float f)
+	{
+		System.out.println("test-float");
+	}
+	
+	public static void main(String s[])
+	{
+		
+		test t=new test();
+		t.test1();
+		t.test1(10);
+		t.test1(1.23f);
+
+	}
+
+}
+
+// constructor overloading
+
+package sample;
+
+
+public class test  
+{
+
+	test()
+	{
+		System.out.println("test");
+	}
+	
+	test(int i)
+	{
+		System.out.println("test-int");
+	}
+	
+	test(float f)
+	{
+		System.out.println("test-float");
+	}
+	
+	public static void main(String s[])
+	{
+		
+		test t=new test();
+		test t1=new test(10);
+		test t2=new test(1.23f);
+
+	}
+
+}
+// method overriding
+
+package sample;
+
+class test11
+{
+	void test22()
+	{
+		System.out.println("parent-test");
+	}
+	
+	void test22(int i)
+	{
+		System.out.println("parent-test-int");
+	}
+	
+	void test22(float f)
+	{
+		System.out.println("parent-test-float");
+	}
+
+}
+public class test  
+{
+
+	void test22()
+	{
+		System.out.println("child-test");
+	}
+	
+	void test22(int i)
+	{
+		System.out.println("child-test-int");
+	}
+	
+	void test22(float f)
+	{
+		System.out.println("child-test-float");
+	}
+	
+	public static void main(String s[])
+	{
+		
+		
+		
+
+	}
+
+}
+
+// constructor chaining
+
+package sample;
+
+class test11
+{
+	test11()
+	{
+		System.out.println("parent-test");
+	}
+	
+	test11(int i)
+	{
+		this();
+		System.out.println("parent-test-int");
+	}
+	
+	test11(float f)
+	{
+		this(10);
+		System.out.println("parent-test-float");
+	}
+
+	public static void main(String s[])
+	{
+			test11 t=new test11(1.23f);
+	}
+}
+
+// super()
+
+package sample;
+
+class test11
+{
+	test11()
+	{
+		System.out.println("parent-test");
+	}
+
+}
+public class test  extends test11
+{
+
+	test()
+	{
+		super();
+		System.out.println("child-test");
+	}
+	
+	
+	public static void main(String s[])
+	{
+			test t=new test();
+	}
+
+}
+
+// super
+
+package sample;
+
+class test11
+{
+	int i=10;
+}
+public class test  extends test11
+{
+
+	int i=20;
+	
+	test()
+	{
+		System.out.println(i);
+		System.out.println(super.i);
+	}
+	
+	
+	public static void main(String s[])
+	{
+			test t=new test();
+	}
+}
+
+// super
+
+package sample;
+
+class test11
+{
+	int i=10;
+	
+	void shiva()
+	{
+		System.out.println("parent-method");
+	}
+}
+public class test  extends test11
+{
+
+	int i=20;
+	
+	void shiva()
+	{
+		System.out.println("child-method");
+	}
+	
+	test()
+	{
+		System.out.println(i);
+		System.out.println(super.i);
+		
+		shiva();
+		super.shiva();
+	}
+	
+	
+	public static void main(String s[])
+	{
+			test t=new test();
+	}
+}

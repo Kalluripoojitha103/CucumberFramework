@@ -1,0 +1,346 @@
+22/01/2025:
+
+Manual Testing:
+---------------
+
+Difference between manual and automation testing:
+
+Manual testing:     				Automation testing:
+1.manually we will test 			1.Automation testing means
+the given project(software)			testing the software using
+i.e web application,api's,			automation testing tools(selenium,
+and mobile applications.			wdio,restassure,zelenium).
+
+2.Not required any 				2.It is very important to know programming language
+programming language		 		and product knowledge as well.
+requires only product 				3.Test cases are executed automatically
+knowledge(software product).			using automation tools.
+3.Test cases are executed			4.It's a less time consuming process.
+manually by tester
+4.It's a time consumption
+process.
+
+
+LANGUAGES SUPPORTED FOR AUTOMATION TOOLS:
+-----------------------------------------
+Java 
+Python
+C#
+Java Script
+Ruby
+Kotlin
+
+Web Automation tools:
+---------------------
+To test the websites tools are 
+1.selenium
+2.zelenium
+3.wdio
+
+API AUTOMATION TOOLS:
+--------------------
+1.Restassure supported by java only
+2.Rest supported by Python
+
+What is Testing:
+Testing means we have to do project verification and project validation.
+Testing---Testing means project must be verified and then must be validated.Now, we have to check whether product bug free or bugs.
+
+
+Verification
+************
+It means checking the document,designs,plans,scripts etc...
+Tester should verify developer product is strictly implemented or not.
+It is static testing.
+It doesn't require coding to execute.
+The goal of verification is the developed product must reach required architecture and specifications.
+Verification is nothing but  prevention of errors.
+
+Validations(Conditions must be applied)
+***********
+It checks by validating the actual product using conditions.
+Tester should validate developed product strictly implementing scripts using conditions.
+It is dynamic testing.
+It requires coding knowledge to execute.
+The goal of validation is the developed product should satisfy with all the given conditions.
+It is detection of errors.
+
+23-10-2025:
+-----------
+
+Verification Real Time Example:
+******************************
+
+
+Example 1:Assume that a team is developing e-commerce website(Safeway.com)
+1.During verification the first thing is review the requirements and design documents:
+
+a) Requirements means features like:search option,auto suggestions,displaying list of products(images,quantity,
+price, cart option,payment option,address filling option,login option)
+
+Example 2:Assume that a team is developing mobile application(HDFC App)
+1.During verification the first thing is review the requirements and design documents:
+
+a) Requirements means features like(login,balance check,FD options,Fund Transfering,Loan details,Card Details,
+Fund transfer history details,logout etc...)
+
+Conclusion
+**********
+Here,it means that peer to peer review ,inspections must be done.
+It should include correctly detailed design.
+
+Validation Real time examples
+*****************************
+
+Example 1:Team developed the e-commerce website(safeway)
+
+a)Tester has to do testing like :
+  login is successful or not
+  Search option is able to search all the items
+  Auto suggestion option is working or not
+  Able to see the details in cart
+  Payment option is working or not
+
+Example 2:
+b)Team developed mobile banking application
+  tester has to do following like:
+  Login is  successful or not
+  Able to see balance amount
+  Able to see fixed deposit option
+  Fund transfer is successfulor not
+  Fund transfer history
+
+ Conclusion
+ *********
+ Please ensure that developed app works as expected and meets user requirements
+
+ Verification---->Development---->Validation
+ Validation can be done manually and by automation.
+
+
+ Steps in manual testing
+ ***********************
+ 1. Requirement Analysis-->Study about developing project documentation,designs,guidelines
+ 2. Test Plan creation -->Creating the test plan that covers all the requirements(features)
+ 3. Test case creation -->Create positive and negative test cases for every requirements.
+ 4. Test case execution-->If it is manually,we will write test cases on excel sheet,if it is automation,will create scripts
+ 5. Defect log -->once test case get executed,if any bugs takes place ,report to developers
+ 6. Defect fix and retesting-->Once developer fix the bug,again retest it to make it bug free
+
+Types of Manual Testing
+***********************
+1.White Box Testing
+2.Black Box Testing
+3.Grey Box Testing
+
+24-1-2025:
+Black Box Testing
+*****************
+1)Here,entire project or particular methods or particular modules must be considered.
+2)We have to test only the functionality(behavior of application) of the above.
+3)Tester should provide input with both positive and negative test cases and check expected output is working fine
+ as expected.
+4)If input given by the tester,if it satisfies test case then status is passed.
+5)If input given by the tester,if not satisfied,then  test case status is failed,if it is failing,tester should report the issue to development team.
+
+Conclusion-It will be done by testers only to check the functionality of application.
+
+Example
+*******
+Consider FB login
+Requirements:username,password and sign in button
+
+I have to enter wrong or correct username and password and checks positive and negative test cases are working as expected or not.
+check sign in button is clickable or not.
+
+
+White Box Testing
+*****************
+1)Here,internal structure i.e., coding part,designing part are considered.
+2)Development team will review the code line by line(correctness of code).
+3)Assume that if any code is missing then developer should correct the code as per the design.
+
+Conclusion-It will be done by developers only for correctness of code.
+
+Example-
+Consider FB login
+Requirements:username,password and sign in button
+
+Designing and coding should be done properly for username,its text field.Password, its text field.Button with sign in text.
+
+
+Grey Box Testing
+****************
+Its a combination of white box and black box testing.
+It should be done by testers only.
+
+Tester with coding knowledge can do white box testing also.
+
+STLC(Software Testing Life cycle)
+*********************************
+STLC is a protocol to test the product so that product meets the requirements and it is free of defects.
+
+1.Requirements Analysis
+
+2.Test Planning
+
+3.Test Case Development
+
+4.Test Enviornment Setup
+
+5.Test Execution
+
+6.Test Closure
+
+Requirement Analysis
+********************
+Here,testers will understand the requirements like what is to be tested.That is should get detail knowledge of the requirements.
+we should get BRD(Business Requirement Document)
+
+27/01/2024:
+
+Test Enviornmet
+***************
+In test enviornment ,testers are not participated ,only the developers or customers creates the test enviornment.
+It is an independent activity.
+
+Test Execution
+**************
+Test Closure
+************
+Its a final stage of STLC.
+we have to prepare the document in such a way that all tested features are working fine as expected.
+Mention all the feature that you have tested you are must definitely give sign off.
+Once sign off is done,lead can give the approval.
+
+
+Severity in Testing
+*******************
+It can be understood as partciular defect can create an impact on the product.
+Impact is of 4 types
+1.Critical impact --> Here,severity level is completely out of box.No further action can be taken
+2.Major impact --> Here,severity level is in such a way that product is failed but some are remains functioning.
+3.Medium impact -->Here,severity level is unfavourable functionality,product is still functioning.
+4.Low impact --> Here, severity level is won't cause major damage to the product.
+
+
+
+Priority in testing
+*******************
+Priority means the order in which defect(severity) should be fixed.
+
+Defects having high priority should be fixed first.
+
+Types of Priority
+*****************
+1.Low
+2.Medium 
+3.High
+
+High-->The defect must be resolved as soon as possible.
+Medium--> The defect should be resolved during normal level.
+Low-->The defect is irriant,it should be fixed only when serious defects are fixed.
+
+
+Combinations of severity and priority
+***************************************
+
+High Severity-High priority
+Examples:
+1.Whenever you are filling web application all your personal details but not able to click the submit button.
+2.Whenwever you are working on web application(downloading,uploading,selecting option),application should not be slow down.
+3.When there is hover actions ,mouse is not working,it also leads to time consuming process.
+
+High Severity-Low Priority
+Examples:
+1.Assume that you are working with older versions.
+2.User is able to click on send OTP button but not able to receive OTP on time.
+
+Low severity low priority
+Examples:
+1.In a website,think that Help option or frequently asked questions module not working properly with small text,font styles.
+2.Assume that need to enter captcha with too much of different combinations.
+
+Low Severity-High Priority
+Examples:
+1.Mis-spelled word, admission detials misspelled as admision.
+
+29-01-2025:
+
+Defect life cycle:
+*****************
+Defect status or bug status is the current state from which the defect is currently going through.
+Steps are:
+1.New
+2.Assigned
+3.Open
+4.Fixed
+5.Pending retest
+6.Retest
+7.Verified
+8.Closed
+
+1.New:
+******
+When any new defect is identified by the tester.It falls under new state.
+Now tester want to prepare defect document(screenshots,error reports etc).
+This defect document must assigned to developer team.
+2.Assigned:
+**********
+Here,new state will get approved by team lead and assigned to developer team to resolve that issue.
+Here,developer team need to change the status to assigned state.
+3.Open:
+*******
+In this open state the defect is being addressed by the developer team .
+Once discussion is done by developer team they have to fix the bug.
+In discussion if it is not bug they have to reject.
+4.Fixed:
+*******
+After necessary changes of code developer team mark the state as fixed.
+5.Pending Request:
+*****************
+During the fixing after defect is completed, the developer team sent the new code to testing team for retesting.
+Now its state changes to pending request
+6.Retest:
+********
+At this stage,tester starts working of retesting the defect.
+To check weather defect is fixed by developer or not and mark the status as retesting.
+7.Verified:
+**********
+The tester retest the bug after it got fixed by the developer team.
+If the tester does't find any kind of defect then we can say that bug is fixed and the status changed to verified.
+8.Closed:
+********
+After fixing the bug by developer team and testing is done, means that issue got resolved then the defect must be closed.
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

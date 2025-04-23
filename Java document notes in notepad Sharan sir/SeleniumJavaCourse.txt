@@ -1,0 +1,983 @@
+SHARAN SIR 
+
+SELENIUM JAVA(AUTOMATION)
+
+3-12-2024
+
+Testing :
+1. manual Testing
+2. Automation 
+
+1.web Testing  (core java/core python/c#/javascript  +SELENIUM TOOL+testNG+CUCUMBER FRAMEWORK+GIT)
+2.mobile Tesing /appium(core java/python/c#/javascript +appium+testng+CUCUMBER FRAMEWORK+GIT)
+3.API  automation (core java/python/c#/javascript +REST ASSURED+testng+CUCUMBER FRAMEWORK+GIT)
+
+WEB Autonation:
+core java:
+
+1.basic programming
+2.if,if else,nested if,switch
+3.while loop,for loop,for each loop
+4.String,Arrays
+5.collection
+6.oops(inheritance,polymorphism,class,object,abstraction,encapsulation)
+7.exception handling
+8.constructors
+9.super ,this
+10.access specifier,modifier
+
+selenium tool
+
+CUCUMBER FRAMEWORK
+
+GIT
+
+3-3 1/2
+1/2 (inteview preperation)
+
+4-11-2024
+
+Testing--->WEB AUTOMATION
+prerequisit:
+1.IDE (visual studio/eclips/inteli J)
+2.java  software version 18
+3.selenium 
+4.testNG
+why selenium tool is used?
+ to  automate(scripting)  web applications.
+
+intelij+java+selenium+testNG--->open source(freely available  from  internet)
+
+MVN repository:-
+selenium
+testNG
+
+
+build  tool:
+maven
+
+
+5-12-2024
+
+
+prerequisite:
+install IntelliJ
+install java 18
+add dependencies of selenium and webdrivermanager
+step 1:mvn repository----->search for selenium dependency choose for 4.15.0
+step 2:mvn repository----->webdrivermanager dependency choose version 5.9.2
+add the above 2 dependencies in pom.xml file. 
+
+
+6/12/2024:
+
+chrome
+edge
+firefox
+how to launch chrome browser?
+WebDriver d;
+WebDrivermanager.chromeDriver().setup;
+d=new ChromeDriver();
+how to land on flipkart website?
+d.get("https://www.flipkart.com/");
+https ----->hypertexttransferprotocol
+
+how to close the browser?
+d.close();
+d.quit();
+
+
+DOM ------>DOCUMENT OBJECT MODEL
+
+INSPECT
+
+HTML  --->HYPER TEXT MARKUP LANGUAGE
+
+TAGS
+
+<html>    </html>
+<div name="poojitha">
+div  ---->tag
+name  ---->attribute
+poojitha --->value
+<div>
+search lab---->visible text/hypertext
+ 
+
+
+7/12/2024:
+
+locators in selenium:
+id
+name
+class
+linktext
+partiallinktest
+xpath
+css selector
+tag name
+
+d.findElement(By.id("asfdgt")).sendkeys("banglore",Keys.ENTER);
+d.findElement(By.name("sd")).sendkeys("banglore",Keys.ENTER);
+d.findElement(By.class("njhjhjg")).sendkeys("banglore",Keys.ENTER);
+
+
+9/12/2024:
+hyperlinks:
+<a href="path">linktext</a>
+a-----anchor tag
+linkText:
+d.findElement(By.linkText("Images")).click();
+
+partiallinktext:
+d.findElement(By.partiallinkText("Ima")).click();
+
+
+11/12/2024:
+COLLECTIONS IN JAVA:
+
+JAVA SUPPORTS NUMBER OF COLLECTIONS LIKE LIST,SET,etc....
+list:
+list is nothing but storing values dynamically.
+we can create 
+1.integer list
+2.fraction list
+3.string list
+creating integer list:
+List<Integer> rno=new ArrayList<>();
+rno.add(65);
+rno.add(66);
+rno.add(67);
+we can disply list values in two methods
+1.using list name
+System.out.Println(rno);
+2.using for each loop
+for(Integer i:rno)
+{
+system.out.println(i);
+}
+add() it is used to add elements in the list
+size() it is used to count no of elements in the list
+System.out.println("total no of rno"+rno.size());
+System.out.println("total number of names="+N.size());
+System.out.println("total number of double="+ht.size());
+
+write java program to create integer list?
+how to create fraction list?
+
+12/12/2024
+we can find number of hyperlinks in webpage and also we can display all those links in console
+List<WebElement> links=d.findElements(By.tagname("a");
+system.out.println("no of links="+links.size());
+if u want to display all the links we have to use for each loop
+for(WebElement w:links)
+{
+system.out.println(w);
+}
+if above code will display all hyperlinks in selenium format it can't be understand by tester so we have to use getText() 
+system.out.println(w.getText());
+
+getAttribute()
+it is used to specify the attribute name like href so that all hyperlinks will be printed
+system.out.println(w.getAttribute("href"));
+
+
+write selenium program to land on manabadi.com website and count,display number of links?
+
+14/12/2024
+
+xpath in selenium:
+in  selenium xpath is  2  types
+1.Absolute  xpath    2.relative xpath
+relative xpath:-
+1.relative xpath starts with //
+2.syntax:-
+//tagname[@attribute='value']
+in xpath  we can  use id,name,classname,linktext.
+
+xpath  with id
+//tagname[@id='value']
+xpath with name
+//tagname[@name='value']
+xpath with classname
+//tagname[@class='value']
+
+xpath with  text():-(linktext)
+//tagname[text()='value']
+
+//*[@class='L3eUgb']----->* means it will give u the each and every tag in web page.
+
+
+17/12/2024:
+
+AXES FUNCTIONS;
+TEXT()
+STARTS-WITH()
+CONTAINS()
+
+
+CONTAINS():
+within this method we can provide complete text or partial text
+d.findElement(By.xpath("//a[contains(text(),'Create new account')]")).click();
+d.findElement(By.xpath("//a[contains(text(),'Create new')]")).click();
+
+CONTAINS() WITH ID,NAME,CLASS
+
+//textarea[contains(@id,'APjFqb')]
+//textarea[contains(@name,'q')]
+//textarea[contains(@class,'APjFqb')]
+
+STARTS-WITH():
+id,name,class in this attributes only we will use starts-with() method .
+
+WITHIN THIS METHOD WE CAN PROVIDE COMPLETE TEXT OR PARTIAL TEXT FROM BEGINNING 
+syntax:
+//tagname[starts-with(@attribute,'value')]
+//textarea[starts-with(@id,'APjFqb')]
+//textarea[starts-with(@id,'APj')]
+
+
+18/12/2024:
+
+xpath:
+//tagname[@attribute='value']
+//textarea[@name='q']
+//tagname[text()='value']
+//a[text()='Images']
+//button[text()='signin']
+//tagname[starts-with(@attribute,'value')]
+//tagname[contains(text(),'value')]
+//tagname[contains(@attribute,'value')]
+
+preceding n following sibling:-
+Absolute xpath
+
+id,name,classname,tagname,linktext,partiallinktext,
+xpath,css selector
+
+19/11/2024:
+
+
+GETTITLE():
+IT IS USED TO DISPLAY THE TITLE OF THE WEBPAGE
+d.getTitle();
+GETCURRENTURL()
+IT IS USED TO DISPLAY THE CURRENT URL OF THE WEBPAGE
+d.getCurrentUrl();
+GETPAGESOURCE():
+IT IS USED TO DISPLAY THE COMPLETE CODE OF THE WEBPAGE
+d.getPageSource();
+
+
+21/12/2024:
+
+css selector:
+
+tagname[attribute='value']
+input[class/id/name='abcdef']
+id in css:(in css  id  regular expression is #)
+#idname
+#abcdefg
+class in css:(in css  class  regular expression is .)
+.classname
+.abdef
+regular expressions
+starts-with()----->^
+ends-with()------->$
+contains()--------->*
+tagname[attribute$/^/*='value']
+input[id$/^/*='abcdefg']
+
+xpath vs css:
+
+1.xpath followed  by //  				1. css followed  by regular expressions(#,.)
+2.in xpath access functions are used 			2. css regular expressiona(^,$,*) are used.
+3.css selector  is very faster then xpath bcoz 
+regular expressions are used.
+
+
+assignment:
+
+
+1.launch chrome browser and land on rediffmail.com
+https://www.rediff.com/
+2.click on signin
+3.enter username and password and click on sign in
+
+use all locators  to solve above task.
+
+22-12-2024:
+
+DROPDOWN in selenium:
+
+to  handle the dropdown,the tag select is  used.
+its  dropdown list items are done with option tag.
+So ,in selenium we have to use 
+Select class to handle the dropdown.
+
+1.we can  count total no.of options and print all those list.
+	WebDriver d;
+        WebDriverManager.chromedriver().setup();
+        d=new ChromeDriver();
+        d.get("https://www.wikipedia.org/");
+        Thread.sleep(4000);
+        List<WebElement> l=d.findElements(By.xpath("//select[@id='searchLanguage']/option"));
+	 System.out.println("total no.of languages="+l.size());
+        for(WebElement w:l)
+        {
+            System.out.println(w.getText());
+        }
+2.we can display  / select particular  option in  3 ways
+  a. visible text   2.value  3.index
+	 WebDriver d;
+        WebDriverManager.chromedriver().setup();
+        d=new ChromeDriver();
+        d.get("https://www.wikipedia.org/");
+        Thread.sleep(4000);
+        WebElement lan=d.findElement(By.xpath("//select[@id='searchLanguage']"));
+        Select sel=new Select(lan);
+        sel.selectByVisibleText("हिन्दी");
+        Thread.sleep(5000);
+        sel.selectByIndex(34);
+        Thread.sleep(4000);
+        sel.selectByValue("lld");
+
+24-12-2024:
+
+ActionClass:
+
+It is used to perform Mouse Actions like
+1.MOUSEHOVER(move to element)
+2.DRAG AND DROP
+3.RIGHT CLICK(context click)
+4.DOUBLE CLICK
+
+MOUSEHOVER:
+Whenever we move the mouse action will be performed,here we have to implement action class by using the method called movetoelement
+
+sample program:
+
+ WebElement r=d.findElement(By.xpath("//a[text()='Results']"));
+        Actions act=new Actions(d);
+        act.moveToElement(r).build().perform();
+        WebElement ht=d.findElement(By.xpath("//a[text()='Hall Tickets']"));
+        Thread.sleep(3000);
+        act.click(ht).build().perform();
+
+selenium practice links:
+
+https://the-internet.herokuapp.com/
+https://the-internet.herokuapp.com/hovers
+
+29/12/2024:
+
+Handling of Alerts:
+Javascript Alerts  are 
+1.Alert
+2.confirm
+3.prompt
+
+we have to use selenium class called  "Alert".to handle all above 3 types.
+Alert class have 2 methods
+1.accept()  2.dismiss()
+
+Alert (NORMAL ALERT (OR) SIMPLE ALERT):
+here we have OK button
+Alert al=driver.switchTo().alert();
+al.accept();
+
+  
+confirm:
+here we have OK and CANCEL button
+Alert al=driver.switchTo().alert();
+al.accept();
+a1.dismiss();
+
+prompt:
+here we have to send the data,using SENDKEYS.
+Alert al=driver.switchTo().alert();
+al.sendKeys("selenium");
+al.accept();
+al.dismiss();
+
+30/12/2024:
+
+https://www.w3schools.com/html/html_tables.asp
+example 1
+
+//table[@id='customers']/tbody/tr[1]
+//table[@id='customers']/tbody/tr[1]/th[1]
+//table[@id='customers']/tbody/tr[1]/th[1]/following::th[1]
+//table[@id='customers']/tbody/tr[1]/th[1]/following::th[2]
+//table[@id='customers']/tbody/tr[2]
+//table[@id='customers']/tbody/tr[2]/td[1]
+//table[@id='customers']/tbody/tr[2]/td[1]/following::td[1]
+//table[@id='customers']/tbody/tr[2]/td[1]/following::td[2]
+//table[@id='customers']/tbody/tr[3]
+//table[@id='customers']/tbody/tr[3]/td[1]
+//table[@id='customers']/tbody/tr[3]/td[1]/following::td[1]
+//table[@id='customers']/tbody/tr[3]/td[1]/following::td[2]
+//table[@id='customers']/tbody/tr[4]
+//table[@id='customers']/tbody/tr[4]/td[1]
+//table[@id='customers']/tbody/tr[4]/td[1]/following::td[1]
+//table[@id='customers']/tbody/tr[4]/td[1]/following::td[2]
+//table[@id='customers']/tbody/tr[5]
+//table[@id='customers']/tbody/tr[5]/td[1]
+//table[@id='customers']/tbody/tr[5]/td[1]/following::td[1]
+//table[@id='customers']/tbody/tr[5]/td[1]/following::td[2]
+//table[@id='customers']/tbody/tr[6]
+//table[@id='customers']/tbody/tr[6]/td[1]
+//table[@id='customers']/tbody/tr[6]/td[1]/following::td[1]
+//table[@id='customers']/tbody/tr[6]/td[1]/following::td[2]
+//table[@id='customers']/tbody/tr[7]
+//table[@id='customers']/tbody/tr[7]/td[1]
+//table[@id='customers']/tbody/tr[7]/td[1]/following::td[1]
+//table[@id='customers']/tbody/tr[7]/td[1]/following::td[2]
+
+
+
+//table[@id='customers']/tbody/tr[1]/th/following::th[2]
+//table[@id='customers']/tbody/tr[4]/td/following::td[2]
+//table[@id='customers']/tbody/tr[6]/td/following::td[2]
+
+https://www.w3schools.com/html/html_tables.asp
+
+31/12/2024:
+
+
+//table[@class='tablesorter'][1]/tbody/tr[1]/td[1]//following::td[4]//preceding-sibling::td[1]
+//table[@class='tablesorter'][1]/tbody/tr[2]/td[1]//following::td[5]//preceding-sibling::td[1]
+
+Launch chrome browser land on google.com website then search for banglore city and move back and search for Hyderabad
+
+Launch chrome browser land on google.com website then search for banglore city and move back and move forward and clear banglore and search for Hyderabad
+
+NAVIGATE FUNCTIONS IN SELENIUM:
+1.back()
+2.forward()
+3.refresh()
+driver.navigate().back();
+driver.navigate().forward();
+driver.navigate().refresh();
+ driver.findElement(By.name("email")).clear();
+
+
+3/1/2025:
+
+TestNG:
+We have to add the dependency of TestNG from maven repository into pom.xml file
+If we use TestNG in project then program can be developed using ANNOTATIONS.
+ex:@Test
+
+sample program:
+
+
+public class TestNg
+{
+
+ @Test
+  public void poojitha()
+  {
+      WebDriver driver;
+      WebDriverManager.chromedriver().setup();
+      driver=new ChromeDriver();
+      driver.get("https://www.google.com/");
+
+    }
+}
+ASSERTIONS IN TestNG:
+Assertions are used for verification and validation purpose.
+
+TestNg supports two types of assertions
+1.HARD ASSERT
+2.SOFT ASSERT
+
+1.Hard assert:
+
+Compare two values and check test cases are passed or failed
+
+ int a,b;
+      a=10;
+      b=10;
+      Assert.assertEquals(a,b);
+
+Compare two strings and check testcases  passed or failed
+
+String actual,expected;
+      actual="poojitha";
+      expected="poojitha";
+      Assert.assertEquals(actual,expected);
+
+ String actual,expected;
+      actual="poojitha";
+      expected="siddu";
+      Assert.assertEquals(actual,expected,"both are not same");
+
+SYNTAX FOR HARD ASSERT:
+
+Assert.assertEquals(actual,expected);
+
+Message will get printed when condition is false
+
+Assert.assertEquals(actual,expected,"message");
+
+ String actual,expected;
+      actual="poojitha";
+      expected="siddu";
+     Assert.assertNotEquals(actual,expected);
+
+
+Compare two integers and check testcases are passed or failed
+Case:1
+
+//AssertEquals
+
+public class TestNgAnnotation {
+
+    @Test
+    public void hoovi()
+    {
+        int actual,expected;
+        actual=100;
+        expected=200;
+        Assert.assertEquals(actual,expected,"both are not same");
+        //output:
+        // tests failed
+        /*java.lang.AssertionError: both are not same
+            Expected :200
+            Actual   :100 */
+
+
+7/1/2025:
+
+
+HARD ASSERT:
+1.These are serious issues
+2.Serious Issues like login,database issues,mobile pattern issues and so on...
+3.Here if assertion fails then rest of code wont execute
+
+Soft assert:
+1. These are cosmotic issues
+2.If assertion fails then execution will continue at the end it will mention all the details about failed assertion.
+3.Soft assert can be done by creating object
+
+EX:SoftAssert so=new SoftAssert();	
+   so.assertEquals(actual,expected,"both are same");
+   so.assertAll();
+
+HEADLESS:
+we can log the details without running the browser(hiding)
+we have to use chromeoptions class
+EX:ChromeOptions co=new ChromeOptions();
+   co.addArguments("--headless");
+   d=new ChromeDriver(co);
+
+
+MAIN THEROY OF ASSERTIONS:
+
+SOFTASSERT:HERE OUTPUT WILL COME IF THE TEST CASES WILL BE FAILED ALSO , AFTER THAT IT WILL SHOW WHERE THE TESTCASES IT WILL BE FAILED.
+FINALLY IT WILL SHOW THE OUTPUT.
+HARDASSERT:WHEREAS IN HARD ASSERT IF THE TEST CASES WILL BE FAILED IT WILL NOT EXECUTE THE NEXT LINES OF CODE AND ALSOS IT WILL NOT GIVE ANY TYPE OF OUTPUT.
+
+7-1-2025:evening
+
+Actions class:
+To perform mouse events like hover,drag and drop,double click and right click
+We have to use Action classes
+Methods:
+MOUSEHOVER--->moveToElement
+DRAD AND DROP----->dragAndDrop
+DOUBLE CLICK------->doubleClick
+RIGHT CLICK----->contextClick
+We have to create object for action class
+
+MOUSEHOVER--->moveToElement
+EX:
+ WebElement notify=driver.findElement(By.xpath("//a[text()='Institutes']"));
+ Actions act=new Actions(driver);
+ act.moveToElement(notify).build().perform();
+ Thread.sleep(3000);
+ WebElement school=driver.findElement(By.xpath("//a[text()='Schools']"));
+ Thread.sleep(3000);
+ act.click(school).build().perform();
+
+DRAD AND DROP----->dragAndDrop
+EX:
+ WebElement source= driver.findElement(By.xpath("(//div[@class='column'])[1]"));
+ WebElement destination= driver.findElement(By.xpath("(//div[@class='column'])[2]"));
+ Actions act=new Actions(driver);
+ act.dragAndDrop(source,destination).build().perform();
+
+DOUBLE CLICK------->doubleClick
+EX:
+ WebElement ele= driver.findElement(By.xpath("//div[@id='hot-spot']"));
+ Actions act=new Actions(driver)
+ act.doubleClick(ele).build().perform();
+
+
+RIGHT CLICK----->contextClick
+EX:
+ WebElement ele= driver.findElement(By.xpath("//div[@id='hot-spot']"));
+ Actions act=new Actions(driver);
+ act.contextClick(ele).build().perform();
+
+
+DRAG AND DROP----->dragAndDrop
+
+Sample program:
+
+public class DragandDrop {
+    public static void main(String[] args) throws InterruptedException {
+        WebDriver driver;
+        WebDriverManager.chromedriver().setup();
+        driver=new ChromeDriver();
+        driver.get("https://the-internet.herokuapp.com/drag_and_drop");
+        Thread.sleep(2000);
+        WebElement source= driver.findElement(By.xpath("(//div[@class='column'])[1]"));
+        WebElement destination= driver.findElement(By.xpath("(//div[@class='column'])[2]"));
+        Actions act=new Actions(driver);
+        act.dragAndDrop(source,destination).build().perform();
+    }
+}
+
+RIGHT CLICK----->contextClick
+
+sample program:
+
+public class RightClick {
+    public static void main(String[] args) throws InterruptedException {
+        WebDriver driver;
+        WebDriverManager.chromedriver().setup();
+        driver=new ChromeDriver();
+        driver.get("https://the-internet.herokuapp.com/context_menu");
+        Thread.sleep(2000);
+        WebElement ele= driver.findElement(By.xpath("//div[@id='hot-spot']"));
+        Actions act=new Actions(driver);
+        act.contextClick(ele).build().perform();
+
+    }
+}
+
+
+DOUBLE CLICK------->doubleClick
+
+sample program:
+
+public class Doubleclick {
+    public static void main(String[] args) throws InterruptedException {
+        WebDriver driver;
+        WebDriverManager.chromedriver().setup();
+        driver=new ChromeDriver();
+        driver.get("https://the-internet.herokuapp.com/context_menu");
+        Thread.sleep(2000);
+        WebElement ele= driver.findElement(By.xpath("//div[@id='hot-spot']"));
+        Actions act=new Actions(driver)
+        act.doubleClick(ele).build().perform();
+
+    }
+}
+  
+
+ssl certificate:
+
+Chromeoptions co=new chromeoptions();
+co.addarguments("--ignore-certificate-errors");
+driver=new chromedriver(co);
+
+Scrolling using JavaScriptExecutor:
+In Javascript u can scroll a webpage up,down,or sideways by executing javascriptcommands using JavaScriptExecutor
+
+Scrolling Down:
+to scroll the webpage vertically down,you can use
+
+ JavascriptExecutor js=(JavascriptExecutor) driver;
+ js.executeScript("window.scrollBy(0,1000)");
+
+Scrolling up:
+To scroll the webpage vertically up,u can use
+
+ JavascriptExecutor js=(JavascriptExecutor) driver;
+ js.executeScript("window.scrollBy(0,-1000)");
+
+Window Handling:
+there may be a reqirement where we can swithch from 1 window into another window in such case we have to use set collection along with window handles method
+
+Set<String> w=driver.getWindowHandles();
+        driver.findElement(By.xpath("//a[@id='opentab']")).click();
+        for(String s:w)
+        {
+            driver.switchTo().window(s);
+        }
+
+Types of waits:
+it is used to perform synchronization. selenium supports three types of waits:
+1.implicit wait
+2.explicit wait
+3.fluent wait
+
+1.implicit wait:
+   driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+it will wait until specified time or below the specified time
+
+2.explicit wait:
+waits until the expected conditions
+
+3.fluent wait:
+it depends on polling time
+
+Boolean methods:
+1.isenabled()
+2.isselected()
+3.isdisplayed()
+
+2.isselected()
+
+ driver.findElement(By.xpath("(//input[@name='radioButton'])[1]")).click();
+        Boolean r=driver.findElement(By.xpath("(//input[@name='radioButton'])[2]")).isSelected();
+        System.out.println(r);
+        Assert.assertTrue(r);
+        driver.close();
+
+
+11-1-2025:
+set:
+set is a collection where it never allows duplicate values.When there is a requirement of storing only unique values in such case we have to use a concept of set
+
+SYNTAX:
+Set<WRAPPERCLASS> OBJECT=NEW HashSet<String>();
+
+ Set<Integer> i=new HashSet<Integer>();
+        i.add(100);
+        i.add(200);
+        i.add(300);
+        i.add(300);
+        System.out.println(i);
+        System.out.println(i.size());
+        for (Integer in:i)
+        {
+            System.out.println(in);
+        }
+
+HashTable:
+Hashtable<String,String> details=new Hashtable<String,String>();
+        details.put("1","poojitha");
+        details.put("2","hoovi");
+        details.put("3","siddu");
+        details.put("2","kavitha");
+        System.out.println(details);
+HashMap:
+ java.util.HashMap<String ,String> details=new java.util.HashMap<String,String>();
+        details.put("1","poojitha");
+        details.put("2","hoovishka");
+        details.put("1","siddu");
+        System.out.println(details);
+        System.out.println(details.size());
+
+13-1-2025
+
+create--> new project and test build as--> maven
+
+dependencies like --> selenium ,web driver manager ,testing, cucumber java, cucumber testing
+
+Add plugins --> cucumber for java and gherkin
+
+create three packages namely 
+****************************
+features-->step definition-->runner
+
+CUCUMBER FRAMEWORK:
+We have to use framework while creating the project.We have to add the dependencies  for cucumber.
+While working with cucumber framework we have to create three files.
+1.Feature File
+2.Step Definition File
+3.Runner File
+
+1.FEATURE FILE:
+Feature file consists of with Gerkin language.Gerkin language can be done with keywords like GIVEN,WHEN,THEN,AND.
+We have to create Features,Scenario ,Scenario out line.
+The information in feature file can be understood by Technical and Non-Technical persons.
+
+2.STEP DEFINITION FILE:
+Here we have to create the definitions for every scenario.
+Actual java code place a major role.
+
+3.RUNNER FILE:
+We have to create runner file using Cucumber Options. Within cucumber options we have to specify the attributes like Glue,Features,Target,Monochrome.
+
+CREATING FEATURE FILES:
+Feature file must be created with extention.feature file.
+It is followed with Gerkin words.
+
+Creating feature file for searching BANGLORE using google.com website:
+
+given land on google.com website 
+when launching chrome browser 
+and enter banglore ,hit enter button 
+then images of banglore will be displayed
+
+Creating feature file for entering user name and password on FACEBOOK website:
+
+Given land on facebook .com website
+when  after launching chrome browser
+and enter user name 
+and enter password
+then click on login button
+ 
+ Creating feature file for entering username and password on Instagram website:
+ 
+given land on Instagram .com website
+when after launching chrome browser
+and enter username,phonenumber,or email
+and enter password
+then click on login button
+
+Creating  feature file for  entering into youtube home button
+ given land on chrome browser
+and search for youtube
+then click  for home button
+
+creating fature file for sign in into reddiffmaill.com
+
+GIVEN land on reddiffmail.com website
+when after lanunching on google chrome browser
+and click on sign in button
+
+and enter the user name 
+and enter the password
+then finally click on sign in button.
+
+
+14-1-2025:
+
+PROPERTIES FILE:
+If we want to store test data in separate file,then we have to create properties file.
+STEP1:
+NEW------>FILE------>POOJITHA.PROPERTIES
+STEP2:
+STORE THE TEST DATA IN THE FORM OF KEY VALUE PAIR
+url=https://www.google.com/
+place=banglore
+STEP 3:
+NOW CREATE JAVA CLASS AND SPECIFY THE PATH OF PROPRTIES FILE USING FILE INPUT STREAM
+ FileInputStream fis=new FileInputStream("C:\\Users\\siddu\\IdeaProjects\\seleniumlearning\\src\\test\\java\\Poojitha.properties");
+STEP 4:
+WE HAVE TO CREATE  OBJECT FOR PROPERTIES FILE
+Properties p=new Properties();
+        p.load(fis);
+BY USING LOAD METHOD WE HAVE TO LOAD FIS OBJECT
+STEP 5:
+Get property is the method that allows to get key from properties file
+String u=p.getProperty("url");
+driver.get(u);
+
+SECOND METHOD:driver.get(p.getProperty("url"));
+
+15-01-2025:
+
+Framework development:
+before implanting cucumber framework we have to add cucumber dependency and GERKIN plugin into pom.XML file.
+we are implanting cucumber BDD(BEHAVIOURAL DATA DRIVEN) Frame work.
+we have to create three packages.
+1.Feature 
+2.Step definition
+3.Runner
+
+Feature Package:
+In Feature pakage we have to create all feature files only with .(dot) feature extention.We can create Scenario using Senario,Scenarion outline Gerkin Words like Given,When,And,Then
+Step_Definition:
+Here Actual java implantation must be done.definitions must be created based on the feature file.
+Runner:
+runner file must be extended with AbstractTestNGCucumberTest.We have to use Chrome options here.
+Chrome options like
+1.Features----->to specify the path of feature file.
+2.glue--------->to provide step_Definitions.
+3.plugin------->specifying the folder for generating reports.
+4.Monochrome---->sets to true automatically to get output in colourful mode.
+
+
+Absolute xpath:
+Absolute xpath starts from the root node (/html) and specifies every node leading to the target elment.This makes it less flexible and prone to breaking with minor HTML changes.
+ex:
+/html/body//div[@class='main-nav']
+/html/body//div[@id='main-nav']
+/html/body//div[@name='main-nav']
+/html/body//div[text()='main-nav']
+
+Launching chrome browser:
+*************************
+WebDriver driver;
+ WebDriverManager.chromedriver().setup();
+driver=new ChromeDriver();
+Launch edge browser:
+*******************
+ WebDriver driver;
+ WebDriverManager.edgedriver().setup();
+ driver=new EdgeDriver();
+launching firefox browser:
+************************
+ WebDriver driver;
+ WebDriverManager.firefoxdriver().setup();
+ driver=new FirefoxDriver();
+note:
+****
+All the browsers should be in PC.
+
+Locators in Selenium:
+*********************
+selenium supports following locators:
+1.linktext
+2.partial linktext
+3.id
+4.name
+5.class
+6.xpath
+7.css selector
+8.tag name
+
+selenium program to display all the links and no of links in google web page :
+*****************************************************************************
+ List<WebElement> links=driver.findElements(By.tagName("a"));
+      System.out.println("total no of hyper links="+links.size());
+       for (WebElement e:links)
+       {
+           System.out.println(e.getText()+" "+e.getAttribute("href"));
+       }
+
+selenium program to launch chrome browser and land on facebook .com website count how many div tags are availabe.
+****************************************************************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
